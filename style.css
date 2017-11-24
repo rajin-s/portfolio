@@ -691,8 +691,8 @@ ul li .content {
   }
   .page-slider .page-back {
     top: unset;
-    bottom: 0.5rem;
-    font-size: 2em;
+    bottom: -1em;
+    left: 0;
   }
   .sub-page {
     overflow: scroll;
