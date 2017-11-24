@@ -326,6 +326,10 @@ ul {
     position: relative;
     ._smooth(0.5s);
     ._shadow();
+	
+	&.tall {
+		height: 70vh;
+	}
 }
 
 .slide-container {
@@ -586,14 +590,18 @@ ul {
 		height: 5em;
 		width: 5em;
 	}
-}
-@media screen and (max-width: 1300px) {
 	#top, #mid, #bottom {
 		padding-left: 2vw;
 		padding-right: 2vw;
 	}
 }
+
 @media screen and (max-width: 1080px) {
+	h2 {
+		display: block;
+		margin-bottom: -0.1em;
+	}
+	
 	#top {
 		padding-left: 2vw;
 		padding-right: 2vw;
@@ -604,13 +612,15 @@ ul {
 		& #icon {
 			display: block;
 			margin: auto;
+			width: 10em;
+			height: 10em;
 		}
 		& #name {
-			font-size: 9vw;
+			font-size: 11vw;
 			text-align: center;
 		}
 		& #desc {
-			font-size: 4vw;
+			font-size: 4.5vw;
 			text-align: center;
 		}
 		
@@ -649,8 +659,6 @@ ul {
 	}
 
 	.slide-show {
-		height: 45vh;
-		
 		& > .slide-container > .slide > .slide-logo {
 			max-width: 30%;
 			min-width: 30%;
@@ -661,12 +669,6 @@ ul {
 		left: unset;
 		right: -1px;
 		bottom: -1em;
-	}
-}
-@media screen and (max-width: 720px) {
-	h2 {
-		display: block;
-		margin-bottom: -0.1em;
 	}
 }
 @media screen and (-webkit-min-device-pixel-ratio : 2) {

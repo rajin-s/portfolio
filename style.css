@@ -293,6 +293,9 @@ ul li:before {
   box-shadow: #333333 4px 4px 0px;
   -webkit-box-shadow: #333333 4px 4px 0px;
 }
+.slide-show.tall {
+  height: 70vh;
+}
 .slide-container {
   height: 100%;
   white-space: nowrap;
@@ -598,8 +601,6 @@ ul li:before {
     height: 5em;
     width: 5em;
   }
-}
-@media screen and (max-width: 1300px) {
   #top,
   #mid,
   #bottom {
@@ -608,6 +609,10 @@ ul li:before {
   }
 }
 @media screen and (max-width: 1080px) {
+  h2 {
+    display: block;
+    margin-bottom: -0.1em;
+  }
   #top {
     padding-left: 2vw;
     padding-right: 2vw;
@@ -617,13 +622,15 @@ ul li:before {
   #top #icon {
     display: block;
     margin: auto;
+    width: 10em;
+    height: 10em;
   }
   #top #name {
-    font-size: 9vw;
+    font-size: 11vw;
     text-align: center;
   }
   #top #desc {
-    font-size: 4vw;
+    font-size: 4.5vw;
     text-align: center;
   }
   #top #nav {
@@ -653,9 +660,6 @@ ul li:before {
     width: unset !important;
     min-width: unset !important;
   }
-  .slide-show {
-    height: 45vh;
-  }
   .slide-show > .slide-container > .slide > .slide-logo {
     max-width: 30%;
     min-width: 30%;
@@ -664,12 +668,6 @@ ul li:before {
     left: unset;
     right: -1px;
     bottom: -1em;
-  }
-}
-@media screen and (max-width: 720px) {
-  h2 {
-    display: block;
-    margin-bottom: -0.1em;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
