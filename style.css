@@ -580,3 +580,9 @@ ul li:before {
 .page-slider .page.second.active {
   left: -100%;
 }
+.note {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #888888;
+}
