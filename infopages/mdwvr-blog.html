@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Slug Slasher
+    </title>
+    <link rel="icon" href="../img/Icon-1.png" />
+    <link rel="stylesheet" type="text/less" href="../style.less" />
+    <link rel="stylesheet" type="text/less" href="infopage.less" />
+    <script src="../../less.js" type="text/javascript"></script>
+    <script src="../slideshow.js" type="text/javascript"></script>
+</head>
+<body id="body">
+    <div id="wrapper">
+        <div class="panel left">
+            <h1>Meteor Dance Wave VR</h1>
+            <p>
+                <em>role: solo developer</em><br /><br />
+                Created as a first dive into Unreal Engine 4, <strong>Meteor Dance Wave VR</strong> is an active virtual-reality rhythm game prototype featuring
+                vibrant visuals and a retro synthwave aesthetic.<br /><br />
+
+                Features
+                <ul>
+                    <li>Central beat keeping system</li>
+                    <li>Central sound visualization system</li>
+                    <li>Dyamic materials (responding to beat &amp; frequency amplitudes)</li>
+                    <li>Runtime processing of course file data</li>
+                </ul>
+                <br />
+
+                Tools Used
+                <ul>
+                    <li>Unreal Engine 4 (Blueprint, Materials, C++)</li>
+                    <li>Photoshop (Textures)</li>
+                    <li>Blender (Modeling)</li>
+                </ul>
+                <!--Utilizing a sound-visualization library, the game was created using both Unreal Engine's Bluprint visual scripting system
+                as well as C++ code extending the engine itself. Key systems inlude processing of file data to construct dynamic, easily
+                created/modified courses as well as a central system to sync all aspects of the game to a constant beat. Materials and
+                post-processing effects were created from scratch using Unreal's node-based Material system such that they could interface
+                with this central beat keeper and use its data to pulse, grow, modulate, etc.<br /><br />
+                While the project is currently in a state where future development would be possible, lack of availability of VR equipment will
+                likely prevent much, if not all, work in the near future.-->
+            </p>
+        </div>
+        <div class="panel right">
+            <div class="slide-show-container">
+                <div class="slide-show">
+                    <div class="slide-container" onmouseover="pauseShow(0)" onmouseout="unpauseShow(0)">
+                        <div class="slide active">
+                            <img class="slide-content" src="img/MDWVR-1.png" />
+                        </div>
+                        <div class="slide">
+                            <img class="slide-content" src="img/MDWVR-3.png" />
+                        </div>
+                        <div class="slide">
+                            <img class="slide-content" src="img/MDWVR-2.png" />
+                        </div>
+                        <div class="slide">
+                            <img class="slide-content" src="img/MDWVR-4.png" />
+                        </div>
+                        <div class="slide">
+                            <img class="slide-content" src="img/MDWVR-5.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-anchors center-text">
+                    <div class="slide-a active" onclick="goToSlide(0, 0)"></div>
+                    <div class="slide-a" onclick="goToSlide(0, 1)"></div>
+                    <div class="slide-a" onclick="goToSlide(0, 2)"></div>
+                    <div class="slide-a" onclick="goToSlide(0, 3)"></div>
+                    <div class="slide-a" onclick="goToSlide(0, 4)"></div>
+                </div>
+            </div>
+            <br />
+            <div class="info-list">
+                Project Duration : 1 month (July - August 2017)<br /><br />
+                More detailed info: <a href="" target="_blank">Blog Post</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
