@@ -160,11 +160,23 @@ ul {
     li {
         display: block;
         padding-left: 1em;
+		white-space: nowrap;
+		
+		* {
+			vertical-align: top;
+		}
 
         &:before {
             content: '+';
+			display: inline-block;
             padding-right: 1em;
         }
+		
+		& .content {
+			display: inline-block;
+			white-space: normal;
+			padding-right: 1em;
+		}
     }
 }
 
@@ -496,8 +508,8 @@ ul {
 .page-slider {
     white-space: nowrap;
     overflow: hidden;
-    padding-right: 4px;
-    margin-right: -4px;
+    padding-right: 0.5rem;
+    margin-right: -0.5rem;
 
     & .page-back {
         display: block;
@@ -567,6 +579,10 @@ ul {
             &.active {
                 left: -100%;
             }
+			
+			& .card {
+				height: 32em;
+			}
         }
     }
 }
@@ -659,16 +675,40 @@ ul {
 	}
 
 	.slide-show {
+		height: 30rem;
+		&.tall {
+			height: 30rem;
+		}
 		& > .slide-container > .slide > .slide-logo {
 			max-width: 30%;
 			min-width: 30%;
 		}
+	}
+	
+	.page-slider {
+		& .page {
+			&.second {
+				height: 100vh;
+				
+				& .card {
+					height: 90vh;
+				}
+			}
+		}
+	}
+	
+	.sub-page {
+		overflow: scroll;
 	}
 
 	#print-resume {
 		left: unset;
 		right: -1px;
 		bottom: -1em;
+	}
+	
+	.m-reverse {
+		flex-direction: column-reverse;
 	}
 }
 @media screen and (-webkit-min-device-pixel-ratio : 2) {

@@ -100,9 +100,19 @@ ul {
 ul li {
   display: block;
   padding-left: 1em;
+  white-space: nowrap;
+}
+ul li * {
+  vertical-align: top;
 }
 ul li:before {
   content: '+';
+  display: inline-block;
+  padding-right: 1em;
+}
+ul li .content {
+  display: inline-block;
+  white-space: normal;
   padding-right: 1em;
 }
 #top {
@@ -494,8 +504,8 @@ ul li:before {
 .page-slider {
   white-space: nowrap;
   overflow: hidden;
-  padding-right: 4px;
-  margin-right: -4px;
+  padding-right: 0.5rem;
+  margin-right: -0.5rem;
 }
 .page-slider .page-back {
   display: block;
@@ -583,6 +593,9 @@ ul li:before {
 .page-slider .page.second.active {
   left: -100%;
 }
+.page-slider .page.second .card {
+  height: 32em;
+}
 .note {
   display: inline-block;
   font-style: italic;
@@ -660,14 +673,32 @@ ul li:before {
     width: unset !important;
     min-width: unset !important;
   }
+  .slide-show {
+    height: 30rem;
+  }
+  .slide-show.tall {
+    height: 30rem;
+  }
   .slide-show > .slide-container > .slide > .slide-logo {
     max-width: 30%;
     min-width: 30%;
+  }
+  .page-slider .page.second {
+    height: 100vh;
+  }
+  .page-slider .page.second .card {
+    height: 90vh;
+  }
+  .sub-page {
+    overflow: scroll;
   }
   #print-resume {
     left: unset;
     right: -1px;
     bottom: -1em;
+  }
+  .m-reverse {
+    flex-direction: column-reverse;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) {

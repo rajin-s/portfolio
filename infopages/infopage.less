@@ -97,3 +97,53 @@ p {
 .slide-show {
     ._shadow();
 }
+
+.two-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	
+	.item {
+		margin-bottom: 1em;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 1000px), screen and (-webkit-min-device-pixel-ratio : 2) {
+	body {
+		padding: 0 0.5em;
+	}
+	
+	.slide-show {
+		height: 20rem;
+	}
+	
+	#wrapper {
+		padding: 0.5em;
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.panel {
+		width: 100%;
+		text-align: center;
+		
+		&.left {
+			padding-bottom: 1em;
+		}
+		&.right {
+			padding-left: 0;
+		}
+	}
+	
+	.two-item {
+		flex-direction: row;
+		justify-content: center;
+		
+		.item {
+			margin-bottom: 0;
+			margin-right: 1em;
+			width: 50%;
+		}
+	}
+}
