@@ -79,8 +79,9 @@ h1 {
   font-weight: 500;
 }
 h2 {
+  display: inline-block;
   font-size: 2em;
-  margin: 0 0 0.25em 0;
+  margin: 0 0.1em 0.25em 0;
   font-weight: 500;
 }
 h3 {
@@ -148,10 +149,10 @@ ul li:before {
   background-image: url('img/Icon-1.svg');
   background-size: cover;
   display: inline-block;
-  height: 8rem;
-  width: 8rem;
+  height: 7.27em;
+  width: 7.27em;
   border: 1px dotted #eeeeee;
-  margin-right: 2rem;
+  margin-right: 1.81em;
   box-shadow: #333333 4px 4px 0px;
   -webkit-box-shadow: #333333 4px 4px 0px;
   transition: all 0.3s;
@@ -163,14 +164,14 @@ ul li:before {
   display: inline-block;
 }
 #name {
-  font-size: 5rem;
+  font-size: 4.54em;
   font-weight: bold;
 }
 #desc {
-  font-size: 2rem;
+  font-size: 1.81em;
   font-style: italic;
   color: #888888;
-  margin-top: -1rem;
+  margin-top: -0.5em;
 }
 #nav {
   display: flex;
@@ -252,7 +253,7 @@ ul li:before {
   flex-grow: 1;
 }
 .footer-col {
-  font-size: 1rem;
+  font-size: .9em;
   font-style: italic;
   padding: 0 2em;
 }
@@ -331,8 +332,8 @@ ul li:before {
 }
 .slide-container .slide > .slide-desc {
   position: absolute;
-  left: 1rem;
-  top: -2rem;
+  left: 1;
+  top: -1.81em;
   z-index: 10;
   background: #eeeeee;
   border: 1px solid #333333;
@@ -489,7 +490,6 @@ ul li:before {
 }
 .page-slider {
   white-space: nowrap;
-  font-size: 0;
   overflow: hidden;
   padding-right: 4px;
   margin-right: -4px;
@@ -553,7 +553,7 @@ ul li:before {
   -o-transition: all 0.1s;
 }
 .page-slider .page {
-  font-size: 1.1rem;
+  font-size: 1em;
   display: inline-block;
   position: relative;
   top: 0;
@@ -581,8 +581,99 @@ ul li:before {
   left: -100%;
 }
 .note {
-  font-size: 0.8rem;
+  display: inline-block;
   font-style: italic;
   font-weight: normal;
   color: #888888;
+  margin-bottom: 0.5em;
+}
+@media screen and (max-width: 1500px) {
+  #name {
+    font-size: 3.5em;
+  }
+  #desc {
+    font-size: 1.5em;
+  }
+  #icon {
+    height: 5em;
+    width: 5em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #top,
+  #mid,
+  #bottom {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #top {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  #top #icon {
+    display: block;
+    margin: auto;
+  }
+  #top #name {
+    font-size: 9vw;
+    text-align: center;
+  }
+  #top #desc {
+    font-size: 4vw;
+    text-align: center;
+  }
+  #top #nav {
+    align-self: flex-end;
+    padding-right: 1.1em;
+  }
+  #mid {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  #bottom {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2em;
+  }
+  #bottom .footer-col {
+    font-size: 3vw;
+  }
+  .multi-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .m-small {
+    align-self: center;
+  }
+  .m-unset-width {
+    width: unset !important;
+    min-width: unset !important;
+  }
+  .slide-show {
+    height: 45vh;
+  }
+  .slide-show > .slide-container > .slide > .slide-logo {
+    max-width: 30%;
+    min-width: 30%;
+  }
+  #print-resume {
+    left: unset;
+    right: -1px;
+    bottom: -1em;
+  }
+}
+@media screen and (max-width: 720px) {
+  h2 {
+    display: block;
+    margin-bottom: -0.1em;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    font-size: 2.2rem;
+  }
 }
