@@ -113,7 +113,7 @@ ul li:before {
 ul li .content {
   display: inline-block;
   white-space: normal;
-  padding-right: 1em;
+  padding-right: 2em;
 }
 #top {
   padding: 2em 10% 1em 10%;
@@ -688,6 +688,11 @@ ul li .content {
   }
   .page-slider .page.second .card {
     height: 90vh;
+  }
+  .page-slider .page-back {
+    top: unset;
+    bottom: 0.5rem;
+    font-size: 2em;
   }
   .sub-page {
     overflow: scroll;
