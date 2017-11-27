@@ -65,7 +65,7 @@ p {
     padding: 0 0.5em;
   }
   .slide-show {
-    height: 20rem;
+    height: 25rem;
   }
   #wrapper {
     padding: 0.5em;
@@ -77,7 +77,7 @@ p {
     text-align: center;
   }
   .panel.left {
-    padding-bottom: 1em;
+    padding-bottom: 2em;
   }
   .panel.right {
     padding-left: 0;
@@ -85,10 +85,10 @@ p {
   .two-item:not(.col) {
     flex-direction: row;
     justify-content: center;
+    padding: 0 1em;
   }
   .two-item:not(.col) .item {
     margin-bottom: 0;
     margin-right: 1em;
-    width: 50%;
   }
 }
