@@ -108,8 +108,8 @@ h{
 	display: none;
 }
 
-@media screen and (max-width : 800px), screen and (-webkit-min-device-pixel-ratio : 2){
+@media screen and (-webkit-min-device-pixel-ratio : 2){
 	body {
-		font-size: 0.35rem;
+		font-size: 1.4rem;
 	}
 }
