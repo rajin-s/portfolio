@@ -181,3 +181,11 @@
     margin: 1em 0.5em 0 0.5em;
   }
 }
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .slide-show {
+    height: 40rem;
+  }
+  .slide-show.tall {
+    height: 45rem;
+  }
+}
