@@ -110,6 +110,7 @@ h{
 
 @media screen and (-webkit-min-device-pixel-ratio : 2){
 	body {
+		margin: 3% !important;
 		font-size: 1.4rem;
 	}
 }
