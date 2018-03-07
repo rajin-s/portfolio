@@ -1,0 +1,22 @@
+body {
+	font-size: 2.2rem;
+}
+
+.page-wrapper {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.middle {
+	padding: 1em 1em 1.5em 1em;
+}
+
+.desktop-only {
+	display: none;
+}
+.thin-only {
+	display: none;
+}
+.mobile-only {
+	display: unset;
+}

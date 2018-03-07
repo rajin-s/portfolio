@@ -1,0 +1,9 @@
+.desktop-only {
+	display: none;
+}
+.thin-only {
+	display: unset;
+}
+.mobile-only {
+	display: none;
+}
