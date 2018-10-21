@@ -1,0 +1,44 @@
+<project>
+  <title>Slug Slasher</title>
+  <thumb>./img/slugs-thumb.gif</thumb>
+  <staticthumb>./img/slugs-slide1.png</staticthumb>
+  
+  <role>Developer</role>
+  <team>4 People</team>
+  <date>Ongoing</date>
+  <info>started January '17</info>
+
+  <description>
+    !format
+    **Slug Slasher** is an action platformer all about saving the world from an onslaught of giant, evil slugs.
+    Currently in development, the project started its life as a small extracurricular endeavor, and is now planned to release on major platforms before the end of the year!
+    
+    With every facet of its design geared towards creating a fun, exciting experience for players of all ages and skill levels, 
+    the game has been met with a very positive response at showcase events such as Indy PopCon, the Midwest Gaming Classic, and PixelPop Festival.
+    
+    As a part of the game's core three-person team, I have been responsible for the production of almost all final in-game content including character art, environmental art, code, and sound effects.
+    Additionally, I have been the team's primary manager, coordinating development, business affairs, and marketing.
+  </description>
+  
+  <task>Writing and maintaining all game code</task>
+  <task>Creating all game visuals and art assets</task>
+  <task>Compiling, editing, and implementing all sound effects</task>
+  <task>Project, marketing, and business management</task>
+
+  <tool>Unity (gameplay, animation)</tool>
+  <tool>Photoshop (sprites, promo art)</tool>
+  <tool>Graphics Gale (spritesheet animation)</tool>
+  <tool>Tiled Map Editor (levels)</tool>
+  <tool>Audition, GarageBand (SFX)</tool>
+  <tool>Excel, Asana (documentation and management)</tool>
+  
+  <slide>./img/slugs-thumb.gif</slide>
+  <slide>./img/slugs-slide2.png</slide>
+  <slide>./img/slugs-slide3.png</slide>
+  <slide>./img/slugs-slide4.png</slide>
+  <slide>./img/slugs-slide1.png</slide>
+
+  <site>http://slugslasher.com</site>
+  <steam>https://store.steampowered.com/app/823590/Slug_Slasher/</steam>
+  <itch>https://slappedsilly.itch.io/slug-slasher-demo</itch>
+</project>

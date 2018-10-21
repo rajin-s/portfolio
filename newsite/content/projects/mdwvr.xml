@@ -1,0 +1,14 @@
+<project>
+  <title>Meteor Dance Wave VR</title>
+  <thumb>./img/mdwvr-thumb.gif</thumb>
+  <staticthumb>./img/mdwvr-slide1.png</staticthumb>
+  
+  <role>Solo</role>
+  <duration>Summer 2017</duration>
+
+  <slide>./img/mdwvr-thumb.gif</slide>
+  <slide>./img/mdwvr-slide1.png</slide>
+  <slide>./img/mdwvr-slide2.png</slide>
+  <slide>./img/mdwvr-slide3.png</slide>
+  <slide>./img/mdwvr-slide4.png</slide>
+</project>

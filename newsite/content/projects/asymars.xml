@@ -1,0 +1,14 @@
+<project>
+  <title>Asymars</title>
+  <thumb>./img/asymars-thumb.gif</thumb>
+  <staticthumb>./img/asymars-slide1.png</staticthumb>
+  
+  <role>Programmer, Artist</role>
+  <duration>April 2018</duration>
+
+  <slide>./img/asymars-thumb.gif</slide>
+  <slide>./img/asymars-slide1.png</slide>
+  <slide>./img/asymars-slide3.png</slide>
+  <slide>./img/asymars-slide4.gif</slide>
+  <slide>./img/asymars-slide2.png</slide>
+</project>

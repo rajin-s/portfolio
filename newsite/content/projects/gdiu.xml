@@ -1,0 +1,37 @@
+<project>
+  <title>Gamedev@IU</title>
+  <thumb>./img/gdiu-thumb.png</thumb>
+  <staticthumb>./img/gdiu-thumb.png</staticthumb>
+  
+  <role>Founder, VP</role>
+  <team>15 &ndash; 20 people</team>
+  <date>Ongoing</date>
+  <info>started May '18</info>
+
+  <description>
+    !format
+    **Gamedev@IU** is a student-run game development organization at Indiana University Bloomington.
+    It aims to create an active community centered around the broad field of game design/development, promoting collaboration and independent skill development through a wide variety of activities and opportunities.
+    
+    I currently serve as the organization's Vice President of Programs, having drafted its original design and led its establishment as a formal student organization.
+    In this role I coordinate a number of special interest groups, organize and run workshops and other events, and collaborate with the rest of the leadership team to ensure everything is running smoothly.
+    
+    Additionally, I am in charge of the GD@IU Design/Prototype Lab, a space in which members are encouraged to experiment with unconventional design ideas and practice their development skills with frequent 2-week long projects.
+  </description>
+
+  <task>Organization management and leadership coordination</task>
+  <task>Workshop and event planning</task>
+  <task>Brand and graphic design for print and web</task>
+  <task>Evaluation of organization structure, goals, and effectiveness</task>
+
+  <tool>Trello (leadership team coordination)</tool>
+  <tool>Illustrator (graphic design)</tool>
+  
+  <slide>./img/gdiu-thumb.png</slide>
+  <slide>./img/gdiu-slide1.JPG</slide>
+  <slide>./img/gdiu-slide2.JPG</slide>
+  <slide>./img/gdiu-slide3.JPG</slide>
+  <slide>./img/gdiu-slide4.png</slide>
+
+  <site>http://gdiu.org</site>
+</project>

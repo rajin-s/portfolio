@@ -1,0 +1,16 @@
+<project>
+  <title>Too Many Bears</title>
+  <thumb>./img/tmb-thumb.gif</thumb>
+  <staticthumb>./img/tmb-slide1.png</staticthumb>
+  
+  <role>Solo</role>
+  <duration>Ludum Dare 40 (December 2017)</duration>
+
+  <slide>./img/tmb-thumb.gif</slide>
+  <slide>./img/tmb-slide1.png</slide>
+  <slide>./img/tmb-slide2.png</slide>
+  <slide>./img/tmb-slide3.png</slide>
+  <slide>./img/tmb-slide4.png</slide>
+
+  <itch>https://fancyplants.itch.io/too-many-bears</itch>
+</project>

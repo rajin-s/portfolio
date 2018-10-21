@@ -1,0 +1,12 @@
+<project>
+	<title>Digital Art</title>
+	<thumb>./img/art-thumb.png</thumb>
+	<staticthumb>./img/art-thumb.png</staticthumb>
+
+	<slide>./img/art-slide-Krita.png</slide>
+	<slide>./img/art-slide-pixel.png</slide>
+	<slide>./img/art-slide-Substance.png</slide>
+  <slide>./img/art-slide-slugs.png</slide>
+  <slide>./img/art-slide-jelly.png</slide>
+	<slide>./img/art-slide-UE4.png</slide>
+</project>

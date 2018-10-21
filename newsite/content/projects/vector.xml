@@ -1,0 +1,14 @@
+<project>
+  <title>Vector Space</title>
+  <thumb>./img/vector-thumb.gif</thumb>
+  <staticthumb>./img/vector-slide1.png</staticthumb>
+  
+  <role>Solo</role>
+  <duration>Summer 2018</duration>
+
+  <slide>./img/vector-thumb.gif</slide>
+  <slide>./img/vector-slide1.png</slide>
+  <slide>./img/vector-slide2.png</slide>
+  <slide>./img/vector-slide3.png</slide>
+  <slide>./img/vector-slide4.png</slide>
+</project>

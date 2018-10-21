@@ -1,0 +1,10 @@
+<project>
+  <title>Graphic Design</title>
+  <thumb>./img/graphic-thumb.png</thumb>
+  <staticthumb>./img/graphic-thumb.png</staticthumb>
+
+  <slide>./img/graphic-slide1.png</slide>
+  <slide>./img/gdiu-slide4.png</slide>
+  <slide>./img/web-slide3.PNG</slide>
+  <slide>./img/graphic-thumb.png</slide>
+</project>

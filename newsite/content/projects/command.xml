@@ -1,0 +1,14 @@
+<project>
+  <title>Command Line</title>
+  <thumb>./img/command-thumb.gif</thumb>
+  <staticthumb>./img/command-slide1.png</staticthumb>
+  
+  <role>Solo</role>
+  <duration>Global Game Jam '18 (January 2018)</duration>
+
+  <slide>./img/command-thumb.gif</slide>
+  <slide>./img/command-slide1.png</slide>
+  <slide>./img/command-slide2.png</slide>
+  <slide>./img/command-slide3.png</slide>
+  <slide>./img/command-slide4.png</slide>
+</project>

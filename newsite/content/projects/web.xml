@@ -1,0 +1,11 @@
+<project>
+	<title>Web Design</title>
+	<thumb>./img/web-thumb.gif</thumb>
+	<staticthumb>./img/web-slide5.PNG</staticthumb>
+
+	<slide>./img/web-slide1.PNG</slide>
+	<slide>./img/web-slide2.PNG</slide>
+	<slide>./img/web-slide3.PNG</slide>
+  <slide>./img/web-slide5.PNG</slide>
+	<slide>./img/web-slide4.gif</slide>
+</project>

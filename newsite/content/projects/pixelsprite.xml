@@ -1,0 +1,14 @@
+<project>
+  <title>PixelSprite</title>
+  <thumb>./img/pixelSprite-thumb.gif</thumb>
+  <staticthumb>./img/pixelsprite-slide2.png</staticthumb>
+  
+  <role>Solo</role>
+  <duration>Ongoing</duration>
+
+  <slide>./img/tmb-thumb.gif</slide>
+  <slide>./img/pixelsprite-slide1.gif</slide>
+  <slide>./img/unbox-slide2.gif</slide>
+  <slide>./img/pixelsprite-thumb.gif</slide>
+  <slide>./img/pixelsprite-slide2.png</slide>
+</project>

@@ -1,0 +1,14 @@
+<project>
+  <title>Unbox</title>
+  <thumb>./img/unbox-thumb.gif</thumb>
+  <staticthumb>./img/unbox-thumb.gif</staticthumb>
+  
+  <role>Solo</role>
+  <duration>April 2018</duration>
+
+  <slide>./img/unbox-slide4.gif</slide>
+  <slide>./img/unbox-slide1.gif</slide>
+  <slide>./img/unbox-slide2.gif</slide>
+  <slide>./img/unbox-slide3.gif</slide>
+  <slide>./img/unbox-thumb.gif</slide>
+</project>

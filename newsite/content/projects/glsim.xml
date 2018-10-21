@@ -1,0 +1,12 @@
+<project>
+  <title>OpenGL Simulation</title>
+  <thumb>./img/glsim-thumb.gif</thumb>
+  <staticthumb>./img/glsim-thumb.gif</staticthumb>
+
+  <role>Solo</role>
+  <duration>April 2018</duration>
+
+  <slide>./img/glsim-slide1.gif</slide>
+  <slide>./img/glsim-slide2.gif</slide>
+  <slide>./img/glsim-thumb.gif</slide>
+</project>

@@ -1,0 +1,23 @@
+<project>
+  <title>Untitled Dungeon Crawler</title>
+  <thumb>./img/crawler-thumb.gif</thumb>
+  <staticthumb>./img/crawler-slide1.png</staticthumb>
+  
+  <role>Solo</role>
+  <date>Ongoing</date>
+  <info>started July 2018</info>
+
+  <description>
+    !format
+    An ongoing side project, this yet untitled project was started as a part of a local weekend game jam. 
+    During those three days I created a general design for the game centered around the theme "Inevitable," created an in-engine mockup for game visuals, and implemented a number of back-end systems.
+  </description>
+
+  <feature></feature>
+
+  <slide>./img/crawler-thumb.gif</slide>
+  <slide>./img/crawler-slide1.png</slide>
+  <slide>./img/crawler-slide2.png</slide>
+  <slide>./img/crawler-slide3.png</slide>
+  <slide>./img/crawler-slide4.png</slide>
+</project>
