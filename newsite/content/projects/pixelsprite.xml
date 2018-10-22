@@ -1,10 +1,27 @@
 <project>
   <title>PixelSprite</title>
-  <thumb>./img/pixelSprite-thumb.gif</thumb>
+  <thumb>./img/pixelSprite-slide1.gif</thumb>
   <staticthumb>./img/pixelsprite-slide2.png</staticthumb>
   
   <role>Solo</role>
-  <duration>Ongoing</duration>
+  <role>Programmer</role>
+  <info>ongoing</info>
+
+  <description>
+    !format
+    **PixelSprite** is a work-in-progress Unity package which aims to bridge the gap between modern
+    rendering techniques and low-resolution stylized graphics. The main function of the plugin is to
+    take 3D meshes, vector art, particle systems, or any other renderable object= in Unity and 
+    transform it into pixel art dynamically in real time.
+  </description>
+
+  <feature>Realtime dynamic pixelization of any renderable object in Unity</feature>
+  <feature>Stylization options including outlines and palette swapping</feature>
+  <feature>Control over how pixelated graphics are drawn to the screen</feature>
+  <feature>Additional 2D tools including bendable objects and vertex snapping</feature>
+
+  <tool>Unity, C#, CG (pipeline, shaders)</tool>
+  <tool>Photoshop (icons, branding)</tool>
 
   <slide>./img/tmb-thumb.gif</slide>
   <slide>./img/pixelsprite-slide1.gif</slide>

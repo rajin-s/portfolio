@@ -1,23 +1,27 @@
 <project>
   <title>Slug Slasher</title>
   <thumb>./img/slugs-thumb.gif</thumb>
-  <staticthumb>./img/slugs-slide1.png</staticthumb>
+  <staticthumb>./img/slugs-slide2.png</staticthumb>
   
-  <role>Developer</role>
+  <role>Programmer</role>
+  <role>Artist</role>
+  <role>Designer</role>
+
   <team>4 People</team>
-  <date>Ongoing</date>
-  <info>started January '17</info>
+  <date>started January '17</date>
+  <info>ongoing</info>
 
   <description>
     !format
     **Slug Slasher** is an action platformer all about saving the world from an onslaught of giant, evil slugs.
-    Currently in development, the project started its life as a small extracurricular endeavor, and is now planned to release on major platforms before the end of the year!
+    Currently in development, the project started its life as a small extracurricular endeavor, and is now planned to release on major platforms!
     
-    With every facet of its design geared towards creating a fun, exciting experience for players of all ages and skill levels, 
-    the game has been met with a very positive response at showcase events such as Indy PopCon, the Midwest Gaming Classic, and PixelPop Festival.
+    With every facet of its design geared towards creating a fun, exciting experience for players of all ages and skill levels,
+    the game has been met with a very positive response at events such as Indy PopCon, the Midwest Gaming Classic, and PixelPop Festival.
     
     As a part of the game's core three-person team, I have been responsible for the production of almost all final in-game content including character art, environmental art, code, and sound effects.
-    Additionally, I have been the team's primary manager, coordinating development, business affairs, and marketing.
+    Additionally, I have been the team's primary manager, coordinating development, business affairs, and marketing, 
+    and have been the primary point of contact for working with an independent musician.
   </description>
   
   <task>Writing and maintaining all game code</task>
@@ -25,9 +29,9 @@
   <task>Compiling, editing, and implementing all sound effects</task>
   <task>Project, marketing, and business management</task>
 
-  <tool>Unity (gameplay, animation)</tool>
+  <tool>Unity, C# (gameplay, animation)</tool>
   <tool>Photoshop (sprites, promo art)</tool>
-  <tool>Graphics Gale (spritesheet animation)</tool>
+  <tool>Graphics Gale, Aseprite (spritesheet animation)</tool>
   <tool>Tiled Map Editor (levels)</tool>
   <tool>Audition, GarageBand (SFX)</tool>
   <tool>Excel, Asana (documentation and management)</tool>

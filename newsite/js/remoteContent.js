@@ -2,6 +2,7 @@
  REMOTE CONTENT HANDLING
  ************************/
 
+
 const contentDirectory = "content/";
 const fileExtension = ".xml"
 const listingFileName = "listing" + fileExtension;
@@ -19,6 +20,7 @@ const getQueryAttr = "get-query";
 const listAttr = "list";
 const valueAttr = "value";
 const indexAttr = "index"
+const storeListAsSingle = false;
 
 const multiContentAttr = "get-multi";
 const multiMaxDisplayAttr = "max-items";
@@ -30,6 +32,7 @@ const injSrcAttr = "inj-src";
 
 const preprocessTag = "!format";
 
+const disableCache = false;
 var getCache = {};
 var parseCache = {};
 var baseHTML = {};
@@ -87,7 +90,7 @@ function unlockInjectQueue() {
 // Apply callback K(string) onto contents of specified file
 //  if file can't be found, call failK()
 function getFileContents(filePath, K, failK) {
-    if (getCache[filePath] != null) {
+    if (getCache[filePath] != null && !disableCache) {
         console.log("[Get File Contents] returned cached value for " + filePath);
         K(getCache[filePath]);
     }
@@ -96,7 +99,7 @@ function getFileContents(filePath, K, failK) {
         http.onreadystatechange = function () {
             if (http.readyState == 4) {
                 if (http.status == 200) {
-                    if (getCache[filePath] != null) {
+                    if (getCache[filePath] != null && !disableCache) {
                         console.log("[Get File Contents] returned cached value for " + filePath);
                         K(getCache[filePath]);
                     }
@@ -120,7 +123,7 @@ function getFileContents(filePath, K, failK) {
 //  - Only supports top level items within root tag
 //  - Root tag is currently ignored
 function parse(content, getLink, filePath) {
-    if (parseCache[content] != null) {
+    if (parseCache[content] != null && !disableCache) {
         // console.log("[Parse] returned cached value for " + content.substring(0, 12) + "...");
         return parseCache[content];
     }
@@ -131,7 +134,7 @@ function parse(content, getLink, filePath) {
 
     var inline = (/<.+?>([\s\S]*)<\/.+?>/g).exec(content)[1];
     // console.log(inline);
-    inline = inline.replace(/>(?:\r\n|\r|\n)/g, '>').replace(/(?:\r\n|\r|\n)</g, '<').replace(/,(?:\r\n|\r|\n)/g, ',').replace(/\t/g, '').replace(/    /g, "");
+    inline = inline.replace(/>(?:\r\n|\r|\n)/g, '>').replace(/(?:\r\n|\r|\n)</g, '<').replace(/,(?:\r\n|\r|\n)/g, ', ').replace(/\t/g, '').replace(/    /g, "");
     let re = /<(.+?)>\s*([\s\S]+?)\s*<\/.+?>/g;
 
     var m = re.exec(inline);
@@ -207,7 +210,7 @@ function inject(o, target) {
                     html = html.replace(protoStartHTML, listHTML);
                 }
             });
-            html = html.replace(varPattern(k), o[k]);
+            html = html.replace(varPattern(k), storeListAsSingle ? o[k] : "list"); // Replace list single variables as comma separated value if storeAsSignle, else just "list"
         }
         else {
             // Transform relative paths

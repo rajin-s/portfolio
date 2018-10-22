@@ -26,6 +26,9 @@
 
 </head>
 <body>
+    <div class="auto-expand curtain-controller"></div>
+    <div class="curtain"></div>
+
     <site>
         <top get="siteinfo">
             <g class="info">
@@ -42,9 +45,9 @@
         </top>
 
         <g>
-            <middle content-title="$title." get-query>
+            <middle content-title="$title" get-query>
                 <slide-view>
-                    <g list="slide" value="ssrc" index="si" class="auto-expand">
+                    <g list="slide" value="ssrc" index="si" %%class="auto-expand">
                         <input type="radio" id="slide$si" name="slide" class="slide-toggle" checked="checked" />
                         <slide %%style="background-image:url('$ssrc');">
                             <a href="$ssrc" target="_blank"></a>
@@ -58,9 +61,13 @@
                 </slide-view>
                 <g class="content">
                     <info-panel>
-                        <h>$role.</h>
-                        <span content="$team">team: $team<br /></span>
-                        duration: $date
+                        <h singlecontent=$role>$role.</h>
+                        <g listcontent="$role">
+                            <h list="role" value="item">$item.</h>
+                        </g>
+                        <g content="$team">team: $team</g>
+                        <g content="$date"><br />$date</g>
+                        <g content="$duration"><br>duration: $duration</g>
                         <g content="$info"><br />($info)</g>
                         <br />
                         <a href="$site" target="_blank">
@@ -81,30 +88,33 @@
 
                     <p>$description</p>
 
-                    <g content="$task">
+                    <section content="$task">
                         <subh>Responsibilities</subh>
                         <ul>
                             <li list="task" value="item">$item</li>
                         </ul>
-                    </g>
-
-                    <g content="$feature">
+                    </section>
+                    
+                    <section content="$feature">
                         <subh>Features</subh>
                         <ul>
                             <li list="feature" value="item">$item</li>
                         </ul>
-                    </g>
+                    </section>
 
-                    <subh>Tools Used</subh>
-                    <ul>
-                        <li list="tool" value="item">$item</li>
-                    </ul>
+                    <section content="$tool">
+                        <subh>Tools Used</subh>
+                        <ul>
+                            <li list="tool" value="item">$item</li>
+                        </ul>
+                    </section>
                 </g>
             </middle>
         </g>
 
-        <bottom>
-            hi
+        <bottom class="flex row small">
+            <g>contact: <a href="mailto:rajin@rajinshankar.com">rajin@rajinshankar.com</a></g>
+            <g>copyright Rajin Shankar, 2018</g>
         </bottom>
     </site>
 

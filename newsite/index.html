@@ -26,6 +26,9 @@
 
 </head>
 <body>
+    <div class="auto-expand curtain-controller"></div>
+    <div class="curtain"></div>
+    
     <input type="checkbox" class="overlay-toggle" id="rc-overlay-toggle" />
     <overlay>
         <label for="rc-overlay-toggle" class="bg-toggle"></label>
@@ -58,9 +61,13 @@
                 </slide-view>
                 <g class="content">
                     <info-panel>
-                        <h>$role.</h>
-                        team: $team
-                        <br />duration: $date
+                        <h singlecontent=$role>$role.</h>
+                        <g listcontent="$role">
+                            <h list="role" value="item">$item.</h>
+                        </g>
+                        <g content="$team">team: $team</g>
+                        <g content="$date"><br />$date</g>
+                        <g content="$duration"><br>duration: $duration</g>
                         <g content="$info"><br />($info)</g>
                         <br />
                         <a href="$site" target="_blank">
@@ -81,14 +88,26 @@
 
                     <p>$description</p>
 
-                    <subh>Responsibilities</subh>
-                    <ul>
-                        <li list="task" value="item">$item</li>
-                    </ul>
-                    <subh>Tools Used</subh>
-                    <ul>
-                        <li list="tool" value="item">$item</li>
-                    </ul>
+                    <section content="$task">
+                        <subh>Responsibilities</subh>
+                        <ul>
+                            <li list="task" value="item">$item</li>
+                        </ul>
+                    </section>
+                    
+                    <section content="$feature">
+                        <subh>Features</subh>
+                        <ul>
+                            <li list="feature" value="item">$item</li>
+                        </ul>
+                    </section>
+
+                    <section content="$tool">
+                        <subh>Tools Used</subh>
+                        <ul>
+                            <li list="tool" value="item">$item</li>
+                        </ul>
+                    </section>
                 </g>
             </middle>
         </site>
@@ -130,7 +149,7 @@
                 <g class="">
                     <grid-row>
                         <a class="tile" get-multi="projects" row-max="3" %%style="background-image:url('$staticthumb')">
-                            <div class="hover-background" style="background-image:url('$thumb')"></div>
+                            <div class="hover-background" %%style="background-image:url('$thumb')"></div>
                             <label for="rc-overlay-toggle" class="full-area" inj-link="rc-overlay" inj-src="$getLink"></label>
                             <g class="content">
                                 <subh>$title</subh>
@@ -140,28 +159,33 @@
                 </g>
             </middle>
 
-            <middle content-title="blog." id="blog">
+            <!-- <middle content-title="blog." id="blog">
                 <g class="">
-                    <!-- <grid-row>
+                    <grid-row>
                         <a class="tile" get-multi="projects" row-max="3" %%style="background-image:url('$thumb')">
                             <label for="rc-overlay-toggle" class="full-area" inj-link="rc-overlay" inj-src="$getLink"></label>
                             <g class="content">
                                 <subh>$title</subh>
                             </g>
                         </a>
-                    </grid-row> -->
+                    </grid-row>
                 </g>
-            </middle>
+            </middle> -->
 
             <middle content-title="me." id="me">
-                <g class="content">
-                    <label for="rc-overlay-toggle">Click me</label>
+                <g class="flex row">
+                    <g class="content">
+                        I am an indpendent game and software developer currently studying computer science at Indiana University.
+                        In addition to checking out my projects here, you can find me on twitter <a href="http://twitter.com/rajinshankar" target="_blank">@RajinShankar</a> to see whatever I'm up to at the moment.
+                    </g>
+                    <panel class="round stretch" style="background-image:url('img/rajin.png'); width: 200px;"></panel>
                 </g>
             </middle>
         </g>
 
-        <bottom>
-            hi
+        <bottom class="flex row small">
+            <g>contact: <a href="mailto:rajin@rajinshankar.com">rajin@rajinshankar.com</a></g>
+            <g>copyright Rajin Shankar, 2018</g>
         </bottom>
     </site>
 

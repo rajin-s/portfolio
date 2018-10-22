@@ -4,7 +4,23 @@
   <staticthumb>./img/vector-slide1.png</staticthumb>
   
   <role>Solo</role>
-  <duration>Summer 2018</duration>
+
+  <date>Summer 2017</date>
+  <duration>48 hours</duration>
+
+  <description>
+    !format
+    Created during a self-imposed weekend game jam, **Vect0r Space** was originally designed as a vehicle 
+    for teaching game programming concepts. Following positive initial reactions, the game will likely 
+    see further development and use as an educational tool.
+  </description>
+
+  <feature>Simple mechanic-driven design for systems and enemies</feature>
+  <feature>Instructional material regarding implementation of core systems</feature>
+  <feature>Stylized, minimalist graphical style created entirely in engine</feature>
+
+  <tool>Unity, C# (gameplay, graphics)</tool>
+  <tool>Bfxr (sound effects)</tool>
 
   <slide>./img/vector-thumb.gif</slide>
   <slide>./img/vector-slide1.png</slide>

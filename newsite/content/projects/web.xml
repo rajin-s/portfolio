@@ -3,6 +3,28 @@
 	<thumb>./img/web-thumb.gif</thumb>
 	<staticthumb>./img/web-slide5.PNG</staticthumb>
 
+	<role>Personal</role>
+	<role>Volunteer</role>
+
+	<date>2014&ndash;Present</date>
+
+	<description>
+		!format
+		In addition to [http://rajinshankar.com][this site], I have made public-facing websites mainly for
+		personal or organizational use, including [http://gdiu.org][Gamedev@IU], Hoosier Games (now inactive), 
+		[http://slugslasher.com][Slug Slasher], and assisted with web design for [http://tutemic.com/shmup][Tutemic].
+		
+		Many of these sites use a custom JavaScript toolset to dynamically load content into static HTML pages, including
+		this text right here!
+
+		I have also served as the Web &amp; Digital Design Specialist at the IU Jacobs School of Music Office of Marketing
+		&amp; Publicity from 2016&ndash;2017.
+	</description>
+
+	<tool>Static HTML, CSS/LESS, and JavaScript</tool>
+	<tool>Dynamic content loading for static pages using JavaScript</tool>
+	<tool>CMS and PHP-based systems</tool>
+
 	<slide>./img/web-slide1.PNG</slide>
 	<slide>./img/web-slide2.PNG</slide>
 	<slide>./img/web-slide3.PNG</slide>

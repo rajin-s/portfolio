@@ -1,0 +1,32 @@
+<project>
+  <title>Unity Submodules</title>
+  <thumb>./img/umodule-thumb.png</thumb>
+  <staticthumb>./img/umodule-thumb.png</staticthumb>
+  
+  <role>Programmer</role>
+  <date>started October 2018</date>
+  <info>ongoing</info>
+
+  <description>
+    !format
+    Started in late 2018, this collection of open source script packages for Unity is aimed at creating a set of
+    unified, extensible frameworks ranging from basic data structures to 2D cameras to 3D level editing tools.
+
+    Each **UModule** can be integrated into git-based Unity projects as a submodule without external dependencies
+    outside the whole set of modules.
+  </description>
+
+  <feature>Basic data structures for use in game systems</feature>
+  <feature>Asset types for centralizing data storage and decoupling systems</feature>
+  <feature>Extended behavior for Unity cameras</feature>
+  <feature>Editor tools for 2D and 3D level building</feature>
+
+  <tool>Unity</tool>
+  <tool>Git / GitHub (workflows and project management)</tool>
+  <tool>Photoshop (icons)</tool>
+
+  <slide>./img/umodule-thumb.png</slide>
+  <slide>./img/umodule-slide1.png</slide>
+
+  <site>https://github.com/rajin-s?tab=repositories&q=UM</site>
+</project>

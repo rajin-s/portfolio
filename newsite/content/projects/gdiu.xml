@@ -3,10 +3,12 @@
   <thumb>./img/gdiu-thumb.png</thumb>
   <staticthumb>./img/gdiu-thumb.png</staticthumb>
   
-  <role>Founder, VP</role>
+  <role>Founder</role>
+  <role>Vice President</role>
+
   <team>15 &ndash; 20 people</team>
-  <date>Ongoing</date>
-  <info>started May '18</info>
+  <date>started May '18</date>
+  <info>ongoing</info>
 
   <description>
     !format
@@ -15,8 +17,6 @@
     
     I currently serve as the organization's Vice President of Programs, having drafted its original design and led its establishment as a formal student organization.
     In this role I coordinate a number of special interest groups, organize and run workshops and other events, and collaborate with the rest of the leadership team to ensure everything is running smoothly.
-    
-    Additionally, I am in charge of the GD@IU Design/Prototype Lab, a space in which members are encouraged to experiment with unconventional design ideas and practice their development skills with frequent 2-week long projects.
   </description>
 
   <task>Organization management and leadership coordination</task>
