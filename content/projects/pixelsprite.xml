@@ -1,6 +1,6 @@
 <project>
   <title>PixelSprite</title>
-  <thumb>./img/pixelSprite-slide1.gif</thumb>
+  <thumb>./img/pixelsprite-slide1.gif</thumb>
   <staticthumb>./img/pixelsprite-slide2.png</staticthumb>
   
   <role>Solo</role>
