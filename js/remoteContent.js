@@ -449,6 +449,6 @@ injectQuery();
 unlockInjectQueue();
 
 onCompleteAllInjects = function () {
-    doAutoExpand();
     makeInjectLinks();
+    doAutoExpand();
 };
