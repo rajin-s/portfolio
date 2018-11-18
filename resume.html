@@ -48,75 +48,13 @@
 
         <g>
             <middle content-title="Resume">
-                <g class="content">
-                    <iframe src="http://docs.google.com/gview?url=http://rajinshankar.com/RajinShankar_Resume.pdf&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>
+                <g class="side-buttons">
+                    <a href="RajinShankar_Resume.pdf"><i class="fas fa-print"></i></a>
+                </g>
+                <g class="content" style="padding:0;">
+                    <include src="resume-embed" id="resume-include"></include>
                 </g>
             </middle>
-            <!-- <middle content-title="$title" get-query>
-                <slide-view>
-                    <g list="slide" value="ssrc" index="si" %%class="auto-expand">
-                        <input type="radio" id="slide$si" name="slide" class="slide-toggle" checked="checked" />
-                        <slide %%style="background-image:url('$ssrc');">
-                            <a href="$ssrc" target="_blank"></a>
-                        </slide>
-                    </g>
-                    <thumb-list>
-                        <thumb list="slide" value="ssrc" index="si" id="thumb$si" %%style="background-image:url('$ssrc');">
-                            <label for="slide$si"></label>
-                        </thumb>
-                    </thumb-list>
-                </slide-view>
-                <g class="content">
-                    <info-panel>
-                        <h singlecontent=$role>$role.</h>
-                        <g listcontent="$role">
-                            <h list="role" value="item">$item.</h>
-                        </g>
-                        <g content="$team">team: $team</g>
-                        <g content="$date"><br />$date</g>
-                        <g content="$duration"><br>duration: $duration</g>
-                        <g content="$info"><br />($info)</g>
-                        <br />
-                        <a href="$site" target="_blank">
-                            <br />website
-                        </a>
-                        <a href="$steam" target="_blank">
-                            <br /><i class="fab fa-steam-icon"></i>steam
-                        </a>
-                        <a href="$itch" target="_blank">
-                            <br />itch.io
-                        </a>
-                        <a href="$jam-page" target="_blank">
-                            <br />jam-page
-                        </a>
-                    </info-panel>
-
-                    <subh content="$sub">$sub</subh>
-
-                    <p>$description</p>
-
-                    <section content="$task">
-                        <subh>Responsibilities</subh>
-                        <ul>
-                            <li list="task" value="item">$item</li>
-                        </ul>
-                    </section>
-                    
-                    <section content="$feature">
-                        <subh>Features</subh>
-                        <ul>
-                            <li list="feature" value="item">$item</li>
-                        </ul>
-                    </section>
-
-                    <section content="$tool">
-                        <subh>Tools Used</subh>
-                        <ul>
-                            <li list="tool" value="item">$item</li>
-                        </ul>
-                    </section>
-                </g>
-            </middle> -->
         </g>
 
         <bottom class="flex row small">
@@ -129,6 +67,16 @@
     <script src="js/remoteContent.js" type="text/javascript"></script>
     <script>
         onCompleteAllInjects = doAutoExpand;
+
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = function () {
+            if (http.readyState == 4 && http.status == 200) {
+                document.getElementById("resume-include").innerHTML = http.responseText;
+            }
+        }
+
+        http.open("GET", "content/resume-embed.xml", true);
+        http.send(null);
     </script>
 </body>
 </html>
