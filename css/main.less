@@ -502,6 +502,31 @@
 }
 
 & /* Additional Components */ {
+    .side-buttons {
+        display: flex;
+        position: absolute;
+        width: auto;
+        right: 0;
+        top: -2px;
+        z-index: 10;
+
+        a {
+            ._panel();
+            ._shadow();
+            ._smooth(@fast);
+            ._morph();
+            width: auto;
+            font-size: 0.8em;
+            padding: 0.4em 0.6em;
+            color: @black;
+            margin-right: @half;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+
     .full-area {
         display: block;
         position: absolute;
