@@ -1,7 +1,7 @@
 <project>
   <title>Unity Submodules</title>
-  <thumb>./img/umodule-thumb.png</thumb>
-  <staticthumb>./img/umodule-thumb.png</staticthumb>
+  <thumb>./img/umodule-slide3.gif</thumb>
+  <staticthumb>./img/umodule-slide2.png</staticthumb>
   
   <role>Programmer</role>
   <date>started October 2018</date>
@@ -14,19 +14,29 @@
 
     Each **UModule** can be integrated into git-based Unity projects as a submodule without external dependencies
     outside the whole set of modules.
+
+    Currently released/in development modules include data structure extensions, 2D camera extensions, GPU-accelerated procedural 3D noise texture generation, flexible scripting syntax definition API for tools and prototypes.
   </description>
 
-  <feature>Basic data structures for use in game systems</feature>
+  <feature>Flexible data structures for use in game systems</feature>
+  <feature>Tool for GPU-accelerated generation and realtime previewing of 3D noise volumes</feature>
+  <feature>Raymarching-based cloud rendering (using generated noise volumes)</feature>
+  <feature>Interpreted language definition/binding API</feature>
   <feature>Asset types for centralizing data storage and decoupling systems</feature>
   <feature>Extended behavior for Unity cameras</feature>
-  <feature>Editor tools for 2D and 3D level building</feature>
+  <feature>3D level editing tools and data structures</feature>
 
   <tool>Unity</tool>
   <tool>Git / GitHub (workflows and project management)</tool>
   <tool>Photoshop (icons)</tool>
 
-  <slide>./img/umodule-thumb.png</slide>
+  <slide>./img/umodule-slide3.gif</slide>
+  <slide>./img/umodule-slide4.jpg</slide>
+  <slide>./img/umodule-slide5.gif</slide>
+  <slide>./img/umodule-slide6.gif</slide>
+  <slide>./img/umodule-slide7.gif</slide>
   <slide>./img/umodule-slide1.png</slide>
+  <slide>./img/umodule-slide2.png</slide>
 
   <site>https://github.com/rajin-s/UModule</site>
 </project>

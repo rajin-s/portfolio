@@ -1,0 +1,38 @@
+<project>
+  <title>Pet Putt</title>
+  <thumb>./img/petputt-thumb.gif</thumb>
+  <staticthumb>./img/petputt-slide1.png</staticthumb>
+  
+  <role>Solo</role>
+
+  <date>March 2019</date>
+  <duration>3 weeks</duration>
+
+  <description>
+    !format
+    **Pet Putt** is an adorable golf game set on spherical putting courses.
+    My second project with the open-source Godot game engine, the game features numerous framework systems to support dialogue, procedural geometry, and interaction in a spherical play space.
+    
+    A public demo will be available soon, and a full release is currently scheduled for later this year!
+  </description>
+
+  <feature>Custom gradient-based lighting and distortion shaders</feature>
+  <feature>Procedural path-on-sphere spline-based geometry generation</feature>
+  <feature>Procedural trajectory arc geometry generation</feature>
+  <feature>Camera and putting interaction systems supporting a spherical play space</feature>
+  <feature>Extensible dialogue framework</feature>
+
+  <tool>Godot, GDScript, GLSL (gameplay, visuals)</tool>
+  <tool>Blender (3D assets)</tool>
+  <tool>Photoshop (textures, graphic design)</tool>
+  <tool>Krita (character art)</tool>
+  
+  <slide>./img/petputt-thumb.gif</slide>
+  <slide>./img/petputt-slide1.png</slide>
+  <slide>./img/petputt-slide2.gif</slide>
+  <slide>./img/petputt-slide5.PNG</slide>
+  <slide>./img/petputt-slide3.gif</slide>
+  <slide>./img/petputt-slide6.PNG</slide>
+  <slide>./img/petputt-slide4.gif</slide>
+  <slide>./img/petputt-slide7.PNG</slide>
+</project>
