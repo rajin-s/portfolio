@@ -1,0 +1,19 @@
+<project>
+  <title>Godot Raytracing</title>
+  <slide-class>hidden</slide-class>
+  <info-class>hidden</slide-class>
+  <description>
+    !format
+    A week-long project to create a realtime stylized raytracing rendering system with Godot.
+    You can view a fullscreen version [demo/godot/raytracing.html][here].
+    
+    <iframe style="border: 1px solid #333"
+        id="Godot" 
+        src="demo/godot/raytracing.html" 
+        width="100%" 
+        height="500px" 
+        allowfullscreen webkitallowfullscreen mozAllowFullScreen 
+        title="Godot Raytracing"></iframe>
+
+  </description>
+</project>
