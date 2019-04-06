@@ -48,7 +48,7 @@
 
         <g>
             <middle content-title="$title" get-query>
-                <slide-view>
+                <slide-view class="$slide-class">
                     <g list="slide" value="ssrc" index="si" %%class="auto-expand">
                         <input type="radio" id="slide$si" name="slide" class="slide-toggle" checked="checked" />
                         <slide %%style="background-image:url('$ssrc');">
@@ -62,7 +62,7 @@
                     </thumb-list>
                 </slide-view>
                 <g class="content">
-                    <info-panel>
+                    <info-panel class="$info-class">
                         <h singlecontent=$role>$role.</h>
                         <g listcontent="$role">
                             <h list="role" value="item">$item.</h>
@@ -116,7 +116,7 @@
 
         <bottom class="flex row small">
             <g>contact: <a href="mailto:rajin@rajinshankar.com">rajin@rajinshankar.com</a></g>
-            <g>copyright Rajin Shankar, 2018</g>
+            <g>copyright Rajin Shankar, 2019</g>
         </bottom>
     </site>
 

@@ -45,6 +45,10 @@
 
 @ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
 
+.hidden {
+    display: none;
+}
+
 ._clear() {
     margin: 0;
     padding: 0;
@@ -802,7 +806,7 @@
 }
 
 & /* Remote Content Formatting */ {
-    a[href*="$"], *[content*="$"], [listcontent]:not([listcontent="list"]), [singlecontent="list"] {
+    a[href*="$"], *[content*="$"], *[listcontent*="$"], *[singlecontent*="$"], [listcontent]:not([listcontent="list"]), [singlecontent="list"] {
         display: none;
     }
 }
