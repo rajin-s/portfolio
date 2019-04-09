@@ -5,7 +5,7 @@
   <description>
     !format
     ===Technical Overview===
-    This small [/demo/godot/raytracing.html][demo project] exploring stylized raytracing in the open source [http://godotengine.org][Godot] engine was inspired by the game [http://mirrordropgame.com][Mirror Drop] and made over three days as a fun personal project.
+    ((This small [/demo/godot/raytracing.html][demo project] exploring stylized raytracing in the open source [http://godotengine.org][Godot] engine was inspired by the game [http://mirrordropgame.com][Mirror Drop] and made over three days as a fun personal project.))
     
     The system consists of:
     '''
@@ -20,7 +20,8 @@
     -- Get the world-space origin and direction of the viewing ray using the fragment's `SCREEN_UV` and provided camera information
     -- Decode object transformation values from the scene texture
     -- Inverse transform the ray origin and direction for each object, test intersection, and re-transform the local hit position and normal
-    -- Repeat with the origin as the hit position, reflect view by hit normal, and use normals, colors, and reflectance in a simple shading calculation at each bounce (up to a fixed number of times)
+    -- Repeat with the hit position as the new origin and reflect the view direction by the hit normal
+    -- Use normals, colors, and reflectance in a simple shading calculation at each step (up to a fixed number of bounces)
     '''
     
     ((One nice thing about this setup is that all transformations of geometry are driven by standard `Spatial` nodes (the default 3D object in Godot).))
@@ -43,8 +44,8 @@
     
     ((That said, I do have some exciting ideas for further research and development that could __potentially__ lead to an interesting game concept.))
 
-    ((__Be sure to check out the [/demo/godot/raytracing.html][in-browser demo] if you want to play around with the system yourself!__
-    __If you're interested in seeing more content like this, be sure to follow me on [https://twitter.com/rajinshankar][Twitter (@RajinShankar)] to see whatever it is I'm up to at the moment!__))
+    ((Don't forget to check out the [/demo/godot/raytracing.html][in-browser demo] if you want to play around with the system yourself! You can adjust the maximum number of bounces, as well as see various debug visualizations of the scene.))
+    ((__If you're interested in seeing more content like this, be sure to follow me on [https://twitter.com/rajinshankar][Twitter (@RajinShankar)] to see whatever it is I'm up to at the moment!__))
   </description>
 
   <slide>./img/godot-raytracing-thumb.gif</slide>
