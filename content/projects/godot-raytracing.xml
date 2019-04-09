@@ -1,0 +1,38 @@
+<project>
+  <title>Godot Raytracing</title>
+  <thumb>./img/godot-raytracing-thumb.gif</thumb>
+  <staticthumb>./img/godot-raytracing-slide4.png</staticthumb>
+  <site>/demo/godot/raytracing.html</site>
+  <blog>/post.html?blog/godot-raytracing</blog>
+
+  <role>Solo</role>
+  <role>Programmer</role>
+  <date>April 2019</date>
+  <duration>1 week</date>
+
+  <description>
+    !format
+    This small [/demo/godot/raytracing.html][demo project] exploring stylized raytracing in the open source [http://godotengine.org][Godot] engine was inspired by the game [http://mirrordropgame.com][Mirror Drop] and made over three days as a fun personal project.
+    
+    Featuring realtime raytracing of a dynamic scene, the system developed uses engine transform data, encoded into a single texture, to render reflective spheres with respect to their scale, rotation, and translation.
+
+    This allows for very easy integration of other engine functionality, such as physics and gameplay scripting, which behave exactly as they would for any other game, passing relevant data to the scene rendering shader.
+
+    You can even try out the demo [/demo/godot/raytracing.html][in your browser]!
+  </description>
+
+  <feature>Realtime GPU raytracing of reflective objects</feature>
+  <feature>Support for arbitrary rotation, scale, and translation of objects and cameras</feature>
+  <feature>Single texture encoding all scene data, built on top of default engine transform systems</feature>
+  <feature>Simultaneous views into the scene with various visualization shaders (depth, normals, no bounces, and multiple bounces)</feature>
+  <feature>Stylized shading model inspired by Mirror Drop</feature>
+
+  <tool>Godot (scene data management, scripting)</tool>
+  <tool>GLSL (raytracing shader)</tool>
+
+  <slide>./img/godot-raytracing-thumb.gif</slide>
+  <slide>./img/godot-raytracing-slide1.gif</slide>
+  <slide>./img/godot-raytracing-slide2.png</slide>
+  <slide>./img/godot-raytracing-slide3.png</slide>
+  <slide>./img/godot-raytracing-slide4.png</slide>
+</project>

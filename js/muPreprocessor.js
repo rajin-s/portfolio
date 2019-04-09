@@ -4,7 +4,7 @@
 
 const defaultFormat = {
     "image": {
-        pattern: /#\(([\s\S]+?)\)\[(.+?)\]/g,
+        pattern: /#\(([\s\S]+?)\)\[(.*?)\]/g,
         format: "<div class='img $2' style=\"background-image:url('$1');\"></div>"
     },
     "link-same-tab": {
@@ -17,11 +17,11 @@ const defaultFormat = {
     },
     "heading": {
         pattern: /===(.+?)===/g,
-        format: "<h1>$1</h1>"
+        format: "<h><strong>$1</strong></h>"
     },
     "subheading": {
         pattern: /==(.+?)==/g,
-        format: "<h2>$1</h2>"
+        format: "<subh><strong>$1</strong></subh>"
     },
     "bold": {
         pattern: /\*\*(.+?)\*\*/g,
@@ -39,6 +39,18 @@ const defaultFormat = {
         pattern: /\s*\(\(([\s\S]+?)\)\)\s*/g,
         format: "<p>$1</p>"
     },
+    "list": {
+        pattern: /\s*'''([\s\S]+?)'''\s*/g,
+        format: "<ul>$1</ul>"
+    },
+    "list-item": {
+        pattern: /\s*--\s*(.*)\s*/g,
+        format: "<li>$1</li>"
+    },
+    "code-inline": {
+        pattern: /`(.+?)`/g,
+        format: "<code>$1</code>"
+    },
     "break": {
         pattern: /(\r\n|\n)(\r\n|\n)/g,
         format: "<br/><br/>"
@@ -50,6 +62,9 @@ function muProcess(input, format = defaultFormat) {
     for (k in format) {
         let pattern = format[k].pattern;
         let replace = format[k].format;
+        if (output.match(pattern) != null) {
+            console.log("match " + k);
+        }
         output = output.replace(pattern, replace);
     }
     return output;

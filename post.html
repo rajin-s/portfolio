@@ -48,7 +48,7 @@
 
         <g>
             <middle content-title="$title" get-query>
-                <slide-view class="$slide-class">
+                <slide-view class="$_slideClass">
                     <g list="slide" value="ssrc" index="si" %%class="auto-expand">
                         <input type="radio" id="slide$si" name="slide" class="slide-toggle" checked="checked" />
                         <slide %%style="background-image:url('$ssrc');">
@@ -62,7 +62,7 @@
                     </thumb-list>
                 </slide-view>
                 <g class="content">
-                    <info-panel class="$info-class">
+                    <info-panel class="$_infoClass">
                         <h singlecontent=$role>$role.</h>
                         <g listcontent="$role">
                             <h list="role" value="item">$item.</h>
@@ -84,11 +84,14 @@
                         <a href="$jam-page" target="_blank">
                             <br />jam-page
                         </a>
+                        <a href="$blog" target="_blank">
+                            <br />blog
+                        </a>
                     </info-panel>
 
                     <subh content="$sub">$sub</subh>
 
-                    <p>$description</p>
+                    <p class="$_descriptionClass">$description</p>
 
                     <section content="$task">
                         <subh>Responsibilities</subh>

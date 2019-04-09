@@ -5,7 +5,7 @@
 
 const contentDirectory = "content/";
 const fileExtension = ".xml"
-const listingFileName = "listing" + fileExtension;
+const listingFileName = "_listing" + fileExtension;
 
 const variablePrefix = "$";
 function varPattern(varName) {

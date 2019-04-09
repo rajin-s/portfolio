@@ -320,9 +320,21 @@
                 ._clear();
                 ._v-space(post; @unit2);
 
-                &:last-child {
+                &:last-child, &.single {
                     margin-bottom: 0;
                 }
+            }
+
+            code {
+                background: @grey;
+                font-size: 0.9em;
+                padding: 0.1em 0.2em;
+            }
+
+            .img {
+                height: 20em;
+                border-radius: @round / 2;
+                ._v-space(post; @unit2);
             }
 
             ul {
