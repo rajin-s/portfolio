@@ -4,7 +4,7 @@
 
 
 const contentDirectory = "content/";
-const fileExtension = ".xml"
+const fileExtension = ".html"
 const listingFileName = "_listing" + fileExtension;
 
 const variablePrefix = "$";
