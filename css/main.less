@@ -44,6 +44,7 @@
 @slow: 0.5s;
 
 @ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@strong-ease-out: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 .hidden {
     display: none;
@@ -349,7 +350,23 @@
     }
 }
 
+._default_margins()
+{
+    h, subh {
+        ._block();
+    }
+
+    p {
+        margin: @half 0;
+    }
+
+    ul {
+        margin: 0;
+    }
+}
+
 & /* Secondary Layout Blocks */ {
+    ._default_margins();
 
     nav {
         ._block(flex);
@@ -374,8 +391,9 @@
     }
 }
 
-& /* Primary Components */ {
 
+
+& /* Primary Components */ {
     panel {
         ._panel();
         ._abs-size();
@@ -396,14 +414,14 @@
         }
     }
 
-    h, subh {
-        ._block();
-    }
-
     .flex {
         display: flex;
         justify-content: space-between;
         width: 100%;
+
+        &.inline {
+            display: inline-flex;
+        }
 
         .content {
             margin-right: @unit;
@@ -518,6 +536,74 @@
 }
 
 & /* Additional Components */ {
+    inline-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inline-toggle {
+        display: none;
+
+        & + * {
+            display: block;
+
+            @transition-speed: 500ms;
+            transition: 
+                opacity     @transition-speed       @strong-ease-out,
+                color       @transition-speed * 1.2 @strong-ease-out,
+                line-height @transition-speed       @strong-ease-out,
+                padding     @transition-speed       @strong-ease-out,
+                height      @transition-speed       @strong-ease-out;
+
+            will-change: padding, line-height;
+
+            opacity: 0;
+            color: @white;
+            line-height: 0em;
+            padding-top: 0;
+            padding-bottom: 0;
+            border-width: 0;
+
+            order: 999999;
+
+            & * {
+                transition: margin @transition-speed @strong-ease-out;
+                margin: 0;
+                will-change: margin;
+            }
+        }
+        
+        &:checked + * {
+            opacity: 1;
+            color: @black;
+            line-height: 1.4em;
+            padding-top: @unit;
+            padding-bottom: @unit;
+            border-width: 1px;
+            order: 1;
+
+            ._v-space(post);
+
+            ._default_margins();
+        }
+    }
+
+    .details {
+        &.large {
+            font-style: italic;
+            color: lighten(@black, 40%);
+        }
+        .small {
+            font-size: 0.9em;
+        }
+    }
+
+    .comma-separated {
+        &:not(:last-child):after {
+            content: ',';
+        }
+    }
+
     .side-buttons {
         display: flex;
         position: absolute;
@@ -550,6 +636,15 @@
         height: 100%;
         top: 0;
         left: 0;
+    }
+
+    .title {
+        white-space: nowrap;
+        font-size: 1.2em;
+
+        a {
+            color: @black;
+        }
     }
 
     overlay {
@@ -585,14 +680,6 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-            }
-
-            .title {
-                white-space: nowrap;
-
-                a {
-                    color: @black;
-                }
             }
 
             .overlay-buttons {

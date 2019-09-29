@@ -1,0 +1,44 @@
+title       : Slug Slasher
+thumb       : /content/img/slugs-thumb.gif
+staticthumb : /content/img/slugs-slide2.png
+
+role     : Programmer
+role     : Artist
+role     : Designer
+date     : Started January 2017
+team     : 4 People
+duration : 2017 &ndash; 18
+
+description : {
+    !format
+    **Slug Slasher** is an action platformer all about saving the world from an onslaught of giant, evil slugs.
+    My first collaborative project, it started its life as a small extracurricular endeavor, and grew into a years long learning experience.
+    During development, the game was met with very positive responses at events such as Indy PopCon, the Midwest Gaming Classic, and PixelPop Festival.
+    
+    As a part of the game's core three-person team, I was responsible for the production of almost all final in-game content, including code, character/environment art, VFX, and sound effects.
+    Additionally, I have been the team's primary manager, coordinating development, business affairs, and marketing, 
+    and have been the primary point of contact for working with an independent composer.
+}
+
+task : Writing and maintaining all game code
+task : Creating all game visuals and art assets
+task : Compiling, editing, and implementing all sound effects
+task : Design iteration and documentation
+task : Project, marketing, and business management
+
+tool : Unity, C# (gameplay, animation)
+tool : Photoshop (sprites, promo art)
+tool : Graphics Gale, Aseprite (spritesheet animation)
+tool : Tiled Map Editor (levels)
+tool : Audition, GarageBand (SFX)
+tool : Excel, Asana (documentation and management)
+
+slide : /content/img/slugs-thumb.gif
+slide : /content/img/slugs-slide2.png
+slide : /content/img/slugs-slide3.png
+slide : /content/img/slugs-slide4.png
+slide : /content/img/slugs-slide1.png
+
+site  : http://slugslasher.com
+#steam : https://store.steampowered.com/app/823590/Slug_Slasher/
+itch  : https://slappedsilly.itch.io/slug-slasher-demo

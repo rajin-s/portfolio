@@ -1,0 +1,88 @@
+<include src="../.include/head.py.html" />
+
+<body>
+    <include src="../.include/page_top.html" />
+    <site>
+        <code py>
+            project_anchor = "$get_link"
+        </code>
+        <include src="../.include/page_navigation.py.html" />
+
+        <g>
+            <middle content-title="$title" get-query>
+                <slide-view>
+                    $$slide
+                        <input type="radio" id="slide$index" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('$slide');">
+                            <a href="$slide" target="_blank"></a>
+                        </slide>
+                    $$
+                    <thumb-list>
+                        $$slide
+                            <input type="radio" id="slide$index" name="slide" class="slide-toggle" />
+                            <thumb id="thumb$index" style="background-image:url('$slide');">
+                                <label for="slide$index"></label>
+                            </thumb>
+                        $$
+                    </thumb-list>
+                </slide-view>
+
+                <g class="content">
+                    <info-panel>
+                        <g>
+                            $$role <h>$role.</h> $$
+                        </g>
+                        <g>$date</g>
+                        
+                        <g content="$team/$duration"><br>($team, $duration)</g>
+
+                        <g content="$info" class="large details"><br />$info</g>
+                        <br />
+                        <a href="$site" target="_blank">
+                            <br />website
+                        </a>
+                        <a href="$steam" target="_blank">
+                            <br /><i class="fab fa-steam-icon"></i>steam
+                        </a>
+                        <a href="$itch" target="_blank">
+                            <br />itch.io
+                        </a>
+                        <a href="$jam-page" target="_blank">
+                            <br />jam-page
+                        </a>
+                        <a href="$blog" target="_blank">
+                            <br />blog
+                        </a>
+                    </info-panel>
+
+                    <subh content="$sub">$sub</subh>
+
+                    $description
+
+                    <section content="$task">
+                        <subh>Responsibilities</subh>
+                        <ul>
+                            $$task <li>$task</li> $$
+                        </ul>
+                    </section>
+                    
+                    <section content="$feature">
+                        <subh>Features</subh>
+                        <ul>
+                            $$feature <li>$feature</li> $$
+                        </ul>
+                    </section>
+
+                    <section content="$tool">
+                        <subh>Tools Used</subh>
+                        <ul>
+                            $$tool <li>$tool</li> $$
+                        </ul>
+                    </section>
+                </g>
+            </middle>
+        </g>
+        
+        <include src="../.include/page_bottom.html" />
+    </site>
+</body>

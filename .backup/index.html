@@ -1,0 +1,200 @@
+﻿<!-- BEGIN SHARED TOP -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rajin Shankar</title>
+    <link href="img/fav.png" rel="icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <link href="css/main.less" rel="stylesheet" type="text/less" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.4/less.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="auto-expand curtain-controller"></div>
+    <div class="curtain"></div>
+    
+    <input type="checkbox" class="overlay-toggle" id="rc-overlay-toggle" />
+    <overlay>
+        <label for="rc-overlay-toggle" class="bg-toggle"></label>
+        <site id="rc-overlay">
+            <g class="overlay-top">
+                <panel class="title">
+                    <a href="post.html?$getLink">$title</a>
+                </panel>
+                <g class="overlay-buttons">
+                    <a href="$site" target="_blank" class="site"><g><i class="fas fa-home" style="font-size: 0.7em; margin-top: 0.2em; margin-left:1px;"></i></g></a>
+                    <a href="$steam" target="_blank" class="steam"><g><i class="fab fa-steam-symbol"></i></g></a>
+                    <a href="$itch" target="_blank" class="itch"><g><i class="fas fa-store" style="font-size: 0.8em; margin-top: 0.1em"></i></g></a>
+                    <a href="post.html?$getLink" class="permalink"><g><i class="fas fa-link" style="font-size: 0.8em; margin-top: 0.1em; margin-left:1px;"></i></g></a>
+                    <label for="rc-overlay-toggle" class="close"><g><i class="fas fa-times" style="font-size: 1.1em"></i></g></label>
+                </g>
+            </g>
+            <middle>
+                <slide-view>
+                    <g list="slide" value="ssrc" index="si" %%class="auto-expand">
+                        <input type="radio" id="slide$si" name="slide" class="slide-toggle" checked="checked" />
+                        <slide %%style="background-image:url('$ssrc');">
+                            <a href="$ssrc" target="_blank"></a>
+                        </slide>
+                    </g>
+                    <thumb-list>
+                        <thumb list="slide" value="ssrc" index="si" id="thumb$si" %%style="background-image:url('$ssrc');">
+                            <label for="slide$si"></label>
+                        </thumb>
+                    </thumb-list>
+                </slide-view>
+                <g class="content">
+                    <info-panel>
+                        <h singlecontent=$role>$role.</h>
+                        <g listcontent="$role">
+                            <h list="role" value="item">$item.</h>
+                        </g>
+                        <g content="$team">team: $team</g>
+                        <g content="$date"><br />$date</g>
+                        <g content="$duration"><br>duration: $duration</g>
+                        <g content="$info"><br />($info)</g>
+                        <br />
+                        <a href="$site" target="_blank">
+                            <br />website
+                        </a>
+                        <a href="$steam" target="_blank">
+                            <br /><i class="fab fa-steam-icon"></i>steam
+                        </a>
+                        <a href="$itch" target="_blank">
+                            <br />itch.io
+                        </a>
+                        <a href="$jam-page" target="_blank">
+                            <br />jam-page
+                        </a>
+                    </info-panel>
+
+                    <subh content="$sub">$sub</subh>
+
+                    <p>$description</p>
+
+                    <section content="$task">
+                        <subh>Responsibilities</subh>
+                        <ul>
+                            <li list="task" value="item">$item</li>
+                        </ul>
+                    </section>
+                    
+                    <section content="$feature">
+                        <subh>Features</subh>
+                        <ul>
+                            <li list="feature" value="item">$item</li>
+                        </ul>
+                    </section>
+
+                    <section content="$tool">
+                        <subh>Tools Used</subh>
+                        <ul>
+                            <li list="tool" value="item">$item</li>
+                        </ul>
+                    </section>
+                </g>
+            </middle>
+        </site>
+    </overlay>
+
+    <site>
+        <top get="siteinfo">
+            <g class="info">
+                <a href="/" class="site-icon"><img %%src="$icon" height="110" width="110" /></a>
+                <g>
+                    <h><a href="/" class="no-color">$title.</a></h>
+                    <subh>$sub1</subh>
+                    <!-- <subh><span list="sub2" value="value">$value. </span></subh> -->
+                    <subh>$sub2.</subh>
+                </g>
+            </g>
+            <nav>
+                <a list="nav" value="page" href="#$page">$page</a>
+                <a href="./resume.html">resume</a>
+            </nav>
+        </top>
+
+        <g>
+            <middle content-title="featured." id="featured">
+                <slide-view>
+                    <g get-multi="featured" class="auto-expand">
+                        <input type="radio" id="slidex$index" name="slidex" class="slide-toggle" checked="checked" />
+                        <slide %%style="background-image:url('$thumb');">
+                            <a href="post.html?$link" target="_blank"></a>
+                        </slide>
+                    </g>
+                    <thumb-list>
+                        <thumb get-multi="featured" list="slide" value="slidesrc" index="slidei" id="thumb$index" %%style="background-image:url('$staticthumb');">
+                            <label for="slidex$index"></label>
+                        </thumb>
+                    </thumb-list>
+                </slide-view>
+            </middle>
+
+            <middle content-title="projects." id="projects">
+                <g class="">
+                    <grid-row>
+                        <a class="tile" get-multi="projects" row-max="3" %%style="background-image:url('$staticthumb')">
+                            <div class="hover-background" %%style="background-image:url('$thumb')"></div>
+                            <label for="rc-overlay-toggle" class="full-area" inj-link="rc-overlay" inj-src="$getLink"></label>
+                            <g class="content">
+                                <subh>$title</subh>
+                            </g>
+                        </a>
+                    </grid-row>
+                </g>
+            </middle>
+
+            <!-- <middle content-title="blog." id="blog">
+                <g class="">
+                    <grid-row>
+                        <a class="tile" get-multi="projects" row-max="3" %%style="background-image:url('$thumb')">
+                            <label for="rc-overlay-toggle" class="full-area" inj-link="rc-overlay" inj-src="$getLink"></label>
+                            <g class="content">
+                                <subh>$title</subh>
+                            </g>
+                        </a>
+                    </grid-row>
+                </g>
+            </middle> -->
+
+            <middle content-title="me." id="me">
+                <g class="flex m-column">
+                    <g class="content">
+                        I am an independent game and software developer currently studying computer science at Indiana University.
+                        In addition to checking out my projects here, you can find me on twitter <a href="http://twitter.com/rajinshankar" target="_blank">@RajinShankar</a> to see whatever I'm up to at the moment.
+                    </g>
+                    <panel class="round stretch keep-square" style="background-image:url('img/rajin.png'); width: 200px;"></panel>
+                </g>
+            </middle>
+        </g>
+
+        <bottom class="flex row small">
+            <g>contact: <a href="mailto:rajin@rajinshankar.com">rajin@rajinshankar.com</a></g>
+            <g>copyright Rajin Shankar, 2019</g>
+        </bottom>
+    </site>
+
+    <script src="js/muPreprocessor.js" type="text/javascript"></script>
+    <script src="js/remoteContent.js" type="text/javascript"></script>
+    <script>
+        document.getElementById("rc-overlay-toggle").checked = false;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+title       : Paper Jam
+thumb       : /content/img/paperjam-thumb.gif
+staticthumb : /content/img/paperjam-slide1.png
+
+team     : Solo
+date     : January 2019
+duration : 1 week
+
+description : {
+    !format
+    Primarily created during a 72-hour weekend game jam, **Paper Jam** is a competitive 2-4 player item-based brawler.
+    The game was designed with economy and polish in mind, so it art direction and gameplay design were structured around things that were compelling yet easy to create, easy to source externally, and/or flexible to use.
+    Following the initial 3-day jam, additional work went into game balance and level design to incorporate feedback from playtesters.
+
+    The game was also shown at Indy PopCon 2019 where it was met with glowing reactions by everyone who played. Following this, **Paper Jam** was released for supporters of all tiers on my [Patreon page](https://patreon.com/rajin).
+}
+
+feature : Flexible system for integrating and animating 2D environments and character assets into a 3D scene
+feature : Art direction centered around economy, with all assets quickly produced by-hand or easily found from online sources
+feature : 4-player local competitive play
+
+tool : Unity, C# (gameplay, visuals)
+tool : FMOD Studio (audio integration and sound design)
+tool : Adobe Audition (audio recording and editing)
+tool : Krita (2D asset creation)
+
+slide : /content/img/paperjam-thumb.gif
+slide : /content/img/paperjam-slide2.png
+slide : /content/img/paperjam-slide3.png
+slide : /content/img/paperjam-slide1.png

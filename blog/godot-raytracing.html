@@ -1,0 +1,149 @@
+<!-- Generated with pygen (c) Rajin Shankar 2019 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rajin Shankar</title>
+    <link href="/img/fav.png" rel="icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <!-- <link href="css/main.css" rel="stylesheet" type="text/css" /> -->
+    
+    <link href="/css/main.less" rel="stylesheet" type="text/less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.4/less.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- <div class="auto-expand curtain-controller"></div>
+<div class="curtain"></div> -->
+    <site>
+        
+
+<top get="siteinfo">
+    <g class="info">
+        <a href="/" class="site-icon"><img src="/img/RS-icon.svg" height="110" width="110" /></a>
+        <g>
+            <h><a href="/" class="no-color">Rajin.</a></h>
+            <subh>games &amp; software.</subh>
+            <subh>developer.</subh>
+        </g>
+    </g>
+    <nav>
+        <a href="/#projects">projects</a>
+        <a href="/#me">me</a>
+        <a href="/resume.html">resume</a>
+    </nav>
+</top>
+
+        <g>
+            <middle content-title="Godot Raytracing" get-query>
+                <slide-view>
+                    
+                        <input type="radio" id="slide0" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('/content/img/godot-raytracing-thumb.gif');">
+                            <a href="/content/img/godot-raytracing-thumb.gif" target="_blank"></a>
+                        </slide>
+                    
+                        <input type="radio" id="slide1" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('/content/img/godot-raytracing-slide2.png');">
+                            <a href="/content/img/godot-raytracing-slide2.png" target="_blank"></a>
+                        </slide>
+                    
+                        <input type="radio" id="slide2" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('/content/img/godot-raytracing-slide3.png');">
+                            <a href="/content/img/godot-raytracing-slide3.png" target="_blank"></a>
+                        </slide>
+                    
+                        <input type="radio" id="slide3" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('/content/img/godot-raytracing-slide4.png');">
+                            <a href="/content/img/godot-raytracing-slide4.png" target="_blank"></a>
+                        </slide>
+                    
+                    <thumb-list>
+                        
+                            <input type="radio" id="slide0" name="slide" class="slide-toggle" />
+                            <thumb id="thumb0" style="background-image:url('/content/img/godot-raytracing-thumb.gif');">
+                                <label for="slide0"></label>
+                            </thumb>
+                        
+                            <input type="radio" id="slide1" name="slide" class="slide-toggle" />
+                            <thumb id="thumb1" style="background-image:url('/content/img/godot-raytracing-slide2.png');">
+                                <label for="slide1"></label>
+                            </thumb>
+                        
+                            <input type="radio" id="slide2" name="slide" class="slide-toggle" />
+                            <thumb id="thumb2" style="background-image:url('/content/img/godot-raytracing-slide3.png');">
+                                <label for="slide2"></label>
+                            </thumb>
+                        
+                            <input type="radio" id="slide3" name="slide" class="slide-toggle" />
+                            <thumb id="thumb3" style="background-image:url('/content/img/godot-raytracing-slide4.png');">
+                                <label for="slide3"></label>
+                            </thumb>
+                        
+                    </thumb-list>
+                </slide-view>
+
+                <g class="content">
+                    <info-panel style="font-size: 0.8em">
+                        <g>
+                             <g>Graphics Programming.<br/></g>  <g>Godot Engine.<br/></g> 
+                        </g>
+                        <g>April 9, 2019</g>
+                    </info-panel>
+
+                    <subh content="$sub">$sub</subh>
+
+                    
+
+<h3>Technical Overview</h3><p>This small <a href="/demo/godot/raytracing.html" target="_blank">demo project</a> exploring stylized raytracing in the open source
+<a href="http://godotengine.org" target="_blank">Godot</a> engine was inspired by the game <a href="http://mirrordropgame.com" target="_blank">Mirror Drop</a>
+and made over three days as a fun personal project.</p>
+<p>The system consists of:
+<ul><li>A <strong>raytracing shader</strong> that renders all objects in the scene</li><li>A <strong>scene manager script</strong> that maintains a list of all active spheres and handles encoding all material and transform data into a single texture that is sent to the display shader</li><li>A <strong>sphere script</strong> that contains an object's radius, colors, and material (emissive and reflectance values) and registers the object with the scene manager on creation and deletion</li><li>A <strong>camera script</strong> that takes the scene texture and feeds it to the material on one or more <code>CanvasItem</code> nodes, as well as the camera's transform information</li>
+</ul></p>
+<p>Since spheres are currently the only supported shape, the scene rendering shader is fairly simple:
+<ul><li>Get the world-space origin and direction of the viewing ray using the fragment's <code>SCREEN_UV</code> and provided camera information</li><li>Decode object transformation values from the scene texture</li><li>Inverse transform the ray origin and direction for each object, test intersection, and re-transform the local hit position and normal</li><li>Repeat with the hit position as the new origin and reflect the view direction by the hit normal</li><li>Use normals, colors, and reflectance in a simple shading calculation at each step (up to a fixed number of bounces)</li>
+</ul></p>
+<p>One nice thing about this setup is that all transformations of geometry are driven by standard <code>Spatial</code> nodes (the default 3D object in Godot).</p>
+
+
+<div class="img p" alt="A screenshot of the output" style="background-image: url('/content/img/godot-raytracing-slide1.gif');"></div>In the demo, the slider in the top left actually just adjusts the transparency of a 2D <code>CanvasItem</code> node that is the 'viewport' into the raytraced scene.
+Underneath is the output of a standard 3D camera showing what the scene looks like internally, using <code>MeshInstance</code> nodes.</p>
+<p>As such, the source spatial nodes can be messed with just like in a normal game.
+For example the two smaller spheres in the demo are <code>RigidBody</code> nodes and can be clicked on or run into to bump them around.</p>
+<p><em>Physics, animation, etc. run exactly the same as always, and the resulting transformations are encoded into the scene texture which is in turn passed to the display shader.</em></p>
+<p>As with Mirror Drop, the primary limitation here is having a limited set of primitive shapes to work with, so no complex models, rigs, etc. as each shape has to be mathematically defined in the display shader.
+However, as evidenced by that game's 2019 IGF win in the visual art category, you can still get beautiful results for a <em>minimal</em> aesthetic using only simple shapes and a good choice of colors.</p>
+<p>As for future plans with this demo, I'll probably release the current version's source project once I can clean it up a little bit and document everything.
+I don't have any commercial aspirations for the project as is (especially since it's aiming to recreate Mirror Drop), but I hope it can serve as a learning tool for others looking to get into graphics programming, both in Godot and more generally.</p>
+<p>That said, I do have some exciting ideas for further research and development that could <em>potentially</em> lead to an interesting game concept.</p>
+<p>Don't forget to check out the <a href="/demo/godot/raytracing.html" target="_blank">in-browser demo</a> if you want to play around with the system yourself!
+You can adjust the maximum number of bounces, as well as see various debug visualizations of the scene.</p>
+<p><em>If you're interested in seeing more content like this, be sure to follow me on <a href="https://twitter.com/rajinshankar" target="_blank">Twitter (@RajinShankar)</a> to see whatever it is I'm up to at the moment!</em></p>
+
+                </g>
+            </middle>
+        </g>
+        
+        <bottom class="flex row small">
+    <g>contact: <a href="mailto:rajin@rajinshankar.com">rajin@rajinshankar.com</a></g>
+    <g>copyright Rajin Shankar, 2019</g>
+</bottom>
+    </site>
+</body>
+
+</html>

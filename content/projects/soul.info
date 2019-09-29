@@ -1,0 +1,29 @@
+title       : Soul
+thumb       : /content/img/soul-thumb.gif
+staticthumb : /content/img/soul-slide4.png
+
+role     : Technical Artist
+role     : Programmer
+team     : 2 people
+duration : 4 months
+date     : 2017 &ndash; 18
+
+description : {
+    !format
+    **Soul** is the masters thesis project for Game Designer Kees Luyendijk (Indiana University, 2018) on which I served as a technical artist and programmer.
+}
+
+task : Establishment of a visual aesthetic
+task : Production of PBR and custom shader-based materials
+task : Construction of game environments
+task : Creation of tools to procedurally generate environment geometry
+task : Production and optimization of game code
+
+tool : Unity, C# (shader, game, and editor code)
+tool : Photoshop (textures)
+
+slide : /content/img/soul-thumb.gif
+slide : /content/img/soul-slide1.png
+slide : /content/img/soul-slide2.png
+slide : /content/img/soul-slide3.gif
+slide : /content/img/soul-slide4.png

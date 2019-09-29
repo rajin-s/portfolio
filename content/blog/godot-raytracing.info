@@ -1,0 +1,61 @@
+title : Godot Raytracing
+date  : April 9, 2019
+
+topic : Graphics Programming
+topic : Godot Engine
+
+description : {
+    !format
+
+    ### Technical Overview ###
+    This small [demo project](/demo/godot/raytracing.html) exploring stylized raytracing in the open source
+    [Godot](http://godotengine.org) engine was inspired by the game [Mirror Drop](http://mirrordropgame.com)
+    and made over three days as a fun personal project.
+
+    The system consists of:
+    <<
+    -- A **raytracing shader** that renders all objects in the scene
+    -- A **scene manager script** that maintains a list of all active spheres and handles encoding all material and transform data into a single texture that is sent to the display shader
+    -- A **sphere script** that contains an object's radius, colors, and material (emissive and reflectance values) and registers the object with the scene manager on creation and deletion
+    -- A **camera script** that takes the scene texture and feeds it to the material on one or more `CanvasItem` nodes, as well as the camera's transform information
+    >>
+
+    Since spheres are currently the only supported shape, the scene rendering shader is fairly simple:
+    <<
+    -- Get the world-space origin and direction of the viewing ray using the fragment's `SCREEN_UV` and provided camera information
+    -- Decode object transformation values from the scene texture
+    -- Inverse transform the ray origin and direction for each object, test intersection, and re-transform the local hit position and normal
+    -- Repeat with the hit position as the new origin and reflect the view direction by the hit normal
+    -- Use normals, colors, and reflectance in a simple shading calculation at each step (up to a fixed number of bounces)
+    >>
+
+    One nice thing about this setup is that all transformations of geometry are driven by standard `Spatial` nodes (the default 3D object in Godot).
+
+    ![A screenshot of the output](/content/img/godot-raytracing-slide1.gif)
+
+    In the demo, the slider in the top left actually just adjusts the transparency of a 2D `CanvasItem` node that is the 'viewport' into the raytraced scene.
+    Underneath is the output of a standard 3D camera showing what the scene looks like internally, using `MeshInstance` nodes.
+
+    As such, the source spatial nodes can be messed with just like in a normal game.
+    For example the two smaller spheres in the demo are `RigidBody` nodes and can be clicked on or run into to bump them around.
+
+    __Physics, animation, etc. run exactly the same as always, and the resulting transformations are encoded into the scene texture which is in turn passed to the display shader.__
+
+    As with Mirror Drop, the primary limitation here is having a limited set of primitive shapes to work with, so no complex models, rigs, etc. as each shape has to be mathematically defined in the display shader.
+    However, as evidenced by that game's 2019 IGF win in the visual art category, you can still get beautiful results for a __minimal__ aesthetic using only simple shapes and a good choice of colors.
+
+    As for future plans with this demo, I'll probably release the current version's source project once I can clean it up a little bit and document everything.
+    I don't have any commercial aspirations for the project as is (especially since it's aiming to recreate Mirror Drop), but I hope it can serve as a learning tool for others looking to get into graphics programming, both in Godot and more generally.
+
+    That said, I do have some exciting ideas for further research and development that could __potentially__ lead to an interesting game concept.
+
+    Don't forget to check out the [in-browser demo](/demo/godot/raytracing.html) if you want to play around with the system yourself!
+    You can adjust the maximum number of bounces, as well as see various debug visualizations of the scene.
+    
+    __If you're interested in seeing more content like this, be sure to follow me on [Twitter (@RajinShankar)](https://twitter.com/rajinshankar) to see whatever it is I'm up to at the moment!__
+}
+
+slide : /content/img/godot-raytracing-thumb.gif
+slide : /content/img/godot-raytracing-slide2.png
+slide : /content/img/godot-raytracing-slide3.png
+slide : /content/img/godot-raytracing-slide4.png

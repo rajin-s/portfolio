@@ -1,0 +1,111 @@
+<include src="../.include/head.py.html" />
+
+<body>
+    <include src="../.include/page_top.html" />
+    <site>
+        <code py>
+            project_anchor = "projects/vector2"
+        </code>
+        <include src="../.include/page_navigation.py.html" />
+
+        <g>
+            <middle content-title="Vect0r Space 2" get-query>
+                <slide-view>
+                    
+                        <input type="radio" id="slide0" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('/content/img/vector2-slide1.PNG');">
+                            <a href="/content/img/vector2-slide1.PNG" target="_blank"></a>
+                        </slide>
+                    
+                        <input type="radio" id="slide1" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('/content/img/vector2-thumb.gif');">
+                            <a href="/content/img/vector2-thumb.gif" target="_blank"></a>
+                        </slide>
+                    
+                        <input type="radio" id="slide2" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('/content/img/vector2-slide2.PNG');">
+                            <a href="/content/img/vector2-slide2.PNG" target="_blank"></a>
+                        </slide>
+                    
+                    <thumb-list>
+                        
+                            <input type="radio" id="slide0" name="slide" class="slide-toggle" />
+                            <thumb id="thumb0" style="background-image:url('/content/img/vector2-slide1.PNG');">
+                                <label for="slide0"></label>
+                            </thumb>
+                        
+                            <input type="radio" id="slide1" name="slide" class="slide-toggle" />
+                            <thumb id="thumb1" style="background-image:url('/content/img/vector2-thumb.gif');">
+                                <label for="slide1"></label>
+                            </thumb>
+                        
+                            <input type="radio" id="slide2" name="slide" class="slide-toggle" />
+                            <thumb id="thumb2" style="background-image:url('/content/img/vector2-slide2.PNG');">
+                                <label for="slide2"></label>
+                            </thumb>
+                        
+                    </thumb-list>
+                </slide-view>
+
+                <g class="content">
+                    <info-panel>
+                        <g>
+                            
+                        </g>
+                        <g>Fall 2018</g>
+                        
+                        <g content="Solo/2 months"><br>(Solo, 2 months)</g>
+
+                        <g content="$info" class="large details"><br />$info</g>
+                        <br />
+                        <a href="$site" target="_blank">
+                            <br />website
+                        </a>
+                        <a href="$steam" target="_blank">
+                            <br /><i class="fab fa-steam-icon"></i>steam
+                        </a>
+                        <a href="$itch" target="_blank">
+                            <br />itch.io
+                        </a>
+                        <a href="$jam-page" target="_blank">
+                            <br />jam-page
+                        </a>
+                        <a href="$blog" target="_blank">
+                            <br />blog
+                        </a>
+                    </info-panel>
+
+                    <subh content="$sub">$sub</subh>
+
+                    <p>Created as a final project for an embedded systems programming class, <strong>Vect0r Space 2</strong> runs on an STM32F3 Discovery board using an engine and 3D renderer written completely from scratch in C.
+With a CPU speed of 72MHz, just 48KB of RAM, and 256KB of flash storage, the game and renderer had to be developed with performance on low-performance hardware as their first priority.</p>
+<p>The engine is capable of rendering 15-20 frames per second at 128x128 resolutions with multiple models visible onscreen at the same time, and interacts directly with hardware peripherals using drivers developed for the class.</p>
+
+
+                    <section content="$task">
+                        <subh>Responsibilities</subh>
+                        <ul>
+                            
+                        </ul>
+                    </section>
+                    
+                    <section content="['Fully custom 3D renderer/rasterizer designed for a highly constrained platform', 'Performance and memory optimizations for 3D including fixed-point number representation, quaternion-based rotations, and lookup-based transcendental functions', 'Direct hardware interaction with drivers for SPI, I2C, and USART protocols', 'Memory-optimized game code using only statically allocated space for infinite runner type gameplay']">
+                        <subh>Features</subh>
+                        <ul>
+                             <li>Fully custom 3D renderer/rasterizer designed for a highly constrained platform</li>  <li>Performance and memory optimizations for 3D including fixed-point number representation, quaternion-based rotations, and lookup-based transcendental functions</li>  <li>Direct hardware interaction with drivers for SPI, I2C, and USART protocols</li>  <li>Memory-optimized game code using only statically allocated space for infinite runner type gameplay</li> 
+                        </ul>
+                    </section>
+
+                    <section content="['C, GDB (code and debugging)', 'Saleae logic analyzer (signal debugging, profiling)', 'Blender (3D assets)']">
+                        <subh>Tools Used</subh>
+                        <ul>
+                             <li>C, GDB (code and debugging)</li>  <li>Saleae logic analyzer (signal debugging, profiling)</li>  <li>Blender (3D assets)</li> 
+                        </ul>
+                    </section>
+                </g>
+            </middle>
+        </g>
+        
+        <include src="../.include/page_bottom.html" />
+    </site>
+</body>

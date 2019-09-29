@@ -1,0 +1,31 @@
+title       : Too Many Bears
+thumb       : /content/img/tmb-thumb.gif
+staticthumb : /content/img/tmb-slide1.png
+
+team     : Solo
+date     : December 2017
+duration : 72 hours
+info     : Ludum Dare 40
+
+description : {
+    !format
+    **Too Many Bears**, a game about battling an invasion of mech-piloting cats with your ever-growing supply of 
+    explosive bears, was my entry to the 40th Ludum Dare game jam, and was made completely solo in just three days. 
+    My first ever submission to a public, multiple-day-long jam, the game was very well received, placing 45th 
+    among over a thousand 72-hour entrants with an outstanding 16th place in graphics. 
+}
+
+feature : Skill/Ability tree system with difficulty scaling
+feature : Custom "bendy kinematics" character animation system
+feature : Effects and characters stylized with custom PixelSprite framework
+
+tool : Unity, C# (gameplay, effects)
+tool : Illustrator (character graphics)
+
+slide : /content/img/tmb-thumb.gif
+slide : /content/img/tmb-slide1.png
+slide : /content/img/tmb-slide2.png
+slide : /content/img/tmb-slide3.png
+slide : /content/img/tmb-slide4.png
+
+itch : https://fancyplants.itch.io/too-many-bears

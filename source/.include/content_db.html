@@ -1,0 +1,39 @@
+<script>
+    var contentData = {}
+    var injectTargetBaseText = {}
+
+    function createInjectLinks() {
+        let injectTargets = document.querySelectorAll("[inject-target]")
+        for (target of injectTargets) {
+            console.log(`[inject-target] ${target.id}`)
+            injectTargetBaseText[target.id] = target.innerHTML;
+        }
+
+        let injectLinks = document.querySelectorAll("[inject-src]")
+        for (link of injectLinks) {
+            console.log(`[inject-link] ${link}`)
+            let targetId = link.getAttribute("inject-link")
+            let key = link.getAttribute("inject-src")
+            link.onclick = () => {
+                console.log(`[inject] ${key} -> ${targetId}`)
+                let target = document.getElementById(targetId)
+                let content = contentData[key]
+
+                console.log(target)
+                
+                target.innerHTML = content
+            }
+        }
+    }
+
+    var onDocumentReady = () => {
+        createInjectLinks();
+    }
+
+    if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+        onDocumentReady()
+    }
+    else {
+        document.addEventListener("DOMContentLoaded", onDocumentReady)
+    }
+</script>

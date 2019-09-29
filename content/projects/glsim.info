@@ -1,0 +1,30 @@
+title       : OpenGL Simulation
+thumb       : /content/img/glsim-thumb.gif
+staticthumb : /content/img/glsim-staticthumb.png
+
+team : Solo
+role : Programmer
+date : April 2018
+
+description : {
+    !format
+    In the spring of 2018 I did a research project on basic game engine design and real-time rendering, presenting
+    a poster at the School of Informatics, Computing, and Engineering Spring Research Symposium.
+    
+    For the project, I developed my own framework in C++ using OpenGL for rendering and GLUT for user input.
+    Using this framework, I made three different demos showcasing dynamic shader parameter linking, transform hierarchies,
+    and GPU particle simulation.
+}
+
+feature : Realtime GPU simulation of millions of particles interacting with scene objects
+feature : Hierarchical scene structure for object manipulation and rendering
+feature : Component-based behavior system
+feature : Extensible API for creating new behavior components
+feature : Dynamic shader preprocessing and parameter linking
+
+tool : C++, OpenGL (engine)
+tool : GLSL (graphical &amp; compute shaders)
+
+slide : /content/img/glsim-slide1.gif
+slide : /content/img/glsim-slide2.gif
+slide : /content/img/glsim-thumb.gif

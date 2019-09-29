@@ -1,0 +1,30 @@
+title       : OddestSea
+thumb       : /content/img/oddestsea-thumb.gif
+staticthumb : /content/img/oddestsea-slide4.png
+
+team     : Contract
+role     : Technical Artist
+role     : Graphics Programmer
+date     : November 2018
+duration : 2 weeks
+
+description : {
+!format
+    During late 2018 I assisted with technical art and polish for a capstone project prototype in Indiana University's Game Design Program titled **OddestSea**.
+    The main focus of my work was establishing an in-engine art style following the general art direction set by the team, as well as creating a unified GPU-accelerated framework for the game's water visuals and interaction with objects.
+    
+    I also provided additional graphical resources for a game pitch presentation, presented at the IU Game Design Department's __Shark Tank__ event.
+}
+
+feature : Stylized water shader with parameterized values for wave activity and coloring
+feature : Compute-shader framework for water-object interaction to match visuals
+feature : Postprocessing using Unity's Postprocessing Stack v2
+
+tool : Unity, Cg, HLSL, C# (visuals, unified water system)
+tool : Substance Designer (water height map generation)
+
+slide : /content/img/oddestsea-thumb.gif
+slide : /content/img/oddestsea-slide1.png
+slide : /content/img/oddestsea-slide2.gif
+slide : /content/img/oddestsea-slide3.png
+slide : /content/img/oddestsea-slide4.png

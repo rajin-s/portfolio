@@ -1,0 +1,28 @@
+title       : Web Design
+thumb       : /content/img/web-thumb.gif
+staticthumb : /content/img/web-slide5.PNG
+
+role : Personal
+role : Volunteer
+date : 2014&ndash;Present
+
+description : {
+    !format
+    In addition to [this site](http://rajinshankar.com), I have made public-facing websites mainly for
+    personal or organizational use, including [Gamedev@IU](http://gdiu.org), Hoosier Games (now inactive), 
+    [Slug Slasher](http://slugslasher.com), and assisted with web design for [Tutemic](http://tutemic.com/shmup).
+
+    I also served as the Web &amp; Digital Design Specialist at the IU Jacobs School of Music Office of Marketing
+    &amp; Publicity from 2016&ndash;2017.
+}
+
+tool : Static HTML, CSS/LESS, and JavaScript
+tool : Generation of static content using a custom Python-in-HTML framework
+tool : Dynamic content loading for static pages using vanilla JavaScript
+tool : CMS and PHP-based systems
+
+slide : /content/img/web-slide1.PNG
+slide : /content/img/web-slide2.PNG
+slide : /content/img/web-slide3.PNG
+slide : /content/img/web-slide5.PNG
+slide : /content/img/web-slide4.gif

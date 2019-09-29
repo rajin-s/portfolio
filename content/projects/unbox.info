@@ -1,0 +1,31 @@
+title       : Unbox
+thumb       : /content/img/unbox-thumb.gif
+staticthumb : /content/img/unbox-slide5.png
+
+team     : Solo
+date     : April 2018
+duration : 2 weeks
+
+description : {
+    !format
+    **Unbox** is a prototype 2D platformer where the level is split into various windows.
+    Overlapping windows changes the terrain in new and interesting ways, enabling puzzle solving and interactions not
+    possible in traditional sidescrollers.
+    
+    Created in two weeks for the prompt "Outside the box," the prototype doesn't feature much gameplay, but does include
+    many of the systems needed to start making levels and puzzles.
+}
+
+feature : Dynamic polygon collider manipulation for partially hidden geometry
+feature : Custom local-space platformer controller code
+feature : Various effects stylized with my PixelSprite Unity package
+
+tool : Unity, C# (gameplay, effects)
+tool : Photoshop (sprites)
+
+slide : /content/img/unbox-slide5.png
+slide : /content/img/unbox-slide4.gif
+slide : /content/img/unbox-slide1.gif
+slide : /content/img/unbox-slide2.gif
+slide : /content/img/unbox-slide3.gif
+slide : /content/img/unbox-thumb.gif

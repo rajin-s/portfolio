@@ -1,0 +1,29 @@
+title       : Meteor Dance Wave VR
+thumb       : /content/img/mdwvr-thumb.gif
+staticthumb : /content/img/mdwvr-slide1.png
+
+team     : Solo
+date     : Summer 2017
+duration : 1 month
+
+description : {
+    !format
+    Created as a first dive into Unreal Engine 4, Meteor Dance Wave VR is an active virtual-reality rhythm game 
+    prototype featuring vibrant visuals and a retro synthwave aesthetic.
+    All assets, materials, effects, and game systems were constructed over the course of one month.
+}
+
+feature : Central beat keeping system
+feature : Central sound visualization system
+feature : A wide variety of hand-made audioreactive materials
+feature : Runtime interpretation of a simple course file format
+
+tool : Unreal Engine 4 (Blueprint, Materials, C++)
+tool : Photoshop (textures)
+tool : Blender (3D assets)
+
+slide : /content/img/mdwvr-thumb.gif
+slide : /content/img/mdwvr-slide1.png
+slide : /content/img/mdwvr-slide2.png
+slide : /content/img/mdwvr-slide3.png
+slide : /content/img/mdwvr-slide4.png

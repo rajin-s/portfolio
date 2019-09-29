@@ -1,0 +1,28 @@
+title       : Technical Art
+thumb       : /content/img/techart-thumb.png
+staticthumb : /content/img/techart-thumb.png
+
+role : Technical Artist
+role : Programmer
+date : 2017 - 2018
+
+description : {
+    !format
+    In addition to my work on personal and collaborative game projects, I have done a variety of independent technical 
+    art projects to learn and experiment with different areas of the field.
+}
+
+tool : Unreal Engine 4 Materials (PBR and custom unlit)
+tool : Unity Shaders
+tool : Substance Designer (with Marmoset Toolbag for rendering)
+tool : Maya (rigging)
+tool : Houdini (visual effects)
+
+slide : /content/img/techart-slide1.png
+slide : /content/img/techart-slide2.gif
+slide : /content/img/techart-slide3.gif
+slide : /content/img/techart-slide4.png
+slide : /content/img/techart-slide5.png
+slide : /content/img/techart-slide6.png
+slide : /content/img/techart-slide7.png
+slide : /content/img/techart-thumb.png

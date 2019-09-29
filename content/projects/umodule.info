@@ -1,0 +1,42 @@
+title       : Unity Submodules
+thumb       : /content/img/umodule-slide3.gif
+staticthumb : /content/img/umodule-slide2.png
+showreel    : /content/img/umodule-slide2.png
+
+team : Open Source
+role : Programmer
+date : started October 2018
+info : ongoing
+
+description : {
+    !format
+    Started in late 2018, this collection of open source script packages for Unity is aimed at creating a set of
+    unified, extensible frameworks ranging from basic data structures to 2D cameras to 3D level editing tools.
+    Each **UModule** can be integrated into git-based Unity projects as a submodule without external dependencies
+    outside the whole set of modules.
+    
+    Currently released/in development modules include data structure extensions, 2D camera extensions, GPU-accelerated procedural 3D noise texture generation, and flexible scripting syntax definition API for tools and prototypes.
+}
+
+feature : Flexible data structures for use in game systems
+feature : Tool for GPU-accelerated generation and realtime previewing of 3D noise volumes
+feature : Raymarching-based cloud rendering (using generated noise volumes)
+feature : Interpreted language definition/binding API
+feature : Asset types for centralizing data storage and decoupling systems
+feature : Extended behavior for Unity cameras
+feature : 3D level editing tools and data structures
+feature : GitHub wiki documentation generation utility
+
+tool : Unity
+tool : Git / GitHub (workflows and project management)
+tool : Photoshop (icons)
+
+slide : /content/img/umodule-slide3.gif
+slide : /content/img/umodule-slide4.jpg
+slide : /content/img/umodule-slide5.gif
+slide : /content/img/umodule-slide6.gif
+slide : /content/img/umodule-slide7.gif
+slide : /content/img/umodule-slide1.png
+slide : /content/img/umodule-slide2.png
+
+site : https://github.com/rajin-s/UModule

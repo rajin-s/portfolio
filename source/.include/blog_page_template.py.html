@@ -1,0 +1,44 @@
+<include src="../.include/head.py.html" />
+
+<body>
+    <include src="../.include/page_top.html" />
+    <site>
+        <include src="../.include/page_navigation.py.html" />
+
+        <g>
+            <middle content-title="$title" get-query>
+                <slide-view>
+                    $$slide
+                        <input type="radio" id="slide$index" name="slide" class="slide-toggle" checked />
+                        <slide style="background-image:url('$slide');">
+                            <a href="$slide" target="_blank"></a>
+                        </slide>
+                    $$
+                    <thumb-list>
+                        $$slide
+                            <input type="radio" id="slide$index" name="slide" class="slide-toggle" />
+                            <thumb id="thumb$index" style="background-image:url('$slide');">
+                                <label for="slide$index"></label>
+                            </thumb>
+                        $$
+                    </thumb-list>
+                </slide-view>
+
+                <g class="content">
+                    <info-panel style="font-size: 0.8em">
+                        <g>
+                            $$topic <g>$topic.<br/></g> $$
+                        </g>
+                        <g>$date</g>
+                    </info-panel>
+
+                    <subh content="$sub">$sub</subh>
+
+                    $description
+                </g>
+            </middle>
+        </g>
+        
+        <include src="../.include/page_bottom.html" />
+    </site>
+</body>

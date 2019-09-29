@@ -1,0 +1,29 @@
+title       : Hyperspace Drifter
+thumb       : /content/img/hsd-thumb.gif
+staticthumb : /content/img/hsd-slide3.PNG
+
+team     : Solo
+date     : February 2019
+duration : 4 weeks
+
+itch : https://rajin.itch.io/hyperspace-drifter
+
+description : {
+    !format
+    **Hyperspace Drifter** is a classic vertically-scrolling shoot 'em, as well as my first project using the open-source Godot game engine.
+    With health as your only resource you must balance offensive capabilities, time manipulation, and the ability to construct drones all while avoiding a constant barrage of enemies.
+}
+
+feature : Custom procedural geometry generation for trails and UI
+feature : Extensible component framework for behavior composition
+feature : Flocking system for enemy movement supporting group cohesion, obstacle avoidance, and player tracking
+
+tool : Godot, GDScript, GLSL (gameplay, visuals)
+tool : Bfxr (sound effects)
+tool : Blender (3D assets)
+tool : Photoshop (textures)
+
+slide : /content/img/hsd-thumb.gif
+slide : /content/img/hsd-slide1.PNG
+slide : /content/img/hsd-slide2.png
+slide : /content/img/hsd-slide3.PNG

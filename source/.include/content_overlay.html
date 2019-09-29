@@ -1,0 +1,142 @@
+<input type="checkbox" class="overlay-toggle" id="rc-overlay-toggle" />
+<overlay>
+    <label for="rc-overlay-toggle" class="bg-toggle"></label>
+    <site id="rc-overlay" inject-target>
+        <g class="overlay-top">
+            <panel class="title">
+                <a href="post.html?$getLink">$title</a>
+            </panel>
+            <g class="overlay-buttons">
+                <a href="$site" target="_blank" class="site">
+                    <g><i class="fas fa-home" style="font-size: 0.7em; margin-top: 0.2em; margin-left:1px;"></i></g>
+                </a>
+                <a href="$steam" target="_blank" class="steam">
+                    <g><i class="fab fa-steam-symbol"></i></g>
+                </a>
+                <a href="$itch" target="_blank" class="itch">
+                    <g><i class="fas fa-store" style="font-size: 0.8em; margin-top: 0.1em"></i></g>
+                </a>
+                <a href="post.html?$getLink" class="permalink">
+                    <g><i class="fas fa-link" style="font-size: 0.8em; margin-top: 0.1em; margin-left:1px;"></i></g>
+                </a>
+                <label for="rc-overlay-toggle" class="close">
+                    <g><i class="fas fa-times" style="font-size: 1.1em"></i></g>
+                </label>
+            </g>
+        </g>
+        <middle>
+            <slide-view>
+                <g list="slide" value="ssrc" index="si" %%class="auto-expand">
+                    <input type="radio" id="slide$si" name="slide" class="slide-toggle" checked="checked" />
+                    <slide %%style="background-image:url('$ssrc');">
+                        <a href="$ssrc" target="_blank"></a>
+                    </slide>
+                </g>
+                <thumb-list>
+                    <thumb list="slide" value="ssrc" index="si" id="thumb$si" %%style="background-image:url('$ssrc');">
+                        <label for="slide$si"></label>
+                    </thumb>
+                </thumb-list>
+            </slide-view>
+            <g class="content">
+                <info-panel>
+                    <h singlecontent=$role>$role.</h>
+                    <g listcontent="$role">
+                        <h list="role" value="item">$item.</h>
+                    </g>
+                    <g content="$team">team: $team</g>
+                    <g content="$date"><br />$date</g>
+                    <g content="$duration"><br>duration: $duration</g>
+                    <g content="$info"><br />($info)</g>
+                    <br />
+                    <a href="$site" target="_blank">
+                        <br />website
+                    </a>
+                    <a href="$steam" target="_blank">
+                        <br /><i class="fab fa-steam-icon"></i>steam
+                    </a>
+                    <a href="$itch" target="_blank">
+                        <br />itch.io
+                    </a>
+                    <a href="$jam-page" target="_blank">
+                        <br />jam-page
+                    </a>
+                </info-panel>
+
+                <subh content="$sub">$sub</subh>
+
+                <p>$description</p>
+
+                <section content="$task">
+                    <subh>Responsibilities</subh>
+                    <ul>
+                        <li list="task" value="item">$item</li>
+                    </ul>
+                </section>
+
+                <section content="$feature">
+                    <subh>Features</subh>
+                    <ul>
+                        <li list="feature" value="item">$item</li>
+                    </ul>
+                </section>
+
+                <section content="$tool">
+                    <subh>Tools Used</subh>
+                    <ul>
+                        <li list="tool" value="item">$item</li>
+                    </ul>
+                </section>
+            </g>
+        </middle>
+    </site>
+
+    <!--script>
+        var contentData = {}
+        var injectTargetBaseText = {}
+
+        const varPrefix = "$"
+
+        function inject(obj, text) {
+            // Replace $var with the appropriate value from the info object
+            for (var k in obj) {
+                text = text.replace(new RegExp(`\\${varPrefix}${k}`, 'g'), obj[k])
+            }
+            return text
+        }
+
+        function createInjectLinks() {
+            let injectTargets = document.querySelectorAll("[inject-target]")
+            for (target of injectTargets) {
+                console.log(`[inject-target] ${target.id}`)
+                injectTargetBaseText[target.id] = target.innerHTML;
+            }
+
+            let injectLinks = document.querySelectorAll("[inject-src]")
+            for (link of injectLinks) {
+                console.log(`[inject-link] ${link}`)
+                let targetId = link.getAttribute("inject-link")
+                let key = link.getAttribute("inject-src")
+                link.onclick = () => {
+                    console.log(`[inject] ${key} -> ${targetId}`)
+                    let target = document.getElementById(targetId)
+                    let content = contentData[key]
+
+                    target.innerHTML = inject(content, injectTargetBaseText[targetId])
+                }
+            }
+        }
+
+        var onDocumentReady = () => {
+            createInjectLinks();
+        }
+
+        if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+            onDocumentReady()
+        }
+        else {
+            document.addEventListener("DOMContentLoaded", onDocumentReady)
+        }
+    </script-->
+
+</overlay>

@@ -1,0 +1,28 @@
+
+title       : Vector Space
+thumb       : /content/img/vector-thumb.gif
+staticthumb : /content/img/vector-slide1.png
+
+team     : Solo
+date     : Summer 2017
+duration : 48 hours
+
+description : {
+    !format
+    Created during a self-imposed weekend game jam, **Vect0r Space** was originally designed as a vehicle 
+    for teaching game programming concepts. In addition to the game itself, presentations and project templates
+    were created for use in workshops put on by the student organization Hoosier Games.
+}
+
+feature : Simple mechanic-driven design for systems and enemies
+feature : Instructional material regarding implementation of core systems
+feature : Stylized, minimalist graphical style created entirely in engine
+
+tool : Unity, C# (gameplay, graphics)
+tool : Bfxr (sound effects)
+
+slide : /content/img/vector-thumb.gif
+slide : /content/img/vector-slide1.png
+slide : /content/img/vector-slide2.png
+slide : /content/img/vector-slide3.png
+slide : /content/img/vector-slide4.png

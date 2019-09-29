@@ -1,0 +1,35 @@
+title       : Asymars
+thumb       : /content/img/asymars-thumb.gif
+staticthumb : /content/img/asymars-slide1.png
+
+role : Programmer
+role : Technical Artist
+team : 3 people
+date : April 2018
+
+description : {
+    !format
+    **Asymars** is a turn-based tactical (digital) board game where opposing sides compete to destroy all of the other's
+    pieces. Games are played on a nonuniform board with asymmetric starting configurations of units.
+    The game features configurable AI that is able to competently compete using a variety of classical artificial
+    intelligence techniques.
+}
+
+task : Design and development of data structures for efficient AI processing
+task : Creation of a framework for AI and human players to interact with individual levels in real-time
+task : Design and balancing of units and board configurations
+task : Production of all game visuals
+
+feature : Classical AI algorithms such as minimax and negamax
+feature : Variable heuristic configuration to compare effectiveness
+feature : Simple object-based level construction with back-end processing to generate AI facing structures
+feature : Multithreaded processing of AI logic to enable real-time play
+
+tool : Unity, C# (gameplay, AI, visuals)
+tool : Photoshop (textures)
+
+slide : /content/img/asymars-thumb.gif
+slide : /content/img/asymars-slide1.png
+slide : /content/img/asymars-slide3.png
+slide : /content/img/asymars-slide4.gif
+slide : /content/img/asymars-slide2.png

@@ -1,0 +1,36 @@
+title       : Command Line
+thumb       : /content/img/command-thumb.gif
+staticthumb : /content/img/command-slide1.png
+
+role : Programmer
+role : Technical Artist
+
+team     : 3 people
+date     : January 2018
+duration : 48 hours
+info     : Global Game Jam
+
+description : {
+    !format
+    Made in 48 hours for the 2018 Global Game Jam, **Command Line** is a drone management and resource collection 
+    game centered around writing programs that are broadcast from communication hubs to the fleets in their command. 
+    
+    Due to the brevity of the jam, some gameplay elements were designed but never implemented, however the final 
+    product showcases many of the core systems and could easily serve as a basis for future development.
+}
+
+task : Design and programming of AI, user interface, and resource systems
+task : Creation and implementation of a visual style with in-engine techniques
+
+feature : Graph-based handling of resource networks
+feature : AI flocking behavior
+feature : Command parsing that drives behavior for AI groups
+
+tool : Unity, C# (gameplay, effects)
+tool : Sibelius (music)
+
+slide : /content/img/command-thumb.gif
+slide : /content/img/command-slide1.png
+slide : /content/img/command-slide2.png
+slide : /content/img/command-slide3.png
+slide : /content/img/command-slide4.png
