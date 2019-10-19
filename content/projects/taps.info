@@ -1,0 +1,32 @@
+title       : The Astro Parcel Service
+thumb       : /content/img/taps-slide1.png
+staticthumb : /content/img/taps-slide2.png
+
+role     : Artist
+date     : Summer 2019
+team     : 14 People
+duration : 4 months
+
+description : {
+    !format
+    **The Astro Parcel Service** is the master's thesis project of Emma Rausch in Indiana University's Game Design and Production program. I was contracted to provide concept art and promotional illustrations over the
+    summer of 2019, creating a cohesive artistic style for the project, designing characters, props, and environments, and iterating on designs based on team feedback.
+
+    Additionally, I created in-engine mockups to help with material stylization, visual effects, and postprocessing.
+}
+
+task : Character, prop, and environment design
+task : Coordination with other concept and asset artists to ensure consistent visual style
+task : In-engine prototyping for materials, effects, and post-processing
+
+tool : Krita (digital painting)
+tool : Unity (prototyping in-engine visuals)
+
+slide : /content/img/taps-slide6.png
+slide : /content/img/taps-slide7.png
+slide : /content/img/taps-slide8.png
+slide : /content/img/taps-slide1.png
+slide : /content/img/taps-slide2.png
+slide : /content/img/taps-slide3.png
+slide : /content/img/taps-slide5.png
+slide : /content/img/taps-slide4.png

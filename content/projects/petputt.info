@@ -1,7 +1,7 @@
 title       : Pet Putt
 thumb       : /content/img/petputt-thumb.gif
-staticthumb : /content/img/petputt-slide1.png
-showreel    : /content/img/petputt-slide5.PNG
+staticthumb : /content/img/petputt-slide1.PNG
+showreel    : /content/img/petputt-slide1.PNG
 
 team     : Solo
 date     : Started March 2019
@@ -30,10 +30,8 @@ tool : Substance Designer (effects textures)
 tool : Krita (character art)
 
 slide : /content/img/petputt-thumb.gif
-slide : /content/img/petputt-slide1.png
-slide : /content/img/petputt-slide2.gif
-slide : /content/img/petputt-slide5.PNG
-slide : /content/img/petputt-slide3.gif
-slide : /content/img/petputt-slide6.PNG
+slide : /content/img/petputt-slide3.PNG
 slide : /content/img/petputt-slide4.gif
-slide : /content/img/petputt-slide7.PNG
+slide : /content/img/petputt-slide6.gif
+slide : /content/img/petputt-slide5.gif
+slide : /content/img/petputt-slide1.PNG

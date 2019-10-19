@@ -1,0 +1,28 @@
+title       : rnjin
+thumb       : /content/img/rnjin-slide1.png
+staticthumb : /content/img/rnjin-slide1.png
+showreel    : /content/img/rnjin-slide1.png
+
+team     : Solo
+role     : Programmer
+date     : Started August 2019
+duration : ongoing
+
+description : {
+    !format
+    **rnjin** is an ongoing independent research project, exploring modern rendering with the Vulkan API and contemporary techniques in game engine architecture, such as entity-component-system architectures and data-oriented design.
+    
+    The project's main design pillars include elegance, which is achieved through extensive use of modern C++ features such as template metaprogramming, and efficiency, using the language's low-level capabilities
+    to optimize data layout and minimize overhead without sacrificing safety.
+}
+
+feature : Fully custom Vulkan renderer, including scene/resource description, shader framework, and GPU memory management
+feature : Extensible data-oriented entity-component-system architecture designed around type safety, cache optimization, and low-overhead processing
+feature : Simple, customizable binary serialization API for arbitrary resource data types
+
+tool : C++ (engine, ECS architecture)
+tool : Vulkan (rendering)
+tool : GLSL (shaders)
+
+slide : /content/img/rnjin-slide2.png
+slide : /content/img/rnjin-slide1.png
