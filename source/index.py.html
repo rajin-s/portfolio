@@ -89,6 +89,15 @@
     </site>
 </body>
 
+<script>
+    let lazyBackgroundElements = document.querySelectorAll("[lazy-background]")
+    for (var i = 0; i < lazyBackgroundElements.length; i++)
+    {
+        let imageURL = lazyBackgroundElements[i].attributes['lazy-background'].value
+        lazyBackgroundElements[i].style = `background-image: url(${imageURL})`;
+    }
+</script>
+
 <code py>
     # Generate content pages
     for project_info in get_vars_listing('projects', list_file='.list.engineering'):
