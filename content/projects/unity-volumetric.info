@@ -1,0 +1,47 @@
+title       : Unity Volumetrics
+thumb       : /content/img/unityvolume-editor.gif
+staticthumb : /content/img/unityvolume-cloudstill.jpg
+
+team : Solo
+role : Graphics Programmer
+date : Spring 2019
+
+oneline   : Raymarched rendering of sparse volumes and tools for authoring procedural 3D textures
+shortrole : Solo
+
+description : {
+    !format
+    During early 2019, I did a variety of explorations into rendering volumetric data using Unity.
+    The first project includes an editor tool to author complex volume textures in real-time by blending layers of different noise types produced by HLSL compute shaders.
+
+    Using this tool, I created a demo scene using an approach to rendering clouds based on the work presented by Andrew Schneider and Nathan Vos for the game Horizon Zero Dawn.
+
+    A follow-up project consisted of converting around two terabytes of astronomic data from the European Space Agency's GAIA mission into a usable volume texture,
+    then producing an interactive visualization using a basic raymarched density accumulation technique.
+}
+
+feature : Compute shader framework for generating 3D noises
+feature : Editor GUI tool for previewing and authoring complex procedural 3D volume textures
+feature : Raymarching-based cloud rendering (using generated noise volumes)
+feature : Tools for converting terabytes of astronomic data into a 3D texture
+feature : Raymarching-based visualization of scientific data
+
+tool : Unity (C#, HLSL)
+
+slide : /content/img/unityvolume-editor.gif
+slide : /content/img/unityvolume-gaia1.PNG
+slide : /content/img/unityvolume-gaia2.PNG
+slide : /content/img/unityvolume-cloudlighting.gif
+slide : /content/img/unityvolume-cloudstill.jpg
+
+highlight-description : {
+    !format
+    This collection of projects explores **volumetric rendering** in Unity,
+    including real-time authoring of complex procedural volume textures, cloud rendering, and scientific visualization.
+
+}
+
+highlight-tag : Solo
+highlight-tag : Unity
+highlight-tag : Shaders
+highlight-tag : Tools

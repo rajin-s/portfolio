@@ -6,6 +6,9 @@ team : Solo
 date : December 2017
 role : Programmer
 
+oneline   : Unity library for real-time pixelization of 3D graphics and effects
+shortrole : Solo 
+
 description : {
     !format
     **PixelSprite** is a Unity package which aims to bridge the gap between modern

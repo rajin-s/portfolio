@@ -154,6 +154,10 @@ def get_vars_listing(path, base_folder=info_folder, list_file=listing_file_name)
     items = open(listing_path).readlines()
     for item in items:
         item = item.strip()
+        
+        if len(item) < 3 or item.startswith('#'):
+            continue
+
         item_path = f"{path}/{item}"
         result.append(get_vars(item_path, base_folder))
 

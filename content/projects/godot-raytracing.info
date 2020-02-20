@@ -11,6 +11,9 @@ role     : Programmer
 date     : April 2019
 duration : 1 week
 
+oneline   : Real-time stylized raytracing in Godot 3.1
+shortrole : Solo
+
 description : {
     !format
     This small [demo project](/demo/godot/raytracing.html) exploring stylized raytracing in the open source [Godot](http://godotengine.org) engine was inspired by the game [Mirror Drop](http://mirrordropgame.com) and made over three days as a fun personal project.

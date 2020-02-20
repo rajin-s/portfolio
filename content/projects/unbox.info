@@ -6,6 +6,9 @@ team     : Solo
 date     : April 2018
 duration : 2 weeks
 
+oneline   : Jam game with custom collision shape manipulation for puzzle-platforming
+shortrole : Solo
+
 description : {
     !format
     **Unbox** is a prototype 2D platformer where the level is split into various windows.

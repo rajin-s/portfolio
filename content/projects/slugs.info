@@ -9,6 +9,11 @@ date     : Started January 2017
 team     : 4 People
 duration : 2017 &ndash; 18
 
+oneline   : 2D platformer with hack-n-slash combat and juicy gamefeel
+shortrole : Programmer
+shortrole : Artist
+shortrole : Designer
+
 description : {
     !format
     **Slug Slasher** is an action platformer all about saving the world from an onslaught of giant, evil slugs.

@@ -7,6 +7,9 @@ team     : Solo
 date     : Started March 2019
 duration : ongoing
 
+oneline   : A spherical minigolf puzzle-adventure with adorable animal friends
+shortrole : Solo
+
 description : {
     !format
     **Pet Putt** is an adorable golf game set on spherical putting courses. My second project with the open-source Godot game engine,
@@ -35,3 +38,15 @@ slide : /content/img/petputt-slide4.gif
 slide : /content/img/petputt-slide6.gif
 slide : /content/img/petputt-slide5.gif
 slide : /content/img/petputt-slide1.png
+
+highlight-description : {
+    !format
+    **Pet Putt** is an award-winning minigolf puzzle-adventure through spherical courses with adorable animal friends.
+}
+
+highlight-tag : Solo
+highlight-tag : Game
+highlight-tag : Godot
+highlight-tag : Scripting
+highlight-tag : C++
+highlight-tag : Shaders

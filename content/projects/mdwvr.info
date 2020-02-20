@@ -6,6 +6,9 @@ team     : Solo
 date     : Summer 2017
 duration : 1 month
 
+oneline   : VR rhythm game inspired by Beat Saber, Rock-Paper-Scissors, and synthwave aesthetics
+shortrole : Solo
+
 description : {
     !format
     Created as a first dive into Unreal Engine 4, Meteor Dance Wave VR is an active virtual-reality rhythm game 
@@ -27,3 +30,5 @@ slide : /content/img/mdwvr-slide1.png
 slide : /content/img/mdwvr-slide2.png
 slide : /content/img/mdwvr-slide3.png
 slide : /content/img/mdwvr-slide4.png
+
+class-title : thin

@@ -10,6 +10,10 @@ date     : January 2018
 duration : 48 hours
 info     : Global Game Jam
 
+oneline   : Jam game with swarms of drones controlled with text-based commands
+shortrole : Programmer
+shortrole : Designer
+
 description : {
     !format
     Made in 48 hours for the 2018 Global Game Jam, **Command Line** is a drone management and resource collection 

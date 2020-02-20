@@ -8,6 +8,9 @@ role     : Graphics Programmer
 date     : November 2018
 duration : 2 weeks
 
+oneline   : Unified visual and compute shader framework for stylized water
+shortrole : Technical Artist
+
 description : {
 !format
     During late 2018 I assisted with technical art and polish for a capstone project prototype in Indiana University's Game Design Program titled **OddestSea**.

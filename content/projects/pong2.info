@@ -6,6 +6,9 @@ team     : Solo
 date     : September 2018
 duration : 1 week
 
+oneline   : Jam game that turns Pong into a circular competitive rhythm game
+shortrole : Solo
+
 description : {
     !format
     Created in the Gamedev@IU Design+Prototype Lab, **Pong 2** is a new take on an old classic, featuring a radial playfield and rhythm-based competition with a single shared controller.

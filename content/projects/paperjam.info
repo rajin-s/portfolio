@@ -6,6 +6,9 @@ team     : Solo
 date     : January 2019
 duration : 1 week
 
+oneline   : Jam game with local 4-player item-based arena combat
+shortrole : Solo
+
 description : {
     !format
     Primarily created during a 72-hour weekend game jam, **Paper Jam** is a competitive 2-4 player item-based brawler.

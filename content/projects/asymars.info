@@ -7,6 +7,10 @@ role : Technical Artist
 team : 3 people
 date : April 2018
 
+oneline   : A chess-like digital puzzle game with asymmetric starting conditions and competent AI
+shortrole : Programmer
+shortrole : Artist
+
 description : {
     !format
     **Asymars** is a turn-based tactical (digital) board game where opposing sides compete to destroy all of the other's

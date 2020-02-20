@@ -10,6 +10,10 @@ team     : 18 people
 duration : 2017 &ndash; 19
 date     : started May '18
 
+oneline   : A student game development organization where I directed a leadership team and organized events
+shortrole : Founder
+shortrole : Organizer
+
 description : {
     !format
     **Gamedev@IU** is a student-run game development organization at Indiana University Bloomington.
@@ -39,3 +43,13 @@ slide : /content/img/gdiu-slide3.JPG
 slide : /content/img/gdiu-slide4.png
 
 site : http://gdiu.org
+
+highlight-description : {
+    !format
+    **Gamedev@IU** is a student-run organization I founded at Indiana University.
+    As a vice president, I collaborated with a leadership team and organized workshops and guest speakers.
+}
+
+highlight-tag : Leadership
+highlight-tag : Collaboration
+highlight-tag : Community Organization

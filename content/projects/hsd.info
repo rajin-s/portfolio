@@ -8,6 +8,9 @@ duration : 4 weeks
 
 itch : https://rajin.itch.io/hyperspace-drifter
 
+oneline   : A stylish arcade SHMUP with only one resource
+shortrole : Solo 
+
 description : {
     !format
     **Hyperspace Drifter** is a classic vertically-scrolling shoot 'em, as well as my first project using the open-source Godot game engine.

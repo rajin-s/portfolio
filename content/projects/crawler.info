@@ -6,6 +6,9 @@ team     : Solo
 date     : July 2018
 duration : 72 hours
 
+oneline   : Jam game with a hybrid 2D pixelart and low-poly 3D aesthetic
+shortrole : Solo
+
 description :  {
     !format
     This never-titled project was made as a part of a local weekend game jam.
@@ -32,3 +35,5 @@ slide : /content/img/crawler-slide1.png
 slide : /content/img/crawler-slide2.png
 slide : /content/img/crawler-slide3.png
 slide : /content/img/crawler-slide4.png
+
+class-title: thin

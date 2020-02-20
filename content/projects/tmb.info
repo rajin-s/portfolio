@@ -7,6 +7,9 @@ date     : December 2017
 duration : 72 hours
 info     : Ludum Dare 40
 
+oneline   : Jam game with custom dynamic pixelization library and explosive bear action
+shortrole : Solo
+
 description : {
     !format
     **Too Many Bears**, a game about battling an invasion of mech-piloting cats with your ever-growing supply of 

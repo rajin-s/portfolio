@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700" rel="stylesheet">
 
     <!-- <link href="css/main.css" rel="stylesheet" type="text/css" /> -->
     
@@ -88,197 +89,353 @@
     }
 </script>
 
+        
+
         <g>
             <!-- Featured Projects -->
-            <middle content-title="featured." id="featured">
-                <slide-view>
-                    <!-- Generated Slides -->
-                    <input type="radio" id="slide0" name="slide" class="slide-toggle" checked="checked" />
-<slide style="background-image:url('/content/img/umodule-slide2.png');">
-    <a href="featured/../projects/umodule.html" target="_blank"></a>
-</slide>
-<input type="radio" id="slide1" name="slide" class="slide-toggle" checked="checked" />
-<slide style="background-image:url('/content/img/petputt-slide1.png');">
-    <a href="featured/../projects/petputt.html" target="_blank"></a>
-</slide>
-<input type="radio" id="slide2" name="slide" class="slide-toggle" checked="checked" />
-<slide style="background-image:url('/content/img/gdiu-thumb.png');">
-    <a href="featured/../projects/gdiu.html" target="_blank"></a>
-</slide>
-<input type="radio" id="slide3" name="slide" class="slide-toggle" checked="checked" />
-<slide style="background-image:url('/content/img/godot-raytracing-slide4.png');">
-    <a href="featured/../projects/godot-raytracing.html" target="_blank"></a>
-</slide>
+            <middle content-title="featured." id="featured" class="force-column">
+                <g><grid-row><a class="tile-card" id="projects/petputt" href="projects/petputt.html">
+    <div class="thumbnail wide" style="background-image:url('/content/img/petputt-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/petputt-thumb.gif')"></div>
+    </div>
 
+    <g class="content highlight-strong-on-hover">
+        <div class="smallish">
+            <p><strong>Pet Putt</strong> is an award-winning minigolf puzzle-adventure through spherical courses with adorable animal friends.</p>
 
-                    <!-- Generated Thumbnails -->
-                    <thumb-list>
-                        <thumb id="thumb0"
-    style="background-image:url('/content/img/umodule-slide2.png');">
-    <label for="slide0"></label>
-</thumb>
-<thumb id="thumb1"
-    style="background-image:url('/content/img/petputt-slide1.png');">
-    <label for="slide1"></label>
-</thumb>
-<thumb id="thumb2"
-    style="background-image:url('/content/img/gdiu-thumb.png');">
-    <label for="slide2"></label>
-</thumb>
-<thumb id="thumb3"
-    style="background-image:url('/content/img/godot-raytracing-slide4.png');">
-    <label for="slide3"></label>
-</thumb>
+        </div>
+        <div class="small tags"> <span class="tag">Solo</span>  <span class="tag">Game</span>  <span class="tag">Godot</span>  <span class="tag">Scripting</span>  <span class="tag">C++</span>  <span class="tag">Shaders</span> </div>
+    </g>
+</a><a class="tile-card" id="projects/rnjin" href="projects/rnjin.html">
+    <div class="thumbnail wide" style="background-image:url('/content/img/rnjin-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/rnjin-slide1.png')"></div>
+    </div>
 
-                    </thumb-list>
-                </slide-view>
+    <g class="content highlight-strong-on-hover">
+        <div class="smallish">
+            <p><strong>rnjin</strong> is an independent research project with a type-safe entity-component-system architecture and Vulkan renderer.</p>
+
+        </div>
+        <div class="small tags"> <span class="tag">Solo</span>  <span class="tag">Engines</span>  <span class="tag">C++</span>  <span class="tag">Vulkan</span> </div>
+    </g>
+</a></grid-row>
+<grid-row><a class="tile-card" id="projects/unity-volumetric" href="projects/unity-volumetric.html">
+    <div class="thumbnail wide" style="background-image:url('/content/img/unityvolume-cloudstill.jpg')">
+        <div class="hover" style="background-image:url('/content/img/unityvolume-editor.gif')"></div>
+    </div>
+
+    <g class="content highlight-strong-on-hover">
+        <div class="smallish">
+            <p>This collection of projects explores <strong>volumetric rendering</strong> in Unity,
+including real-time authoring of complex procedural volume textures, cloud rendering, and scientific visualization.</p>
+
+        </div>
+        <div class="small tags"> <span class="tag">Solo</span>  <span class="tag">Unity</span>  <span class="tag">Shaders</span>  <span class="tag">Tools</span> </div>
+    </g>
+</a><a class="tile-card" id="projects/gdiu" href="projects/gdiu.html">
+    <div class="thumbnail wide" style="background-image:url('/content/img/gdiu-thumb.png')">
+        <div class="hover" style="background-image:url('/content/img/gdiu-thumb.png')"></div>
+    </div>
+
+    <g class="content highlight-strong-on-hover">
+        <div class="smallish">
+            <p><strong>Gamedev@IU</strong> is a student-run organization I founded at Indiana University.
+As a vice president, I collaborated with a leadership team and organized workshops and guest speakers.</p>
+
+        </div>
+        <div class="small tags"> <span class="tag">Leadership</span>  <span class="tag">Collaboration</span>  <span class="tag">Community Organization</span> </div>
+    </g>
+</a></grid-row>
+</g>
             </middle>
 
             <!-- Project Grid -->
-            <middle content-title="projects." id="projects">
-                <g>
-                    <grid-row><a class="tile" id="projects/rnjin" style="background-image:url('/content/img/rnjin-slide1.png')" href="projects/rnjin.html">
-    <div class="hover-background" style="background-image:url('/content/img/rnjin-slide1.png')"></div>
-    <g class="content">
-        <subh>rnjin</subh>
-    </g>
-</a><a class="tile" id="projects/umodule" style="background-image:url('/content/img/umodule-slide2.png')" href="projects/umodule.html">
-    <div class="hover-background" style="background-image:url('/content/img/umodule-slide3.gif')"></div>
-    <g class="content">
-        <subh>Unity Submodules</subh>
-    </g>
-</a><a class="tile" id="projects/petputt" style="background-image:url('/content/img/petputt-slide1.png')" href="projects/petputt.html">
-    <div class="hover-background" style="background-image:url('/content/img/petputt-thumb.gif')"></div>
-    <g class="content">
-        <subh>Pet Putt</subh>
-    </g>
-</a></grid-row>
-<grid-row><a class="tile" id="projects/godot-raytracing" style="background-image:url('/content/img/godot-raytracing-slide4.png')" href="projects/godot-raytracing.html">
-    <div class="hover-background" style="background-image:url('/content/img/godot-raytracing-thumb.gif')"></div>
-    <g class="content">
-        <subh>Godot Raytracing</subh>
-    </g>
-</a><a class="tile" id="projects/paperjam" style="background-image:url('/content/img/paperjam-slide1.png')" href="projects/paperjam.html">
-    <div class="hover-background" style="background-image:url('/content/img/paperjam-thumb.gif')"></div>
-    <g class="content">
-        <subh>Paper Jam</subh>
-    </g>
-</a><a class="tile" id="projects/slugs" style="background-image:url('/content/img/slugs-slide2.png')" href="projects/slugs.html">
-    <div class="hover-background" style="background-image:url('/content/img/slugs-thumb.gif')"></div>
-    <g class="content">
-        <subh>Slug Slasher</subh>
-    </g>
-</a></grid-row>
-<grid-row><a class="tile" id="projects/gdiu" style="background-image:url('/content/img/gdiu-thumb.png')" href="projects/gdiu.html">
-    <div class="hover-background" style="background-image:url('/content/img/gdiu-thumb.png')"></div>
-    <g class="content">
-        <subh>Gamedev@IU</subh>
-    </g>
-</a><a class="tile" id="projects/taps" style="background-image:url('/content/img/taps-slide2.png')" href="projects/taps.html">
-    <div class="hover-background" style="background-image:url('/content/img/taps-slide1.png')"></div>
-    <g class="content">
-        <subh>The Astro Parcel Service</subh>
-    </g>
-</a><a class="tile" id="projects/glsim" style="background-image:url('/content/img/glsim-staticthumb.png')" href="projects/glsim.html">
-    <div class="hover-background" style="background-image:url('/content/img/glsim-thumb.gif')"></div>
-    <g class="content">
-        <subh>OpenGL Simulation</subh>
-    </g>
-</a></grid-row>
-<grid-row><a class="tile" id="projects/hsd" style="background-image:url('/content/img/hsd-slide3.PNG')" href="projects/hsd.html">
-    <div class="hover-background" style="background-image:url('/content/img/hsd-thumb.gif')"></div>
-    <g class="content">
-        <subh>Hyperspace Drifter</subh>
-    </g>
-</a><a class="tile" id="projects/vector2" style="background-image:url('/content/img/vector2-slide2.PNG')" href="projects/vector2.html">
-    <div class="hover-background" style="background-image:url('/content/img/vector2-thumb.gif')"></div>
-    <g class="content">
-        <subh>Vect0r Space 2</subh>
-    </g>
-</a><a class="tile" id="projects/oddestsea" style="background-image:url('/content/img/oddestsea-slide4.png')" href="projects/oddestsea.html">
-    <div class="hover-background" style="background-image:url('/content/img/oddestsea-thumb.gif')"></div>
-    <g class="content">
-        <subh>OddestSea</subh>
-    </g>
-</a></grid-row>
-<grid-row><a class="tile" id="projects/crawler" style="background-image:url('/content/img/crawler-slide1.png')" href="projects/crawler.html">
-    <div class="hover-background" style="background-image:url('/content/img/crawler-thumb.gif')"></div>
-    <g class="content">
-        <subh>Untitled Dungeon Crawler</subh>
-    </g>
-</a><a class="tile" id="projects/asymars" style="background-image:url('/content/img/asymars-slide1.png')" href="projects/asymars.html">
-    <div class="hover-background" style="background-image:url('/content/img/asymars-thumb.gif')"></div>
-    <g class="content">
-        <subh>Asymars</subh>
-    </g>
-</a><a class="tile" id="projects/soul" style="background-image:url('/content/img/soul-slide4.png')" href="projects/soul.html">
-    <div class="hover-background" style="background-image:url('/content/img/soul-thumb.gif')"></div>
-    <g class="content">
-        <subh>Soul</subh>
-    </g>
-</a></grid-row>
-<grid-row><a class="tile" id="projects/pong2" style="background-image:url('/content/img/pong2-slide1.png')" href="projects/pong2.html">
-    <div class="hover-background" style="background-image:url('/content/img/pong2-thumb.gif')"></div>
-    <g class="content">
-        <subh>Pong 2</subh>
-    </g>
-</a><a class="tile" id="projects/pixelsprite" style="background-image:url('/content/img/pixelsprite-slide2.png')" href="projects/pixelsprite.html">
-    <div class="hover-background" style="background-image:url('/content/img/pixelsprite-slide1.gif')"></div>
-    <g class="content">
-        <subh>PixelSprite</subh>
-    </g>
-</a><a class="tile" id="projects/tmb" style="background-image:url('/content/img/tmb-slide1.png')" href="projects/tmb.html">
-    <div class="hover-background" style="background-image:url('/content/img/tmb-thumb.gif')"></div>
-    <g class="content">
-        <subh>Too Many Bears</subh>
-    </g>
-</a></grid-row>
-<grid-row><a class="tile" id="projects/unbox" style="background-image:url('/content/img/unbox-slide5.png')" href="projects/unbox.html">
-    <div class="hover-background" style="background-image:url('/content/img/unbox-thumb.gif')"></div>
-    <g class="content">
-        <subh>Unbox</subh>
-    </g>
-</a><a class="tile" id="projects/mdwvr" style="background-image:url('/content/img/mdwvr-slide1.png')" href="projects/mdwvr.html">
-    <div class="hover-background" style="background-image:url('/content/img/mdwvr-thumb.gif')"></div>
-    <g class="content">
-        <subh>Meteor Dance Wave VR</subh>
-    </g>
-</a><a class="tile" id="projects/command" style="background-image:url('/content/img/command-slide1.png')" href="projects/command.html">
-    <div class="hover-background" style="background-image:url('/content/img/command-thumb.gif')"></div>
-    <g class="content">
-        <subh>Command Line</subh>
-    </g>
-</a></grid-row>
-<grid-row><a class="tile" id="projects/techart" style="background-image:url('/content/img/techart-thumb.png')" href="projects/techart.html">
-    <div class="hover-background" style="background-image:url('/content/img/techart-thumb.png')"></div>
-    <g class="content">
-        <subh>Technical Art</subh>
-    </g>
-</a><a class="tile" id="projects/web" style="background-image:url('/content/img/web-slide5.PNG')" href="projects/web.html">
-    <div class="hover-background" style="background-image:url('/content/img/web-thumb.gif')"></div>
-    <g class="content">
-        <subh>Web Design</subh>
-    </g>
-</a><a class="tile" id="projects/graphic" style="background-image:url('/content/img/graphic-thumb.png')" href="projects/graphic.html">
-    <div class="hover-background" style="background-image:url('/content/img/graphic-thumb.png')"></div>
-    <g class="content">
-        <subh>Graphic Design</subh>
-    </g>
-</a></grid-row>
+            <middle content-title="engineering." id="projects">
+                <g><grid-row><a class="tile-card" id="projects/rnjin" href="projects/rnjin.html">
+    <div class="thumbnail" style="background-image:url('/content/img/rnjin-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/rnjin-slide1.png')"></div>
+    </div>
 
-                </g>
+    <g class="content">
+        <subh class="$class-title">rnjin</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">From-scratch ECS framework with C++ and Vulkan</div>
+    </g>
+</a><a class="tile-card" id="projects/umodule" href="projects/umodule.html">
+    <div class="thumbnail" style="background-image:url('/content/img/umodule-slide2.png')">
+        <div class="hover" style="background-image:url('/content/img/umodule-slide2.png')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Unity Submodules</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Open-source Unity submodules with extensible APIs and extensive documentation</div>
+    </g>
+</a></grid-row>
+<grid-row><a class="tile-card" id="projects/unity-volumetric" href="projects/unity-volumetric.html">
+    <div class="thumbnail" style="background-image:url('/content/img/unityvolume-cloudstill.jpg')">
+        <div class="hover" style="background-image:url('/content/img/unityvolume-editor.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Unity Volumetrics</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Raymarched rendering of sparse volumes and tools for authoring procedural 3D textures</div>
+    </g>
+</a><a class="tile-card" id="projects/vector2" href="projects/vector2.html">
+    <div class="thumbnail" style="background-image:url('/content/img/vector2-slide2.PNG')">
+        <div class="hover" style="background-image:url('/content/img/vector2-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Vect0r Space 2</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">From-scratch graphics drivers and software rendering for a restricted device with C</div>
+    </g>
+</a></grid-row>
+<grid-row><a class="tile-card" id="projects/godot-raytracing" href="projects/godot-raytracing.html">
+    <div class="thumbnail" style="background-image:url('/content/img/godot-raytracing-slide4.png')">
+        <div class="hover" style="background-image:url('/content/img/godot-raytracing-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Godot Raytracing</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Real-time stylized raytracing in Godot 3.1</div>
+    </g>
+</a><a class="tile-card" id="projects/glsim" href="projects/glsim.html">
+    <div class="thumbnail" style="background-image:url('/content/img/glsim-staticthumb.png')">
+        <div class="hover" style="background-image:url('/content/img/glsim-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">OpenGL Simulation</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">From-scratch GPU rendering and simulation with C++ and OpenGL</div>
+    </g>
+</a><a class="tile-card" id="projects/pixelsprite" href="projects/pixelsprite.html">
+    <div class="thumbnail" style="background-image:url('/content/img/pixelsprite-slide2.png')">
+        <div class="hover" style="background-image:url('/content/img/pixelsprite-slide1.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">PixelSprite</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Unity library for real-time pixelization of 3D graphics and effects</div>
+    </g>
+</a></grid-row>
+</g>
+            </middle>
+            
+            <middle content-title="games.">
+                <g><grid-row><a class="tile-card" id="projects/petputt" href="projects/petputt.html">
+    <div class="thumbnail" style="background-image:url('/content/img/petputt-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/petputt-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Pet Putt</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">A spherical minigolf puzzle-adventure with adorable animal friends</div>
+    </g>
+</a><a class="tile-card" id="projects/slugs" href="projects/slugs.html">
+    <div class="thumbnail" style="background-image:url('/content/img/slugs-slide2.png')">
+        <div class="hover" style="background-image:url('/content/img/slugs-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Slug Slasher</subh>
+        <div class="small short-roles"> <span class="role">Programmer</span>  <span class="role">Artist</span>  <span class="role">Designer</span> </div>
+        <div class="smallish">2D platformer with hack-n-slash combat and juicy gamefeel</div>
+    </g>
+</a></grid-row>
+<grid-row><a class="tile-card" id="projects/pong2" href="projects/pong2.html">
+    <div class="thumbnail" style="background-image:url('/content/img/pong2-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/pong2-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Pong 2</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Jam game that turns Pong into a circular competitive rhythm game</div>
+    </g>
+</a><a class="tile-card" id="projects/hsd" href="projects/hsd.html">
+    <div class="thumbnail" style="background-image:url('/content/img/hsd-slide3.PNG')">
+        <div class="hover" style="background-image:url('/content/img/hsd-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Hyperspace Drifter</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">A stylish arcade SHMUP with only one resource</div>
+    </g>
+</a><a class="tile-card" id="projects/paperjam" href="projects/paperjam.html">
+    <div class="thumbnail" style="background-image:url('/content/img/paperjam-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/paperjam-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Paper Jam</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Jam game with local 4-player item-based arena combat</div>
+    </g>
+</a></grid-row>
+<grid-row><a class="tile-card" id="projects/tmb" href="projects/tmb.html">
+    <div class="thumbnail" style="background-image:url('/content/img/tmb-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/tmb-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Too Many Bears</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Jam game with custom dynamic pixelization library and explosive bear action</div>
+    </g>
+</a><a class="tile-card" id="projects/soul" href="projects/soul.html">
+    <div class="thumbnail" style="background-image:url('/content/img/soul-slide4.png')">
+        <div class="hover" style="background-image:url('/content/img/soul-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Soul</subh>
+        <div class="small short-roles"> <span class="role">Technical Artist</span> </div>
+        <div class="smallish">Art direction and implementation for an abstract narrative experience exploring grief</div>
+    </g>
+</a><a class="tile-card" id="projects/asymars" href="projects/asymars.html">
+    <div class="thumbnail" style="background-image:url('/content/img/asymars-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/asymars-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Asymars</subh>
+        <div class="small short-roles"> <span class="role">Programmer</span>  <span class="role">Artist</span> </div>
+        <div class="smallish">A chess-like digital puzzle game with asymmetric starting conditions and competent AI</div>
+    </g>
+</a></grid-row>
+<grid-row><a class="tile-card" id="projects/unbox" href="projects/unbox.html">
+    <div class="thumbnail" style="background-image:url('/content/img/unbox-slide5.png')">
+        <div class="hover" style="background-image:url('/content/img/unbox-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Unbox</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Jam game with custom collision shape manipulation for puzzle-platforming</div>
+    </g>
+</a><a class="tile-card" id="projects/mdwvr" href="projects/mdwvr.html">
+    <div class="thumbnail" style="background-image:url('/content/img/mdwvr-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/mdwvr-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="thin">Meteor Dance Wave VR</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">VR rhythm game inspired by Beat Saber, Rock-Paper-Scissors, and synthwave aesthetics</div>
+    </g>
+</a><a class="tile-card" id="projects/command" href="projects/command.html">
+    <div class="thumbnail" style="background-image:url('/content/img/command-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/command-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Command Line</subh>
+        <div class="small short-roles"> <span class="role">Programmer</span>  <span class="role">Designer</span> </div>
+        <div class="smallish">Jam game with swarms of drones controlled with text-based commands</div>
+    </g>
+</a></grid-row>
+</g>
+            </middle>
+            
+            <middle content-title="visuals.">
+                <g><grid-row><a class="tile-card" id="projects/oddestsea" href="projects/oddestsea.html">
+    <div class="thumbnail" style="background-image:url('/content/img/oddestsea-slide4.png')">
+        <div class="hover" style="background-image:url('/content/img/oddestsea-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">OddestSea</subh>
+        <div class="small short-roles"> <span class="role">Technical Artist</span> </div>
+        <div class="smallish">Unified visual and compute shader framework for stylized water</div>
+    </g>
+</a><a class="tile-card" id="projects/crawler" href="projects/crawler.html">
+    <div class="thumbnail" style="background-image:url('/content/img/crawler-slide1.png')">
+        <div class="hover" style="background-image:url('/content/img/crawler-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="thin">Untitled Dungeon Crawler</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Jam game with a hybrid 2D pixelart and low-poly 3D aesthetic</div>
+    </g>
+</a><a class="tile-card" id="projects/techart" href="projects/techart.html">
+    <div class="thumbnail" style="background-image:url('/content/img/techart-thumb.png')">
+        <div class="hover" style="background-image:url('/content/img/techart-thumb.png')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Technical Art</subh>
+        <div class="small short-roles"> <span class="role">Independent</span> </div>
+        <div class="smallish">Exploratory projects with Substance Designer, Houdini, Maya, and UE4 materials</div>
+    </g>
+</a></grid-row>
+</g>
+            </middle>
+            
+            <middle content-title="other.">
+                <g><grid-row><a class="tile-card" id="projects/gdiu" href="projects/gdiu.html">
+    <div class="thumbnail" style="background-image:url('/content/img/gdiu-thumb.png')">
+        <div class="hover" style="background-image:url('/content/img/gdiu-thumb.png')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Gamedev@IU</subh>
+        <div class="small short-roles"> <span class="role">Founder</span>  <span class="role">Organizer</span> </div>
+        <div class="smallish">A student game development organization where I directed a leadership team and organized events</div>
+    </g>
+</a><a class="tile-card" id="projects/taps" href="projects/taps.html">
+    <div class="thumbnail" style="background-image:url('/content/img/taps-slide2.png')">
+        <div class="hover" style="background-image:url('/content/img/taps-slide1.png')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">The Astro Parcel Service</subh>
+        <div class="small short-roles"> <span class="role">Artist</span> </div>
+        <div class="smallish">Contract art direction and concept illustration for a small indie project</div>
+    </g>
+</a></grid-row>
+<grid-row><a class="tile-card" id="projects/web" href="projects/web.html">
+    <div class="thumbnail" style="background-image:url('/content/img/web-slide7.png')">
+        <div class="hover" style="background-image:url('/content/img/web-thumb.gif')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Web Design</subh>
+        <div class="small short-roles"> <span class="role">Solo</span> </div>
+        <div class="smallish">Static websites with responsive layouts and custom content management tools</div>
+    </g>
+</a><a class="tile-card" id="projects/graphic" href="projects/graphic.html">
+    <div class="thumbnail" style="background-image:url('/content/img/graphic-thumb.png')">
+        <div class="hover" style="background-image:url('/content/img/graphic-thumb.png')"></div>
+    </div>
+
+    <g class="content">
+        <subh class="$class-title">Graphic Design</subh>
+        <div class="small short-roles"> <span class="role">Artist</span> </div>
+        <div class="smallish">Professional and volunteer graphic design work across various media</div>
+    </g>
+</a></grid-row>
+</g>
             </middle>
 
             <!-- About Me -->
             <middle content-title="me." id="me">
-                <g class="flex m-column">
+                <g class="flex">
                     <g class="content">
                         I am an independent game and software developer based in Bloomington, Indiana.
                         In addition to checking out my projects here, you can find me on Twitter
                         <a href="http://twitter.com/rajinshankar" target="_blank">@RajinShankar</a> to see whatever I'm
                         up to at the moment.
                     </g>
-                    <panel class="round stretch keep-square"
+                    <panel class="round stretch"
                         style="background-image:url('img/rajin.png'); width: 200px;"></panel>
                 </g>
             </middle>
@@ -286,7 +443,7 @@
 
         <bottom class="flex row small">
     <g>contact: <a href="mailto:rajin@rajinshankar.com">rajin@rajinshankar.com</a></g>
-    <g>copyright Rajin Shankar, 2019</g>
+    <g>copyright Rajin Shankar, 2020</g>
 </bottom>
     </site>
 </body>

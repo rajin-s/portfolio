@@ -6,6 +6,9 @@ team : Solo
 role : Programmer
 date : April 2018
 
+oneline   : From-scratch GPU rendering and simulation with C++ and OpenGL
+shortrole : Solo 
+
 description : {
     !format
     In the spring of 2018 I did a research project on basic game engine design and real-time rendering, presenting

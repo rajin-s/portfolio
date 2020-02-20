@@ -7,6 +7,9 @@ team     : Solo
 date     : Fall 2018
 duration : 2 months
 
+oneline   : From-scratch graphics drivers and software rendering for a restricted device with C
+shortrole : Solo
+
 description : {
     !format
     Created as a final project for an embedded systems programming class, **Vect0r Space 2** runs on an STM32F3 Discovery board using an engine and 3D renderer written completely from scratch in C.

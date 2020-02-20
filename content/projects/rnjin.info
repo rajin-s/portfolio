@@ -5,8 +5,11 @@ showreel    : /content/img/rnjin-slide1.png
 
 team     : Solo
 role     : Programmer
-date     : Started August 2019
-duration : ongoing
+date     : Fall 2019
+duration : 5 months
+
+oneline   : From-scratch ECS framework with C++ and Vulkan
+shortrole : Solo
 
 description : {
     !format
@@ -26,3 +29,13 @@ tool : GLSL (shaders)
 
 slide : /content/img/rnjin-slide2.png
 slide : /content/img/rnjin-slide1.png
+
+highlight-description : {
+    !format
+    **rnjin** is an independent research project with a type-safe entity-component-system architecture and Vulkan renderer.
+}
+
+highlight-tag : Solo
+highlight-tag : Engines
+highlight-tag : C++
+highlight-tag : Vulkan
