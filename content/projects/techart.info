@@ -1,6 +1,6 @@
 title       : Technical Art
-thumb       : /content/img/techart-thumb.png
-staticthumb : /content/img/techart-thumb.png
+thumb       : /content/img/_thumb.techart-thumb.png
+staticthumb : /content/img/_thumb.techart-thumb.png
 
 role : Technical Artist
 role : Programmer

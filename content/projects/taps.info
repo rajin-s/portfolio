@@ -1,6 +1,6 @@
 title       : The Astro Parcel Service
-thumb       : /content/img/taps-slide1.png
-staticthumb : /content/img/taps-slide2.png
+thumb       : /content/img/_thumb.taps-slide1.png
+staticthumb : /content/img/_thumb.taps-slide2.png
 
 role     : Artist
 date     : Summer 2019
