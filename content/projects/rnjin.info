@@ -1,7 +1,6 @@
 title       : rnjin
 thumb       : /content/img/_thumb.rnjin-slide1.png
 staticthumb : /content/img/_thumb.rnjin-slide1.png
-showreel    : /content/img/rnjin-slide1.png
 
 team     : Solo
 role     : Programmer
@@ -27,7 +26,6 @@ tool : C++ (engine, ECS architecture)
 tool : Vulkan (rendering)
 tool : GLSL (shaders)
 
-slide : /content/img/rnjin-slide2.png
 slide : /content/img/rnjin-slide1.png
 
 highlight-description : {

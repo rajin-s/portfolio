@@ -14,7 +14,7 @@ shortrole : Solo
 description : {
     !format
     **Pet Putt** is a minigolf puzzle-adventure with adorable animal friends through spherical worlds.
-    The game started as a small experimental prototype, and has since grown into a full-scale independent production.
+    The game started as a small experimental prototype and has since grown into a full-scale independent production.
 
     Made using a customized fork of the open-source Godot game engine, **Pet Putt**'s award-winning visuals
     leverage a variety of shader and procedural geometry effects to produce a distinct visual style while keeping
@@ -23,7 +23,7 @@ description : {
     The game's spherical courses and interaction systems have been met with a glowing reception when it was shown
     for the first time at Indy PopCon 2019, and subsequently when it was selected for the Indy Indies 2019 Winter Showcase.
 
-    In addition to the main game, **Pet Putt Planets!** is a course-building card game being design and developed by
+    In addition to the main game, **Pet Putt Planets!** is a course-building card game being designed and developed by
     [Adam Stichter](http://twitter.com/ajstichter) and myself.
 }
 
