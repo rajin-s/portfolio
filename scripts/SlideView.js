@@ -45,3 +45,4 @@ function resetAdvanceInterval() {
 }
 
 currentIndex = slideToggles.length - 1
+resetAdvanceInterval()
