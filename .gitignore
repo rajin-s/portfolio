@@ -1,4 +1,4 @@
 **/.vs/
 
 # Shouldn't overwrite public / staging CNAME that are set by Github
-CNAME
+**/CNAME
