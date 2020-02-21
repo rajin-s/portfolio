@@ -1,7 +1,6 @@
 title       : Godot Raytracing
-thumb       : /content/img/godot-raytracing-thumb.gif
+thumb       : /content/img/video/_thumb.godot-raytracing-spin.webm
 staticthumb : /content/img/_thumb.godot-raytracing-slide4.png
-showreel    : /content/img/godot-raytracing-slide4.png
 
 site : /demo/godot/raytracing.html
 blog : /blog/godot-raytracing.html

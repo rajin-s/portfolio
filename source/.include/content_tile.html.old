@@ -1,0 +1,6 @@
+<a class="tile" id="$get_link" style="background-image:url('$staticthumb')" href="$get_link.html">
+    <div class="hover-background" style="background-image:url('$thumb')"></div>
+    <g class="content">
+        <subh>$title</subh>
+    </g>
+</a>

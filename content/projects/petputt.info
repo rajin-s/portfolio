@@ -1,23 +1,30 @@
-title       : Pet Putt
-thumb       : /content/img/petputt-thumb.gif
-staticthumb : /content/img/_thumb.petputt-slide1.png
-showreel    : /content/img/petputt-slide1.png
+title       : Pet Putt!
+thumb       : /content/img/video/_thumb.petputt-level.webm
+staticthumb : /content/img/_thumb.petputt-shot.PNG
 
 team     : Solo
 date     : Started March 2019
 duration : ongoing
+
+site : http://petputt.com
 
 oneline   : A spherical minigolf puzzle-adventure with adorable animal friends
 shortrole : Solo
 
 description : {
     !format
-    **Pet Putt** is an adorable golf game set on spherical putting courses. My second project with the open-source Godot game engine,
-    Pet Putt started as a small experimental prototype, and has since grown into a full-scale independent production.
+    **Pet Putt** is a minigolf puzzle-adventure with adorable animal friends through spherical worlds.
+    The game started as a small experimental prototype, and has since grown into a full-scale independent production.
 
-    The game was awarded the __Best Aesthetics__ award at Indy PopCon 2019, and has received very positive reception at various other
-    local showcase events. The PopCon demo is available on my [Patreon page](https://patreon.com/rajin), which is also the best way to
-    help support development.
+    Made using a customized fork of the open-source Godot game engine, **Pet Putt**'s award-winning visuals
+    leverage a variety of shader and procedural geometry effects to produce a distinct visual style while keeping
+    asset production manageable for a one-person team.
+
+    The game's spherical courses and interaction systems have been met with a glowing reception when it was shown
+    for the first time at Indy PopCon 2019, and subsequently when it was selected for the Indy Indies 2019 Winter Showcase.
+
+    In addition to the main game, **Pet Putt Planets!** is a course-building card game being design and developed by
+    [Adam Stichter](http://twitter.com/ajstichter) and myself.
 }
 
 feature : Custom gradient-based lighting shaders
@@ -25,6 +32,7 @@ feature : Procedural spherical spline geometry generation for paths
 feature : Procedural trajectory arc geometry generation
 feature : Orientation-independent camera control and object interaction to support a spherical play space
 feature : Extensible dialogue, state machine, and serialization framework systems
+feature : !format **Best Aesthetic**: Indy PopCon 2019
 
 tool : Godot, GDScript, GLSL (gameplay, visuals)
 tool : Blender (3D assets)
@@ -32,12 +40,14 @@ tool : Photoshop (textures, graphic design)
 tool : Substance Designer (effects textures)
 tool : Krita (character art)
 
-slide : /content/img/petputt-thumb.gif
-slide : /content/img/petputt-slide3.PNG
-slide : /content/img/petputt-slide4.gif
-slide : /content/img/petputt-slide6.gif
-slide : /content/img/petputt-slide5.gif
-slide : /content/img/petputt-slide1.png
+slide : /content/img/petputt-shot.PNG
+slide : /content/img/petputt-desert.png
+slide : /content/img/petputt-space.png
+slide : /content/img/petputt-ice.PNG
+slide : /content/img/petputt-spooky.gif
+slide : /content/img/petputt-blackhole.gif
+slide : /content/img/petputt-breakable.gif
+slide : /content/img/petputt-cabin.png
 
 highlight-description : {
     !format
