@@ -9,4 +9,5 @@ for path in paths:
         in_file = path
         out_file = path.replace(".less", ".css")
 
-        system(f"lessc {in_file} {out_file} --clean-css=\"--s1 --advanced --compatibility=ie8\"")
+        # system(f"lessc {in_file} {out_file} --clean-css=\"--s1 --advanced --compatibility=ie8\"")
+        system(f"lessc {in_file} {out_file}")
