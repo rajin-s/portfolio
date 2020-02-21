@@ -10,32 +10,23 @@
 
         <g>
             <middle content-title="rnjin" get-query>
+                 <input type="radio" id="slide$index" name="slide" class="slide-toggle" index="$index" checked /> 
+                
                 <slide-view>
                     
-                        <input type="radio" id="slide0" name="slide" class="slide-toggle" checked />
-                        <slide style="background-image:url('/content/img/rnjin-slide2.png');">
-                            <a href="/content/img/rnjin-slide2.png" target="_blank"></a>
-                        </slide>
-                    
-                        <input type="radio" id="slide1" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/rnjin-slide1.png');">
                             <a href="/content/img/rnjin-slide1.png" target="_blank"></a>
                         </slide>
                     
-                    <thumb-list>
-                        
-                            <input type="radio" id="slide0" name="slide" class="slide-toggle" />
-                            <thumb id="thumb0" style="background-image:url('/content/img/rnjin-slide2.png');">
-                                <label for="slide0"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide1" name="slide" class="slide-toggle" />
-                            <thumb id="thumb1" style="background-image:url('/content/img/rnjin-slide1.png');">
-                                <label for="slide1"></label>
-                            </thumb>
-                        
-                    </thumb-list>
                 </slide-view>
+                
+                <thumb-list>
+                    
+                        <thumb id="slide-thumb$index" style="background-image:url('/content/img/rnjin-slide1.png');">
+                            <label for="slide$index"></label>
+                        </thumb>
+                    
+                </thumb-list>
 
                 <g class="content">
                     <info-panel>
@@ -100,4 +91,6 @@ to optimize data layout and minimize overhead without sacrificing safety.</p>
         
         <include src="../.include/page_bottom.html" />
     </site>
+
+    <script src="/scripts/SlideView.js"></script>
 </body>

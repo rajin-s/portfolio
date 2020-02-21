@@ -10,22 +10,23 @@
 
         <g>
             <middle content-title="$title" get-query>
+                $$slide <input type="radio" id="slide$index" name="slide" class="slide-toggle" index="$index" checked /> $$
+                
                 <slide-view>
                     $$slide
-                        <input type="radio" id="slide$index" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('$slide');">
                             <a href="$slide" target="_blank"></a>
                         </slide>
                     $$
-                    <thumb-list>
-                        $$slide
-                            <input type="radio" id="slide$index" name="slide" class="slide-toggle" />
-                            <thumb id="thumb$index" style="background-image:url('$slide');">
-                                <label for="slide$index"></label>
-                            </thumb>
-                        $$
-                    </thumb-list>
                 </slide-view>
+                
+                <thumb-list>
+                    $$slide
+                        <thumb id="slide-thumb$index" style="background-image:url('$slide');">
+                            <label for="slide$index"></label>
+                        </thumb>
+                    $$
+                </thumb-list>
 
                 <g class="content">
                     <info-panel>
@@ -87,4 +88,6 @@
         
         <include src="../.include/page_bottom.html" />
     </site>
+
+    <script src="/scripts/SlideView.js"></script>
 </body>

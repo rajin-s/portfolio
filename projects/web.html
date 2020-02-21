@@ -52,62 +52,55 @@
 
         <g>
             <middle content-title="Web Design" get-query>
+                 <input type="radio" id="slide0" name="slide" class="slide-toggle" index="0" checked />  <input type="radio" id="slide1" name="slide" class="slide-toggle" index="1" checked />  <input type="radio" id="slide2" name="slide" class="slide-toggle" index="2" checked />  <input type="radio" id="slide3" name="slide" class="slide-toggle" index="3" checked />  <input type="radio" id="slide4" name="slide" class="slide-toggle" index="4" checked /> 
+                
                 <slide-view>
                     
-                        <input type="radio" id="slide0" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/web-slide1.PNG');">
                             <a href="/content/img/web-slide1.PNG" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide1" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/web-slide7.png');">
                             <a href="/content/img/web-slide7.png" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide2" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/web-slide3.PNG');">
                             <a href="/content/img/web-slide3.PNG" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide3" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/web-slide6.png');">
                             <a href="/content/img/web-slide6.png" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide4" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/web-thumb.gif');">
                             <a href="/content/img/web-thumb.gif" target="_blank"></a>
                         </slide>
                     
-                    <thumb-list>
-                        
-                            <input type="radio" id="slide0" name="slide" class="slide-toggle" />
-                            <thumb id="thumb0" style="background-image:url('/content/img/web-slide1.PNG');">
-                                <label for="slide0"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide1" name="slide" class="slide-toggle" />
-                            <thumb id="thumb1" style="background-image:url('/content/img/web-slide7.png');">
-                                <label for="slide1"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide2" name="slide" class="slide-toggle" />
-                            <thumb id="thumb2" style="background-image:url('/content/img/web-slide3.PNG');">
-                                <label for="slide2"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide3" name="slide" class="slide-toggle" />
-                            <thumb id="thumb3" style="background-image:url('/content/img/web-slide6.png');">
-                                <label for="slide3"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide4" name="slide" class="slide-toggle" />
-                            <thumb id="thumb4" style="background-image:url('/content/img/web-thumb.gif');">
-                                <label for="slide4"></label>
-                            </thumb>
-                        
-                    </thumb-list>
                 </slide-view>
+                
+                <thumb-list>
+                    
+                        <thumb id="slide-thumb0" style="background-image:url('/content/img/web-slide1.PNG');">
+                            <label for="slide0"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb1" style="background-image:url('/content/img/web-slide7.png');">
+                            <label for="slide1"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb2" style="background-image:url('/content/img/web-slide3.PNG');">
+                            <label for="slide2"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb3" style="background-image:url('/content/img/web-slide6.png');">
+                            <label for="slide3"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb4" style="background-image:url('/content/img/web-thumb.gif');">
+                            <label for="slide4"></label>
+                        </thumb>
+                    
+                </thumb-list>
 
                 <g class="content">
                     <info-panel>
@@ -178,6 +171,9 @@ web design for <a href="http://tutemic.com/shmup" target="_blank">Tutemic</a>.</
     <g>copyright Rajin Shankar, 2020</g>
 </bottom>
     </site>
+
+    <script src="/scripts/SlideView.js"></script>
 </body>
+
 
 </html>

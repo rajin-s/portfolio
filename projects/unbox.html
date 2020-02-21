@@ -52,72 +52,63 @@
 
         <g>
             <middle content-title="Unbox" get-query>
+                 <input type="radio" id="slide0" name="slide" class="slide-toggle" index="0" checked />  <input type="radio" id="slide1" name="slide" class="slide-toggle" index="1" checked />  <input type="radio" id="slide2" name="slide" class="slide-toggle" index="2" checked />  <input type="radio" id="slide3" name="slide" class="slide-toggle" index="3" checked />  <input type="radio" id="slide4" name="slide" class="slide-toggle" index="4" checked />  <input type="radio" id="slide5" name="slide" class="slide-toggle" index="5" checked /> 
+                
                 <slide-view>
                     
-                        <input type="radio" id="slide0" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/unbox-slide5.png');">
                             <a href="/content/img/unbox-slide5.png" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide1" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/unbox-slide4.gif');">
                             <a href="/content/img/unbox-slide4.gif" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide2" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/unbox-slide1.gif');">
                             <a href="/content/img/unbox-slide1.gif" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide3" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/unbox-slide2.gif');">
                             <a href="/content/img/unbox-slide2.gif" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide4" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/unbox-slide3.gif');">
                             <a href="/content/img/unbox-slide3.gif" target="_blank"></a>
                         </slide>
                     
-                        <input type="radio" id="slide5" name="slide" class="slide-toggle" checked />
                         <slide style="background-image:url('/content/img/unbox-thumb.gif');">
                             <a href="/content/img/unbox-thumb.gif" target="_blank"></a>
                         </slide>
                     
-                    <thumb-list>
-                        
-                            <input type="radio" id="slide0" name="slide" class="slide-toggle" />
-                            <thumb id="thumb0" style="background-image:url('/content/img/unbox-slide5.png');">
-                                <label for="slide0"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide1" name="slide" class="slide-toggle" />
-                            <thumb id="thumb1" style="background-image:url('/content/img/unbox-slide4.gif');">
-                                <label for="slide1"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide2" name="slide" class="slide-toggle" />
-                            <thumb id="thumb2" style="background-image:url('/content/img/unbox-slide1.gif');">
-                                <label for="slide2"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide3" name="slide" class="slide-toggle" />
-                            <thumb id="thumb3" style="background-image:url('/content/img/unbox-slide2.gif');">
-                                <label for="slide3"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide4" name="slide" class="slide-toggle" />
-                            <thumb id="thumb4" style="background-image:url('/content/img/unbox-slide3.gif');">
-                                <label for="slide4"></label>
-                            </thumb>
-                        
-                            <input type="radio" id="slide5" name="slide" class="slide-toggle" />
-                            <thumb id="thumb5" style="background-image:url('/content/img/unbox-thumb.gif');">
-                                <label for="slide5"></label>
-                            </thumb>
-                        
-                    </thumb-list>
                 </slide-view>
+                
+                <thumb-list>
+                    
+                        <thumb id="slide-thumb0" style="background-image:url('/content/img/unbox-slide5.png');">
+                            <label for="slide0"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb1" style="background-image:url('/content/img/unbox-slide4.gif');">
+                            <label for="slide1"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb2" style="background-image:url('/content/img/unbox-slide1.gif');">
+                            <label for="slide2"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb3" style="background-image:url('/content/img/unbox-slide2.gif');">
+                            <label for="slide3"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb4" style="background-image:url('/content/img/unbox-slide3.gif');">
+                            <label for="slide4"></label>
+                        </thumb>
+                    
+                        <thumb id="slide-thumb5" style="background-image:url('/content/img/unbox-thumb.gif');">
+                            <label for="slide5"></label>
+                        </thumb>
+                    
+                </thumb-list>
 
                 <g class="content">
                     <info-panel>
@@ -187,6 +178,9 @@ many of the systems needed to start making levels and puzzles.</p>
     <g>copyright Rajin Shankar, 2020</g>
 </bottom>
     </site>
+
+    <script src="/scripts/SlideView.js"></script>
 </body>
+
 
 </html>
