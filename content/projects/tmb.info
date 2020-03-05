@@ -9,6 +9,7 @@ info     : Ludum Dare 40
 
 oneline   : Jam game with custom dynamic pixelization library and explosive bear action
 shortrole : Solo
+shortrole : Game Jam
 
 description : {
     !format
@@ -24,6 +25,9 @@ feature : Effects and characters stylized with custom PixelSprite framework
 
 tool : Unity, C# (gameplay, effects)
 tool : Illustrator (character graphics)
+
+skill : Rapid prototyping
+skill : Arts aptitude
 
 slide : /content/img/tmb-thumb.gif
 slide : /content/img/tmb-slide1.png

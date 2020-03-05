@@ -32,6 +32,9 @@ feature : Stylized shading model inspired by Mirror Drop
 tool : Godot (scene data management, scripting)
 tool : GLSL (raytracing shader)
 
+skill : Independent motivation
+skill : Graphics programming
+
 slide : /content/img/godot-raytracing-thumb.gif
 slide : /content/img/godot-raytracing-slide1.gif
 slide : /content/img/godot-raytracing-slide2.png

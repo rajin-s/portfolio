@@ -26,6 +26,10 @@ tool : C++ (engine, ECS architecture)
 tool : Vulkan (rendering)
 tool : GLSL (shaders)
 
+skill : Low-level programming
+skill : Modern C++ language features
+skill : Independent motivation
+
 slide : /content/img/rnjin-slide1.png
 
 highlight-description : {

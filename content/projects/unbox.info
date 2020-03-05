@@ -8,6 +8,7 @@ duration : 2 weeks
 
 oneline   : Jam game with custom collision shape manipulation for puzzle-platforming
 shortrole : Solo
+shortrole : Game Jam
 
 description : {
     !format
@@ -25,6 +26,8 @@ feature : Various effects stylized with my PixelSprite Unity package
 
 tool : Unity, C# (gameplay, effects)
 tool : Photoshop (sprites)
+
+skill : Rapid prototyping
 
 slide : /content/img/unbox-slide5.png
 slide : /content/img/unbox-slide4.gif

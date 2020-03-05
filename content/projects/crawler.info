@@ -8,6 +8,7 @@ duration : 72 hours
 
 oneline   : Jam game with a hybrid 2D pixelart and low-poly 3D aesthetic
 shortrole : Solo
+shortrole : Game Jam
 
 description :  {
     !format
@@ -29,6 +30,9 @@ feature : Tools for placing props and creating levels
 
 tool : Unity, C# (gameplay, lighting &amp; postprocessing, animation)
 tool : Aseprite (2D assets)
+
+skill : Rapid Prototyping
+skill : Tech Art
 
 slide : /content/img/crawler-thumb.gif
 slide : /content/img/crawler-slide1.png

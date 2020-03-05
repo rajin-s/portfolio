@@ -35,15 +35,23 @@
                         </g>
                         <g>$date</g>
                         
-                        <g content="$team/$duration"><br>($team, $duration)</g>
+                        <g content="$team">
+                            <br />$team
+                        </g>
+                        <g content="$duration">
+                            <br />$duration
+                        </g>
 
                         <g content="$info" class="large details"><br />$info</g>
+                        
                         <br />
                         <a href="$site" target="_blank">
                             <br />website
                         </a>
+                        
                         <a href="$steam" target="_blank">
-                            <br /><i class="fab fa-steam-icon"></i>steam
+                            <br />
+                            <i class="fab fa-steam-icon"></i>steam
                         </a>
                         <a href="$itch" target="_blank">
                             <br />itch.io
@@ -58,12 +66,20 @@
 
                     <subh content="$sub">$sub</subh>
                     
+                    <section content="$skill">
+                        <subh>Key Skills</subh>
+                        <ul>
+                            $$skill <li>$skill</li> $$
+                        </ul>
+                    </section>
+
                     <section content="$task">
                         <subh>Responsibilities</subh>
                         <ul>
                             $$task <li>$task</li> $$
                         </ul>
                     </section>
+                    
                     
                     <section content="$feature">
                         <subh>Features</subh>

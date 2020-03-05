@@ -28,6 +28,9 @@ feature : Dynamic shader preprocessing and parameter linking
 tool : C++, OpenGL (engine)
 tool : GLSL (graphical &amp; compute shaders)
 
+skill : Low-level programming
+skill : Independent motivation
+
 slide : /content/img/glsim-slide1.gif
 slide : /content/img/glsim-slide2.gif
 slide : /content/img/glsim-thumb.gif

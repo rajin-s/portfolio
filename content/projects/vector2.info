@@ -27,6 +27,10 @@ tool : C, GDB (code and debugging)
 tool : Saleae logic analyzer (signal debugging, profiling)
 tool : Blender (3D assets)
 
+skill : Optimization
+skill : Low-level programming
+skill : Hardware interaction
+
 slide : /content/img/vector2-slide1.PNG
 slide : /content/img/vector2-thumb.gif
 slide : /content/img/vector2-slide2.PNG

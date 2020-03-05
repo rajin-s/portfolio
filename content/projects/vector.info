@@ -6,6 +6,7 @@ staticthumb : /content/img/_thumb.vector-slide1.png
 team     : Solo
 date     : Summer 2017
 duration : 48 hours
+shortrole : Game Jam
 
 description : {
     !format

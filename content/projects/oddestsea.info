@@ -26,6 +26,9 @@ feature : Postprocessing using Unity's Postprocessing Stack v2
 tool : Unity, Cg, HLSL, C# (visuals, unified water system)
 tool : Substance Designer (water height map generation)
 
+skill : Rapid prototyping
+skill : Graphics programming
+
 slide : /content/img/oddestsea-thumb.gif
 slide : /content/img/oddestsea-slide1.png
 slide : /content/img/oddestsea-slide2.gif

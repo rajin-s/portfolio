@@ -8,6 +8,7 @@ duration : 1 week
 
 oneline   : Jam game with local 4-player item-based arena combat
 shortrole : Solo
+shortrole : Game Jam
 
 description : {
     !format
@@ -26,6 +27,9 @@ tool : Unity, C# (gameplay, visuals)
 tool : FMOD Studio (audio integration and sound design)
 tool : Adobe Audition (audio recording and editing)
 tool : Krita (2D asset creation)
+
+skill : Rapid prototyping
+skill : Production-minded design
 
 slide : /content/img/paperjam-thumb.gif
 slide : /content/img/paperjam-slide2.png

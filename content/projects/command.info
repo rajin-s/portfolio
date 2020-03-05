@@ -13,6 +13,7 @@ info     : Global Game Jam
 oneline   : Jam game with swarms of drones controlled with text-based commands
 shortrole : Programmer
 shortrole : Designer
+shortrole : Game Jam
 
 description : {
     !format
@@ -32,6 +33,10 @@ feature : Command parsing that drives behavior for AI groups
 
 tool : Unity, C# (gameplay, effects)
 tool : Sibelius (music)
+
+skill : Rapid prototyping
+skill : Teamwork
+skill : Programming
 
 slide : /content/img/command-thumb.gif
 slide : /content/img/command-slide1.png

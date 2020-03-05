@@ -8,6 +8,7 @@ duration : 1 week
 
 oneline   : Jam game that turns Pong into a circular competitive rhythm game
 shortrole : Solo
+shortrole : Game Jam
 
 description : {
     !format
@@ -24,6 +25,8 @@ feature : Audio visualization systems that integrate with scene objects and cust
 
 tool : Unity, C# (gameplay, visuals)
 tool : Bfxr (sound effects)
+
+skill : Rapid prototyping
 
 slide : /content/img/pong2-thumb.gif
 slide : /content/img/pong2-slide1.png

@@ -28,6 +28,9 @@ feature : Raymarching-based visualization of scientific data
 
 tool : Unity (C#, HLSL)
 
+skill : Graphics programming
+skill : Data processing and visualization
+
 slide : /content/img/unityvolume-editor.gif
 slide : /content/img/unityvolume-gaia1.PNG
 slide : /content/img/unityvolume-gaia2.PNG
