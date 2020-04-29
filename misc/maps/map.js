@@ -104,7 +104,7 @@ function readData(text) {
 
         let count = headerRow.length < line.length ? headerRow.length : line.length
         for (var j = 0; j < count; j++) {
-            entry[headerRow[j]] = line[j]
+            entry[headerRow[j]] = line[j].trim()
         }
 
         entry.rent = parseInt(entry.rent.replace(/[\$,]/g, ''))
