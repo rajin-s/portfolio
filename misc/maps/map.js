@@ -61,6 +61,9 @@ function initializeMap() {
         }
     )
 
+    var bikeLayer = new google.maps.BicyclingLayer()
+    bikeLayer.setMap(map)
+
     createLabelClass()
     geo = new google.maps.Geocoder()
     if (doPaths) {
@@ -110,6 +113,7 @@ function readData(text) {
         entry.rent = parseInt(entry.rent.replace(/[\$,]/g, ''))
         entry.bedrooms = parseInt(entry.bedrooms)
         entry.area = parseInt(entry.area)
+        entry.rentPerArea = entry.rent / entry.area
 
         data.push(entry)
     }
@@ -135,6 +139,7 @@ function readData(text) {
 
     getMinMax('rent')
     getMinMax('area')
+    getMinMax('rentPerArea')
 
     placeMarkers()
 }
@@ -177,13 +182,19 @@ function createLabelClass() {
 }
 
 function placeMarkers() {
+    const entryDelay = 200
+    const limitDelay = 1000
+
     console.log("Placing Markers")
 
     function handleEntry(i) {
         if (i >= data.length) {
             console.log("Finished placing markers")
+            document.getElementById("loading-status").remove()
             return
         }
+
+        document.getElementById("loading-status").innerText = "Loading..."
 
         let entry = data[i]
         if ('address' in entry) {
@@ -192,15 +203,16 @@ function placeMarkers() {
                 if (status === 'OK') {
                     entry.location = results[0].geometry.location
                     placeMarker(entry)
-                    setTimeout(() => handleEntry(index + 1), 100)
+                    setTimeout(() => handleEntry(index + 1), entryDelay)
                 }
                 else if (status === 'OVER_QUERY_LIMIT') {
                     console.log("Waiting for bandwidth...")
-                    setTimeout(() => handleEntry(index), 1000)
+                    document.getElementById("loading-status").innerText = "Waiting..."
+                    setTimeout(() => handleEntry(index), limitDelay)
                 }
                 else {
                     console.log(`Failed to lookup address '${entry.address}': ${status}`)
-                    setTimeout(() => handleEntry(index + 1), 100)
+                    setTimeout(() => handleEntry(index + 1), entryDelay)
                 }
             })
         }
@@ -210,7 +222,7 @@ function placeMarkers() {
             handleEntry(i + 1)
         }
     }
-    
+
     handleEntry(0)
 
     // document.getElementById("map").classList.add('select-all-marker-labels')
@@ -226,8 +238,9 @@ function placeMarker(entry) {
         map: map,
         position: entry.location,
         title: entry.name,
-        animation: google.maps.Animation.DROP,
+        animation: google.maps.Animation.BOUNCE,
     })
+    setTimeout(() => { marker.setAnimation(null) }, 500)
 
     let labelContent = createLabelContent(entry)
     let label = new Label(marker, labelContent)
@@ -260,10 +273,6 @@ function placeMarker(entry) {
     // }
 }
 
-function getDirections(entry) {
-
-}
-
 var tagColors = { next: 0 }
 function createInfoWindowContent(entry) {
     function getPercent(name) {
@@ -280,6 +289,7 @@ function createInfoWindowContent(entry) {
 
     let rentPercent = getPercent('rent')
     let areaPercent = getPercent('area')
+    let rentPerAreaPercent = getPercent('rentPerArea')
 
     function createElement(tag, classes, text) {
         let e = document.createElement(tag)
@@ -307,13 +317,15 @@ function createInfoWindowContent(entry) {
             content.appendChild(createElement('div', ["address"], entry.address))
         }
     }
-    content.appendChild(createElement('div', ["rent"], `$${entry.rent}/mo &mdash; <em>top ${rentPercent}%</em>`))
-    content.appendChild(createElement('div', ["area"], `${entry.area}ft² &mdash; <em>top ${areaPercent}%</em>`))
 
-    if (doPaths) {
-        content.appendChild(createElement('div', ["spacer"], ""))
-        let pathDistance = 0
-    }
+    content.appendChild(createElement('div', ["rent"], `$${entry.rent}/mo &mdash; <strong>${rentPercent / 10}/10</em></strong>`))
+    content.appendChild(createElement('div', ["area"], `${entry.area}ft² &mdash; <strong>${(100 - areaPercent) / 10}/10</strong>`))
+
+    content.appendChild(createElement('div', ["spacer"], ""))
+    content.appendChild(createElement('div', ["calculated"], `$${Math.floor(entry.rentPerArea * 100) / 100}/ft² &mdash; <strong>${rentPerAreaPercent / 10}/10</strong>`))
+    
+    content.appendChild(createElement('div', ["spacer"], ""))
+    content.appendChild(createElement('h3', ["calculated"], `${Math.floor((rentPercent + rentPerAreaPercent + 100 - areaPercent) / 3) / 10}/10`))
 
     if ('tags' in entry) {
         content.appendChild(createElement('div', ["spacer"], ""))
@@ -342,21 +354,21 @@ function createInfoWindowContent(entry) {
 function createLabelContent(entry) {
     const hueMin = 0
     const hueMax = 190
-    function createElement(name, format, swapHues) {
+    function createElement(name, colorSource, format, swapHues) {
         let e = document.createElement('span')
         e.classList.add("map-marker-label-element")
 
         let text = format.replace(/\*/g, entry[name])
         e.innerHTML = text
 
-        let minKey = `${name}Min`
-        let maxKey = `${name}Max`
+        let minKey = `${colorSource}Min`
+        let maxKey = `${colorSource}Max`
 
         if (minKey in metadata) {
             let min = swapHues ? metadata[maxKey] : metadata[minKey]
             let max = swapHues ? metadata[minKey] : metadata[maxKey]
 
-            let t = (entry[name] - min) / (max - min)
+            let t = (entry[colorSource] - min) / (max - min)
             let hue = hueMin + (hueMax - hueMin) * t
             e.style.backgroundColor = `hsl(${hue}deg, 85%, 80%)`
             e.style.color = `hsl(${hue + 15}deg, 90%, 25%)`
@@ -367,9 +379,9 @@ function createLabelContent(entry) {
     }
 
     let labelElements = []
-    labelElements.push(createElement('bedrooms', "*b", false))
-    labelElements.push(createElement('area', "*ft²", false))
-    labelElements.push(createElement('rent', "$*/mo", true))
+    labelElements.push(createElement('bedrooms', 'rentPerArea', "*b", true))
+    labelElements.push(createElement('area', 'area', "*ft²", false))
+    labelElements.push(createElement('rent', 'rent', "$*/mo", true))
 
     let labelContent = document.createElement('div')
     labelElements.forEach(x => labelContent.appendChild(x))

@@ -114,6 +114,20 @@
 
             pointer-events: none;
         }
+
+        #loading-status {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        #loading-status:before {
+            content: '';
+            background: url('https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif');
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            background-size: contain;
+            margin-right: 0.5em;
+        }
     </style>
 </head>
 
@@ -122,6 +136,7 @@
         <script src="map.js"></script>
     </div>
     <div id="controls">
+        <div id="loading-status">Loading...</div>
         <div>[A] : Focus all labels</div>
         <div>Click on a marker to show more info</div>
         <div>Click on a label to keep it focused</div>
