@@ -61,8 +61,8 @@ function initializeMap() {
         }
     )
 
-    var bikeLayer = new google.maps.BicyclingLayer()
-    bikeLayer.setMap(map)
+    // var bikeLayer = new google.maps.BicyclingLayer()
+    // bikeLayer.setMap(map)
 
     createLabelClass()
     geo = new google.maps.Geocoder()
@@ -113,7 +113,7 @@ function readData(text) {
         entry.rent = parseInt(entry.rent.replace(/[\$,]/g, ''))
         entry.bedrooms = parseInt(entry.bedrooms)
         entry.area = parseInt(entry.area)
-        entry.rentPerArea = entry.rent / entry.area
+        entry.rentperarea = parseFloat(entry.rentperarea.replace(/[\$,]/g, ''))
 
         data.push(entry)
     }
@@ -139,7 +139,7 @@ function readData(text) {
 
     getMinMax('rent')
     getMinMax('area')
-    getMinMax('rentPerArea')
+    getMinMax('rentperarea')
 
     placeMarkers()
 }
@@ -289,7 +289,7 @@ function createInfoWindowContent(entry) {
 
     let rentPercent = getPercent('rent')
     let areaPercent = getPercent('area')
-    let rentPerAreaPercent = getPercent('rentPerArea')
+    let rentPerAreaPercent = getPercent('rentperarea')
 
     function createElement(tag, classes, text) {
         let e = document.createElement(tag)
@@ -322,7 +322,7 @@ function createInfoWindowContent(entry) {
     content.appendChild(createElement('div', ["area"], `${entry.area}ft² &mdash; <strong>${(100 - areaPercent) / 10}/10</strong>`))
 
     content.appendChild(createElement('div', ["spacer"], ""))
-    content.appendChild(createElement('div', ["calculated"], `$${Math.floor(entry.rentPerArea * 100) / 100}/ft² &mdash; <strong>${rentPerAreaPercent / 10}/10</strong>`))
+    content.appendChild(createElement('div', ["calculated"], `$${Math.floor(entry.rentperarea * 100) / 100}/ft² &mdash; <strong>${rentPerAreaPercent / 10}/10</strong>`))
     
     content.appendChild(createElement('div', ["spacer"], ""))
     content.appendChild(createElement('h3', ["calculated"], `${Math.floor((rentPercent + rentPerAreaPercent + 100 - areaPercent) / 3) / 10}/10`))
@@ -379,7 +379,7 @@ function createLabelContent(entry) {
     }
 
     let labelElements = []
-    labelElements.push(createElement('bedrooms', 'rentPerArea', "*b", true))
+    labelElements.push(createElement('bedrooms', 'rentperarea', "*b", true))
     labelElements.push(createElement('area', 'area', "*ft²", false))
     labelElements.push(createElement('rent', 'rent', "$*/mo", true))
 
