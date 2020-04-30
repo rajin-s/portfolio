@@ -194,7 +194,7 @@ function placeMarkers() {
             return
         }
 
-        document.getElementById("loading-status").innerText = "Loading..."
+        document.getElementById("loading-status").innerText = `Loading... (${i}/${data.length - 1})`
 
         let entry = data[i]
         if ('address' in entry) {
@@ -207,7 +207,7 @@ function placeMarkers() {
                 }
                 else if (status === 'OVER_QUERY_LIMIT') {
                     console.log("Waiting for bandwidth...")
-                    document.getElementById("loading-status").innerText = "Waiting..."
+                    document.getElementById("loading-status").innerText = `Waiting... (${i}/${data.length - 1})`
                     setTimeout(() => handleEntry(index), limitDelay)
                 }
                 else {
