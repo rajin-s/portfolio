@@ -1,0 +1,448 @@
+html,
+body {
+    margin: 0;
+    font-family: 'Fira Code', Consolas, monospace;
+
+    background-color: @white;
+    color: @black;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Library                                  */
+/* -------------------------------------------------------------------------- */
+
+// Colors
+@white: #eee;
+@black: #444;
+@red: #db455e;
+
+// Sizes
+@unitSmall: 4px;
+@unit: 22px;
+@infoWidth: @unit * 30;
+
+// Curves
+@easeWayOut: cubic-bezier(0.19, 1, 0.22, 1);
+
+// Common bits
+._Smooth(@time: 0.4s)
+{
+    transition: all @time @easeWayOut;
+}
+._Fill(@url, @size: contain)
+{
+    background-image: url(@url);
+    background-position: center;
+    background-size: @size;
+    background-repeat: no-repeat;
+}
+._Clickable()
+{
+    cursor: pointer;
+}
+._Border(@c: @black)
+{
+    border: 1px solid @c;
+}
+._ListSpace(horizontal)
+{
+    margin-right: @unit/2;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+._ListSpace(vertical)
+{
+    margin-bottom: @unit/2;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Main View                                 */
+/* -------------------------------------------------------------------------- */
+
+#Page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+
+    #Map
+    {
+        flex-grow: 9999;
+
+        background-color: fade(blue, 10%);
+    }
+    
+    #Info
+    {
+        position: relative;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        
+        width: @infoWidth;
+        min-width: 600px;
+        height: 100%;
+        overflow: hidden;
+
+        border-left: 1px solid @black;
+
+        ._Smooth(0.5s);
+
+        input#FilterInput {
+            margin-bottom: @unit/2;
+            font-family: 'Fira Code', Consolas, monospace;
+            padding: @unitSmall @unit/2;
+        }
+        
+        .Content {
+            display: flex;
+            flex-direction: column;
+            
+            width: @infoWidth;
+            height: 50%;
+            flex-grow: 1;
+
+            padding: @unit;
+            box-sizing: border-box;
+
+            .Title {
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+
+            .List {
+                padding-right: @unit/2;
+
+                overflow-y: scroll;
+                display: flex;
+                flex-direction: column;
+
+                .Item {
+                    position: relative;
+                    padding: @unitSmall*2 @unitSmall*3 @unitSmall*2 @unitSmall*4;
+
+                    margin-bottom: @unit/2;
+                    ._Smooth();
+                    ._Border();
+                    ._Clickable();
+
+                    .Heading
+                    {
+                        margin-bottom: @unitSmall;
+                    }
+
+                    .Name
+                    {
+                        font-weight: bold;
+
+                    }
+                    .Link {
+                        ._Smooth();
+                        &:hover {
+                            color: @red;
+                        }
+                    }
+                    .Address
+                    {
+                        font-size: 0.8em;
+                        color: fade(@black, 75%);
+                    }
+
+                    &:after
+                    {
+                        content: '';
+                        display: block;
+                        position:absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 0;
+                        background-color: @black;
+
+                        ._Smooth();
+                    }
+
+                    & > * {
+                        margin-left: 0px;
+                        ._Smooth();
+                    }
+
+                    &.Selected {
+                        & > * {
+                            margin-left: 8px;
+                        }
+                        &:after
+                        {
+                            width: 8px !important;
+                            background-color: @red;
+                        }
+                    }
+
+                    &.Previewing {
+                        .Link {
+                            color: @red;
+                        }
+                    }
+
+                    &:hover:after
+                    {
+                        width: 4px;
+                    }
+
+                    &:focus
+                    {
+                        &.Selected
+                        {
+                            background-color: fade(@red, 10%);
+                            border-color: @red;
+                        }
+
+                        outline: none;
+                    }
+                }
+
+                &[sort='rent'] .Rent,
+                &[sort='area'] .Area,
+                &[sort='rentperarea'] .RentPerArea,
+                &[sort='impression'] .Impression,
+                &[sort='impressionperrent'] .ImpressionPerRent,
+                &[sort='bustime'] .BusTime,
+                &[sort='cartime'] .CarTime,
+                &[sort='nearbystuff'] .NearbyStuff,
+                &[sort='scenery'] .Scenery,
+                .Focused
+                {
+                    border-bottom-color: fade(@black, 60%);
+                }
+            }
+
+            .Line
+            {
+                display: flex;
+                font-size: 0.9em;
+
+                & > *
+                {
+                    border-bottom: 2px dotted transparent;
+                }
+
+                .Spacer {
+                    &:before {
+                        content: '.';
+                        color: fade(@black, 60%);
+                        margin: 0 @unit/2;
+                    }
+                }
+            }
+
+            ._Smooth(1s);
+            
+            h2 {
+                margin: @unit/2 0;
+            }
+        }
+
+        #ShowHide
+        {
+            display: block;
+            position: absolute;
+            
+            top: @unit / 2;
+            right: @unit / 2;
+            z-index: 9999;
+            
+            width: @unit * 2;
+            height: @unit * 2;
+            
+            background: @white;
+
+            ._Border();
+            ._Clickable();
+            
+            &:after {
+                content: ' ';
+                display: block;
+                width: 70%;
+                height: 70%;
+                
+                position: absolute;
+                left: 15%;
+                top: 15%;
+
+                transform: rotate(180deg);
+                
+                ._Fill('img/ico_Arrow.png');
+                ._Smooth(0.5s);
+            }
+
+            & ~ .Content {
+                margin-left: 0;
+            }
+            & ~ #Details {
+                max-height: 50%;
+            }
+        }
+
+        &.Hidden
+        {
+            width: 0%;
+            min-width: @unit * 3;
+            
+            #ShowHide
+            {
+                &:after {
+                    transform: rotate(0deg);
+                }
+        
+                & ~ .Content {
+                    margin-left: @unit * 4;
+                    opacity: 0;
+                }
+                & ~ #Details {
+                    height: 0%;
+                }
+            }
+        }
+    }
+}
+
+#Details {
+    position: relative;
+    
+    width: @infoWidth;
+    height: 50%;
+
+    ._Smooth(0.5s);
+
+    iframe
+    {
+        display: block;
+        width: 100%;
+        height: 50vh;
+
+        outline: none;
+    }
+    
+    .Button
+    {
+        display: block;
+        width: 0;
+        padding: 0 @unit/2;
+        height: @unit;
+        
+        position: absolute;
+        top: -@unit/2;
+        z-index: 9999;
+        
+        background-color: @black;
+        
+        ._Border(@white);
+        ._Smooth(1s);
+        ._Clickable();
+    }
+    .Exit
+    {
+        left: 50%;
+        transform: rotate(45deg);
+        ._Fill('img/ico_Arrow2.png', 80%);
+    }
+    .OpenExternal
+    {
+        right: @unit;
+        transform: rotate(-45deg);
+        ._Fill('img/ico_Arrow2.png', 80%);
+    }
+    
+    & .Cover
+    {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9998;
+        width: 100%;
+        height: 100%;
+        background-color: @white;
+        border-top: 1px solid @black;
+        pointer-events: none;
+
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        &:after {
+            @size: 100px;
+            content: '';
+            display: block;
+            width: @size;
+            height: @size;
+            margin: -@size/2 0 0 -@size/2;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            ._Fill('img/loading.gif');
+        }
+    }
+    &.Loading .Cover
+    {
+        opacity: 1;
+        transition: none;
+    }
+
+    &.Hidden
+    {
+        height: 0%;
+
+        .Button {
+            top: @unit/2;
+        }
+        
+        .Exit {
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Components                                 */
+/* -------------------------------------------------------------------------- */
+
+.TagList
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    .Tag
+    {
+        display: block;
+        padding: @unitSmall @unit/2;
+        background-color: @white;
+
+        font-size: 0.8em;
+
+        ._Border();
+        ._ListSpace(horizontal);
+        ._Clickable();
+
+        margin-bottom: @unit/2;
+
+        border-radius: 0;
+        transition: border-radius 1s @easeWayOut;
+    }
+
+    input {
+        display: none;
+    }
+    input:checked + .Tag, 
+    .Tag.Hoverable:hover {
+        background-color: @black;
+        color: @white;
+        border-radius: 1.5em;
+    }
+}

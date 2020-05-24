@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Stuff</title>
+
+    <link href="apartments.less" rel="stylesheet" type="text/less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.0.4/less.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div id="Page" class="">
+        <!-- Main Map View (filled be maps API) -->
+        <div id="Map"></div>
+
+        <!-- Main Info Panel -->
+        <div id="Info">
+            <!-- Toggle for showing / hiding the info panel -->
+            <div id="ShowHide" onclick="toggle('Info', 'Hidden')"></div>
+
+            <div class="Content">
+                <div class="Line">
+                    <div class="Title">Apartments</div>
+                    <div class="Spacer"></div>
+                    <div class="TagList">
+                        <div class="Tag Hoverable" onclick="selectAll(true)">select all</div>
+                        <div class="Tag Hoverable" onclick="selectAll(false)">deselect all</div>
+                    </div>
+                </div>
+                <div id="InfoSort" class="TagList">
+                    <input type="radio" name="sort" id="SortBeds">
+                    <label for="SortBeds" class="Tag" onclick="sortInfoList('bedrooms', true);">Beds</label>
+
+                    <input type="radio" name="sort" id="SortRent">
+                    <label for="SortRent" class="Tag" onclick="sortInfoList('rent', false);">Rent</label>
+
+                    <input type="radio" name="sort" id="SortArea">
+                    <label for="SortArea" class="Tag" onclick="sortInfoList('area', true);">Area</label>
+
+                    <input type="radio" name="sort" id="SortImpression">
+                    <label for="SortImpression" class="Tag" onclick="sortInfoList('impression', true);"">Impression</label>
+                    
+                    <input type="radio" name="sort" id="SortRentPerArea">
+                    <label for="SortRentPerArea" class="Tag" onclick="sortInfoList('rentperarea', false);"">Rent/Area</label>
+                    
+                    <input type="radio" name="sort" id="SortImpressionPerRent">
+                    <label for="SortImpressionPerRent" class="Tag" onclick="sortInfoList('impressionperrent', true);"">Impression/Rent</label>
+                    
+                    <input type="radio" name="sort" id="SortBus">
+                    <label for="SortBus" class="Tag" onclick="sortInfoList('bustime', false);"">Bus</label>
+                    
+                    <input type="radio" name="sort" id="SortCar">
+                    <label for="SortCar" class="Tag" onclick="sortInfoList('cartime', false);"">Car</label>
+
+                    <input type="radio" name="sort" id="SortNearby">
+                    <label for="SortNearby" class="Tag" onclick="sortInfoList('nearbystuff', true);"">Nearby Stuff</label>
+                    
+                    <input type="radio" name="sort" id="SortScenery">
+                    <label for="SortScenery" class="Tag" onclick="sortInfoList('scenery', true);"">Scenery</label>
+                </div>
+
+                <input id="FilterInput" type="text" placeholder="filter expression... ex. x.rent &lt; 2000">
+
+                <div id="InfoList" class="List">
+                    <!-- Filled in populateInfoList -->
+                </div>
+            </div>
+
+            <div id="Details" class="Loading Hidden">
+                <div class="Button Exit" onclick="unpreviewItem(lastPreviewItem);"></div>
+                <a id="WebViewExternal" target="_blank" class="Button OpenExternal"></a>
+                <div class="Cover"></div>
+                <iframe id="WebView" src="about:blank"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="apartments.js"></script>
+<script>
+    parseArguments();
+    loadMap();
+    loadData();
+
+    data.items.forEach((x) => {
+        if (eval("x.name.contains('Place')"))
+        {
+            console.log(x);
+        }
+    });
+</script>
