@@ -127,6 +127,7 @@ function loadData() {
     })
 }
 
+const skip_count = 1;
 function parseData(text) {
     console.log("Parsing data");
 
@@ -139,12 +140,12 @@ function parseData(text) {
         console.log("No data to parse")
     }
 
-    let headerRow = lines[0]
+    let headerRow = lines[skip_count]
     for (var i = 0; i < headerRow.length; i++) {
         headerRow[i] = headerRow[i].toLowerCase().trim()
     }
 
-    for (var i = 1; i < lines.length; i++) {
+    for (var i = 1 + skip_count; i < lines.length; i++) {
         let line = lines[i]
         var entry = {}
 
