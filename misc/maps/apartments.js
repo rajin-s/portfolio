@@ -248,7 +248,7 @@ function deselectItem(item) {
 
 function selectAll(value) {
     if (value) {
-        data.items.forEach((item) => { selectItem(item) });
+        data.items.forEach((item) => { if (item.filter) { selectItem(item); } });
     }
     else {
         data.items.forEach((item) => { deselectItem(item) });
@@ -361,6 +361,10 @@ function filterInfoList(expression) {
                     return;
                 }
             }
+            if (ref_value === true || ref_value === false) {
+                if (other == "true") { other = true; }
+                if (other == "false") { other = false; }
+            }
 
             if (op == "is" || op == "==") {
                 data.items.forEach((item) => { item.filter = item.filter && (item[name] == other); });
@@ -429,6 +433,7 @@ function initializeMap() {
     console.log("Creating Map");
     page.map = new google.maps.Map(page.mapView, { center: args.centerLocation, zoom: 13 });
     createLabelClass();
+
     onMapLoaded();
 }
 
