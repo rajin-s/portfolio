@@ -49,24 +49,6 @@ function parseArguments() {
 function onFilterChanged() {
     let text = page.filterInput.value;
     filterInfoList(text);
-
-    // if (text === "") {
-    //     console.log(`Use filter: true`);
-    //     filterInfoList("true");
-    // }
-    // else {
-    //     text = text.replace(/=/, "==");
-    //     text = text.replace(/\band\b/, "&&");
-    //     text = text.replace(/\bor\b/, "||");
-    //     try {
-    //         console.log(`Use filter: ${text}`);
-    //         filterInfoList(text);
-    //     }
-    //     catch
-    //     {
-    //         console.log(`Invalid filter: ${text}`);
-    //     }
-    // }
 }
 page.filterInput.addEventListener('input', onFilterChanged);
 
@@ -148,8 +130,11 @@ function parseData(text) {
 
 function onDataLoaded() {
     page.info.classList.remove('Loading');
-    populateInfoList();
+    loadMap();
+}
+function onMapLoaded() {
     initializeMarkers();
+    populateInfoList();
 }
 
 /* -------------------------------------------------------------------------- */
@@ -346,68 +331,67 @@ function filterInfoList(expression) {
     // Reset filter
     data.items.forEach((item) => { item.filter = true });
 
-    if (expression == "") {
-        return;
-    }
+    if (expression != "") {
+        // Split into (...) groups
+        let groups = expression.matchAll(patterns.group);
 
-    // Split into (...) groups
-    let groups = expression.matchAll(patterns.group);
+        let hasGroups = false;
 
-    let hasGroups = false;
+        // Process each group
+        for (let group of groups) {
+            hasGroups = true;
+            let elements = group[1].match(patterns.elements);
 
-    // Process each group
-    for (let group of groups) {
-        hasGroups = true;
-        let elements = group[1].match(patterns.elements);
+            if (elements == null) {
+                console.log(`Invalid filter group: ${group}`)
+                return;
+            }
 
-        if (elements == null) {
-            console.log(`Invalid filter group: ${group}`)
-            return;
-        }
+            let name = elements[1];
+            let op = elements[2];
+            let other = elements[3];
 
-        let name = elements[1];
-        let op = elements[2];
-        let other = elements[3];
+            if (data.items[0][name] == undefined) {
+                console.log(`Invalid property: ${name}`);
+                return;
+            }
 
-        if (data.items[0][name] == undefined) {
-            console.log(`Invalid property: ${name}`);
-            return;
-        }
+            let ref_value = data.items[0][name];
+            if (Number.isInteger(ref_value)) {
+                other = parseInt(other);
+                if (isNaN(other)) {
+                    return;
+                }
+            }
 
-        let ref_value = data.items[0][name];
-        if (Number.isInteger(ref_value)) {
-            other = parseInt(other);
-            if (isNaN(other)) {
+            if (op == "is" || op == "==") {
+                data.items.forEach((item) => { item.filter = item.filter && (item[name] == other); });
+            }
+            else if (op == "has") {
+                data.items.forEach((item) => { item.filter = item.filter && (item[name].match(new RegExp(other, 'i')) != null); });
+            }
+            else if (op == "<") {
+                data.items.forEach((item) => { item.filter = item.filter && (item[name] < other); });
+            }
+            else if (op == ">") {
+                data.items.forEach((item) => { item.filter = item.filter && (item[name] > other); });
+            }
+            else if (op == "<=") {
+                data.items.forEach((item) => { item.filter = item.filter && (item[name] <= other); });
+            }
+            else if (op == ">=") {
+                data.items.forEach((item) => { item.filter = item.filter && (item[name] >= other); });
+            }
+            else {
+                console.log(`Invalid filter operation: ${op}`);
                 return;
             }
         }
 
-        if (op == "is" || op == "==") {
-            data.items.forEach((item) => { item.filter = item.filter && (item[name] == other); });
+        if (!hasGroups) {
+            expression = expression.replace(/[\(\)]/g, "\\\\$0");
+            data.items.forEach((item) => { item.filter = item.filter && (item.name.match(new RegExp(expression, 'i')) != null); });
         }
-        else if (op == "has") {
-            data.items.forEach((item) => { item.filter = item.filter && (item[name].match(new RegExp(other, 'i')) != null); });
-        }
-        else if (op == "<") {
-            data.items.forEach((item) => { item.filter = item.filter && (item[name] < other); });
-        }
-        else if (op == ">") {
-            data.items.forEach((item) => { item.filter = item.filter && (item[name] > other); });
-        }
-        else if (op == "<=") {
-            data.items.forEach((item) => { item.filter = item.filter && (item[name] <= other); });
-        }
-        else if (op == ">=") {
-            data.items.forEach((item) => { item.filter = item.filter && (item[name] >= other); });
-        }
-        else {
-            console.log(`Invalid filter operation: ${op}`);
-            return;
-        }
-    }
-
-    if (!hasGroups) {
-        data.items.forEach((item) => { item.filter = item.filter && (item.name.match(new RegExp(expression, 'i')) != null); });
     }
 
     data.items.forEach((item) => {
@@ -447,6 +431,7 @@ function initializeMap() {
     console.log("Creating Map");
     page.map = new google.maps.Map(page.mapView, { center: args.centerLocation, zoom: 13 });
     createLabelClass();
+    onMapLoaded();
 }
 
 function initializeMarkers() {
