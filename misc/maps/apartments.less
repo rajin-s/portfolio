@@ -415,10 +415,10 @@ body {
         background-color: @white;
         border-top: 1px solid @black;
         pointer-events: none;
-
+        
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
-
+        
         &:after {
             @size: 100px;
             content: '';
@@ -426,18 +426,19 @@ body {
             width: @size;
             height: @size;
             margin: -@size/2 0 0 -@size/2;
-
+            
             position: absolute;
             left: 50%;
             top: 50%;
+            z-index: 9998;
 
             ._Fill('img/loading.gif');
         }
     }
     &.Loading .Cover
     {
-        opacity: 1;
-        transition: none;
+        opacity: 1 !important;
+        transition: none !important;
     }
 
     &.Hidden

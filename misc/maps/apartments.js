@@ -562,17 +562,40 @@ function loadWebViewPage(url) {
 
     page.details.classList.add("Loading");
     page.webView.src = "about:blank";
+
+    if (!url.startsWith("http")) {
+        url = "http://" + url;
+    }
+
     page.webViewExternal.href = url;
 
-    http.open('get', 'https://cors-anywhere.herokuapp.com/' + url)
+    http.open('get', url)
     http.onreadystatechange = () => {
-        if (http.readyState == 4 && http.status == 200) {
-            page.details.classList.remove("Loading");
+        if (http.readyState == 4) {
+            if (http.status == 200) {
+                page.webView.src = url;
+            }
+            else {
+                http.open('get', 'https://cors-anywhere.herokuapp.com/' + url)
+                http.onreadystatechange = () => {
+                    if (http.readyState == 4) {
+                        page.details.classList.remove("Loading");
+                        let doc = page.webView.contentDocument;
+                        doc.open();
 
-            let doc = page.webView.contentDocument;
-            doc.open();
-            doc.write(http.responseText);
-            doc.close();
+                        if (http.status == 200) {
+                            doc.write(http.responseText);
+                        }
+                        else
+                        {
+                            doc.write(`Failed to open link: <a href='${url}' target="_blank">${url}</a>`);
+                        }
+
+                        doc.close();
+                    }
+                };
+                http.send()
+            }
         }
     };
 
