@@ -36,6 +36,8 @@ let args = {
     sheetURL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRj14jquvIrTJ6j_-uc4myv0dOaMCYegcAeqhQVL0EA4370K3bLzZj8Vv3lJ8JRef9RgDMC_kwtqunp/pub?output=tsv",
 }
 
+var Label
+
 function parseArguments() {
     var url = new URLSearchParams(window.location.search);
     if (url.has('sheet')) { args.sheetURL = url.get('sheet'); }
@@ -46,23 +48,25 @@ function parseArguments() {
 
 function onFilterChanged() {
     let text = page.filterInput.value;
-    if (text === "") {
-        console.log(`Use filter: true`);
-        filterInfoList("true");
-    }
-    else {
-        text = text.replace(/=/, "==");
-        text = text.replace(/\band\b/, "&&");
-        text = text.replace(/\bor\b/, "||");
-        try {
-            console.log(`Use filter: ${text}`);
-            filterInfoList(text);
-        }
-        catch
-        {
-            console.log(`Invalid filter: ${text}`);
-        }
-    }
+    filterInfoList(text);
+
+    // if (text === "") {
+    //     console.log(`Use filter: true`);
+    //     filterInfoList("true");
+    // }
+    // else {
+    //     text = text.replace(/=/, "==");
+    //     text = text.replace(/\band\b/, "&&");
+    //     text = text.replace(/\bor\b/, "||");
+    //     try {
+    //         console.log(`Use filter: ${text}`);
+    //         filterInfoList(text);
+    //     }
+    //     catch
+    //     {
+    //         console.log(`Invalid filter: ${text}`);
+    //     }
+    // }
 }
 page.filterInput.addEventListener('input', onFilterChanged);
 
@@ -71,50 +75,7 @@ page.filterInput.addEventListener('input', onFilterChanged);
 /* -------------------------------------------------------------------------- */
 
 let data = {
-    items: [
-        // {
-        //     name: "AVA Esterra Park",
-        //     address: "15301 NE Turing St, Redmond, WA 98052",
-        //     beds: "2",
-        //     rent: "500",
-        //     area: "1140",
-        //     rentperarea: "13",
-        //     link: "http://google.com",
-        // },
-        // {
-        //     name: "AVA Esterra Park",
-        //     address: "15301 NE Turing St, Redmond, WA 98052",
-        //     beds: "2",
-        //     rent: "5002",
-        //     area: "1140",
-        //     rentperarea: "132",
-        //     link: "https://easings.net/en#easeOutExpo",
-        // },
-        // {
-        //     name: "Foo 1 asd a d",
-        //     rent: "3",
-        //     rent: "5100",
-        //     area: "1130",
-        //     rentperarea: "12",
-        //     link: "https://www.quora.com/How-do-you-type-a-%C2%B2-squared-symbol",
-        // },
-        // {
-        //     name: "Foo 2 AD w e q",
-        //     rent: "2",
-        //     rent: "2500",
-        //     area: "0",
-        //     rentperarea: "1222",
-        //     link: "https://loremipsum.io/generator/?n=5&t=p",
-        // },
-        // {
-        //     name: "Foo 3 DDd Aa dDD",
-        //     rent: "1",
-        //     rent: "5020",
-        //     area: "140",
-        //     rentperarea: "122",
-        //     link: "https://github.com/SomMeri/less4j/wiki/Less-Language-Namespaces",
-        // },
-    ]
+    items: []
 }
 
 function loadData() {
@@ -154,10 +115,14 @@ function parseData(text) {
             entry[headerRow[j]] = line[j].trim()
         }
 
+        entry.index = i + 1;
+        entry.filter = true;
+
         let makeNumber = (k) => {
             entry['text_' + k] = entry[k];
             entry[k] = parseFloat(entry[k].replace("$", "").replace(",", ""));
         };
+
 
         makeNumber('bedrooms');
         makeNumber('rent');
@@ -171,6 +136,7 @@ function parseData(text) {
         makeNumber('scenery');
         makeNumber('lat');
         makeNumber('lng');
+        makeNumber('score');
 
         if (entry.name == "") {
             entry.name = `🏦 ${i + 1}`;
@@ -181,6 +147,7 @@ function parseData(text) {
 }
 
 function onDataLoaded() {
+    page.info.classList.remove('Loading');
     populateInfoList();
     initializeMarkers();
 }
@@ -193,7 +160,7 @@ let templates = {
     item:
         `
         <div class='Heading'>
-            <div class='Name'><span class='Link'>🔗 $name</span></div>
+            <div class='Name'><span class='Link'>$index. 🔗 $name</span></div>
             <div class='Address'>$address </div>
         </div>
         <div class='Line'>
@@ -241,50 +208,53 @@ function populateInfoList() {
         i++;
 
         let target = item;
-        newElement.getElementsByClassName('Link')[0].onclick = (event) => {
-            if (item.previewing) {
-                unpreviewItem(item)
-            }
-            else {
-                previewItem(item);
-                if (item.selected) {
-                    showMarker(item);
-                }
-            }
-            event.stopPropagation();
-        };
         newElement.onclick = (event) => {
-            if (isSelected(item)) {
+            if (item.selected) {
                 deselectItem(item);
             }
             else {
                 selectItem(item);
             }
         };
+        newElement.getElementsByClassName('Link')[0].onclick = (event) => {
+            if (item.previewing) {
+                unpreviewItem(item)
+            }
+            else {
+                previewItem(item);
+                showMarker(item); // only if it's filtered and selected
+            }
+            event.stopPropagation();
+        };
+        newElement.getElementsByClassName('Address')[0].onclick = (event) => {
+            page.map.panTo({lat: item.lat, lng: item.lng});
+            event.stopPropagation();
+            focusItem(item, false);
+        };
 
         page.infoList.appendChild(newElement);
         item.element = newElement;
         item.selected = false;
     });
-}
 
-function isSelected(item) {
-    return item.selected;
+    onFilterChanged();
 }
 
 function selectItem(item) {
 
     if (!item.selected) {
+        item.selected = true;
         showMarker(item);
     }
 
-    item.selected = true;
     item.element.classList.add('Selected');
+    item.label.container.classList.add('Selected');
 }
 
 function deselectItem(item) {
     item.selected = false;
     item.element.classList.remove('Selected');
+    item.label.container.classList.remove('Selected');
 
     hideMarker(item);
 }
@@ -323,11 +293,20 @@ function unpreviewItem(item) {
     }
 }
 
-function focusItem(item) {
-    let y = item.element.offsetTop - page.infoList.offsetTop;
-    page.infoList.scrollTo({ top: y, behavior: 'smooth' });
+function focusItem(item, scroll=true) {
+    data.items.forEach((item) => { item.element.classList.remove('Focus'); });
 
-    setTimeout(() => { item.element.focus({preventScroll: true}); }, 1);
+    item.focused = true;
+    item.element.classList.add('Focus');
+    focusLabel(item);
+
+    if (scroll)
+    {
+        let y = item.element.offsetTop - page.infoList.offsetTop;
+        page.infoList.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+    setTimeout(() => { item.element.focus({ preventScroll: true }); }, 1);
 }
 
 function sortInfoList(key, reverse) {
@@ -350,18 +329,87 @@ function sortInfoList(key, reverse) {
     page.infoList.setAttribute('sort', key);
 }
 
+const patterns = {
+    group: /\((.+?)\)/g,
+    elements: /(\S*) (\S*) (.*)/,
+};
+
 function filterInfoList(expression) {
-    data.items.forEach((x) => {
-        let result = eval(expression);
-        if (result) {
-            x.element.style.display = 'unset';
-            if (x.selected) {
-                showMarker(x);
+
+    if (expression == "") {
+        return;
+    }
+
+    if (data.items.length == 0) {
+        return;
+    }
+
+    // Reset filter
+    data.items.forEach((item) => { item.filter = true });
+
+    // Split into (...) groups
+    let groups = expression.matchAll(patterns.group);
+
+    // Process each group
+    for (let group of groups) {
+        let elements = group[1].match(patterns.elements);
+
+        if (elements == null) {
+            console.log(`Invalid filter group: ${group}`)
+            return;
+        }
+
+        let name = elements[1];
+        let op = elements[2];
+        let other = elements[3];
+
+        if (data.items[0][name] == undefined) {
+            console.log(`Invalid property: ${name}`);
+            return;
+        }
+
+        let ref_value = data.items[0][name];
+        if (Number.isInteger(ref_value)) {
+            other = parseInt(other);
+            if (isNaN(other)) {
+                return;
             }
         }
+
+        if (op == "is" || op == "==") {
+            data.items.forEach((item) => { item.filter = item.filter && (item[name] == other); });
+        }
+        else if (op == "has") {
+            data.items.forEach((item) => { item.filter = item.filter && (item[name].search(other) >= 0); });
+        }
+        else if (op == "<") {
+            data.items.forEach((item) => { item.filter = item.filter && (item[name] < other); });
+        }
+        else if (op == ">") {
+            data.items.forEach((item) => { item.filter = item.filter && (item[name] > other); });
+        }
+        else if (op == "<=") {
+            data.items.forEach((item) => { item.filter = item.filter && (item[name] <= other); });
+        }
+        else if (op == ">=") {
+            data.items.forEach((item) => { item.filter = item.filter && (item[name] >= other); });
+        }
         else {
-            x.element.style.display = 'none';
-            hideMarker(x);
+            console.log(`Invalid filter operation: ${op}`);
+            return;
+        }
+    }
+
+    data.items.forEach((item) => {
+        if (item.filter) {
+            item.element.style.display = 'unset';
+            item.label.container.classList.remove('FilterOut');
+            showMarker(item);
+        }
+        else {
+            item.element.style.display = 'none';
+            item.label.container.classList.add('FilterOut');
+            hideMarker(item);
         }
     });
 }
@@ -388,6 +436,7 @@ function loadMap() {
 function initializeMap() {
     console.log("Creating Map");
     page.map = new google.maps.Map(page.mapView, { center: args.centerLocation, zoom: 13 });
+    createLabelClass();
 }
 
 function initializeMarkers() {
@@ -406,6 +455,24 @@ function initializeMarkers() {
             title: `${item.name} : ${item.text_rent}, ${item.text_area}ft², ${item.text_impression}*`,
             animation: null,
         });
+
+        let labelContent = document.createElement('div', 'foo');
+        item.label = new Label(item.marker, labelContent);
+        item.label.setMap(page.map);
+
+        item.label.container.onclick = (event) => {
+            if (event.altKey)
+            {
+                deselectItem(item);
+            }
+            else if (event.shiftKey || item.focused) {
+                selectItem(item);
+                focusItem(item);
+            }
+            else {
+                focusItem(item);
+            }
+        };
 
         item.marker.addListener('click', (event) => {
             toggle('Info', 'Hidden', 'off');
@@ -432,12 +499,61 @@ function initializeMarkers() {
 }
 
 function showMarker(item) {
-    item.marker.setVisible(true);
-    item.marker.setAnimation(google.maps.Animation.BOUNCE);
-    setTimeout(() => { item.marker.setAnimation(null) }, 500)
+    if (item.filter && item.selected) {
+        item.marker.setVisible(true);
+        item.marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(() => { item.marker.setAnimation(null) }, 500)
+    }
 }
 function hideMarker(item) {
     item.marker.setVisible(false);
+}
+
+let lastFocusedLabel = null;
+function focusLabel(item) {
+    if (lastFocusedLabel != null)
+    {
+        lastFocusedLabel.container.classList.remove('Focus');
+    }
+
+    item.label.container.classList.add('Focus');
+    lastFocusedLabel = item.label;
+}
+function unfocusLabel(item) {
+    item.label.container.classList.remove('Focus');
+}
+
+function createLabelClass() {
+    function LabelClass(marker, content) {
+        this.marker = marker
+
+        this.content = content
+        content.classList.add('MapLabel')
+
+        this.container = document.createElement('div')
+        this.container.classList.add('MapAnchor')
+        this.container.appendChild(content)
+
+        google.maps.OverlayView.preventMapHitsAndGesturesFrom(this.container)
+    }
+
+    LabelClass.prototype = Object.create(google.maps.OverlayView.prototype)
+
+    LabelClass.prototype.onAdd = function () {
+        this.getPanes().floatPane.appendChild(this.container)
+    }
+    LabelClass.prototype.onRemove = function () {
+        if (this.container.parentElement) {
+            this.container.parentElement.removeChild(this.container)
+        }
+    }
+    LabelClass.prototype.draw = function () {
+        var position = this.getProjection().fromLatLngToDivPixel(this.marker.position)
+        this.container.style.left = position.x + 'px'
+        this.container.style.top = position.y + 'px'
+    }
+
+    Label = LabelClass
 }
 
 /* -------------------------------------------------------------------------- */

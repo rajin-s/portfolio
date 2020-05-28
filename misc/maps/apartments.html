@@ -18,7 +18,9 @@
         <div id="Map"></div>
 
         <!-- Main Info Panel -->
-        <div id="Info">
+        <div id="Info" class="Loading">
+            <div class="Cover"></div>
+
             <!-- Toggle for showing / hiding the info panel -->
             <div id="ShowHide" onclick="toggle('Info', 'Hidden')"></div>
 
@@ -63,7 +65,7 @@
                     <label for="SortScenery" class="Tag" onclick="sortInfoList('scenery', true);"">Scenery</label>
                 </div>
 
-                <input id="FilterInput" type="text" placeholder="filter expression... ex. x.rent &lt; 2000">
+                <input id="FilterInput" type="text" placeholder="filter - ex. (rent &lt; 2000) (tags has modern)">
 
                 <div id="InfoList" class="List">
                     <!-- Filled in populateInfoList -->
