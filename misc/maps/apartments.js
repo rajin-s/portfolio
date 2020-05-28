@@ -186,7 +186,7 @@ let templates = {
             <div class='Scenery'>scenery: $text_scenery</div>
             <div class="Spacer"></div>
             <div class='Score' title=
-                '$text_impressionperrent */$ × $text_area ft²'>
+                '$text_impression* × $text_area ft² / $text_rent'>
                 score: $text_score</div>
         </div>
     `
@@ -231,7 +231,7 @@ function populateInfoList() {
             event.stopPropagation();
         };
         newElement.getElementsByClassName('Address')[0].onclick = (event) => {
-            page.map.panTo({lat: item.lat, lng: item.lng});
+            page.map.panTo({ lat: item.lat, lng: item.lng });
             event.stopPropagation();
             focusItem(item, false);
         };
@@ -297,15 +297,14 @@ function unpreviewItem(item) {
     }
 }
 
-function focusItem(item, scroll=true) {
+function focusItem(item, scroll = true) {
     data.items.forEach((item) => { item.element.classList.remove('Focus'); });
 
     item.focused = true;
     item.element.classList.add('Focus');
     focusLabel(item);
 
-    if (scroll)
-    {
+    if (scroll) {
         let y = item.element.offsetTop - page.infoList.offsetTop;
         page.infoList.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -354,8 +353,11 @@ function filterInfoList(expression) {
     // Split into (...) groups
     let groups = expression.matchAll(patterns.group);
 
+    let hasGroups = false;
+
     // Process each group
     for (let group of groups) {
+        hasGroups = true;
         let elements = group[1].match(patterns.elements);
 
         if (elements == null) {
@@ -384,7 +386,7 @@ function filterInfoList(expression) {
             data.items.forEach((item) => { item.filter = item.filter && (item[name] == other); });
         }
         else if (op == "has") {
-            data.items.forEach((item) => { item.filter = item.filter && (item[name].search(other) >= 0); });
+            data.items.forEach((item) => { item.filter = item.filter && (item[name].match(new RegExp(other, 'i')) != null); });
         }
         else if (op == "<") {
             data.items.forEach((item) => { item.filter = item.filter && (item[name] < other); });
@@ -402,6 +404,10 @@ function filterInfoList(expression) {
             console.log(`Invalid filter operation: ${op}`);
             return;
         }
+    }
+
+    if (!hasGroups) {
+        data.items.forEach((item) => { item.filter = item.filter && (item.name.match(new RegExp(expression, 'i')) != null); });
     }
 
     data.items.forEach((item) => {
@@ -465,8 +471,7 @@ function initializeMarkers() {
         item.label.setMap(page.map);
 
         item.label.container.onclick = (event) => {
-            if (event.altKey)
-            {
+            if (event.altKey) {
                 deselectItem(item);
             }
             else if (event.shiftKey || item.focused) {
@@ -515,8 +520,7 @@ function hideMarker(item) {
 
 let lastFocusedLabel = null;
 function focusLabel(item) {
-    if (lastFocusedLabel != null)
-    {
+    if (lastFocusedLabel != null) {
         lastFocusedLabel.container.classList.remove('Focus');
     }
 
