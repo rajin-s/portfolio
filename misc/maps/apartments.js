@@ -161,7 +161,7 @@ let templates = {
         `
         <div class='Heading'>
             <div class='Name'><span class='Link'>$index. 🔗 $name</span></div>
-            <div class='Address'>$address </div>
+            <div><span class='Address'>$address</span></div>
         </div>
         <div class='Line'>
             <div class='BedRooms'>$text_bedrooms bed</div>
@@ -184,6 +184,10 @@ let templates = {
             <div class='NearbyStuff'>nearby: $text_nearbystuff</div>
             <div class="Spacer"></div>
             <div class='Scenery'>scenery: $text_scenery</div>
+            <div class="Spacer"></div>
+            <div class='Score' title=
+                '$text_impressionperrent */$ × $text_area ft²'>
+                score: $text_score</div>
         </div>
     `
 }
@@ -197,7 +201,7 @@ function populateInfoList() {
             if (v === "") {
                 v = "?";
             }
-            result = result.replace(`$${k}`, v);
+            result = result.replace(new RegExp(`\\$${k}\\b`, 'g'), v);
         }
 
         let newElement = document.createElement('div');
