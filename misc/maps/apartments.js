@@ -170,9 +170,7 @@ let templates = {
             <div class="Spacer"></div>
             <div class='Scenery'>scenery: $text_scenery</div>
             <div class="Spacer"></div>
-            <div class='Score' title=
-                '$text_impression* × $text_area ft² / $text_rent'>
-                score: $text_score</div>
+            <div class='Score'>score: $text_score</div>
         </div>
     `
 }
