@@ -340,16 +340,16 @@ const patterns = {
 
 function filterInfoList(expression) {
 
-    if (expression == "") {
-        return;
-    }
-
     if (data.items.length == 0) {
         return;
     }
 
     // Reset filter
     data.items.forEach((item) => { item.filter = true });
+
+    if (expression == "") {
+        return;
+    }
 
     // Split into (...) groups
     let groups = expression.matchAll(patterns.group);
